@@ -8,6 +8,8 @@
   "dependencies": {
     "fs": "^0.0.2",
     "nunjucks": "^1.2.0",
+  },
+  "peerDependencies": {
     "acos-jsparsons": "acos-server/acos-jsparsons"
   }
 }
