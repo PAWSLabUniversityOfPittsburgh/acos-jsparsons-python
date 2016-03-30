@@ -44,6 +44,7 @@ var getContentFromFile = function(file) {
 
 JSPARSONSPython.namespace = 'jsparsons-python';
 JSPARSONSPython.contentTypeNamespace = 'jsparsons';
+JSPARSONSPython.packageType = 'content';
 
 
 JSPARSONSPython.meta = {
