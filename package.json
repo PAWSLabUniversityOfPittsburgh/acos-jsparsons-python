@@ -4,6 +4,10 @@
   "description": "Jsparsons content package for Python",
   "main": "index.js",
   "author": "Lassi Haaranen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acos-server/acos-jsparsons-python"
+  },  
   "license": "MIT",
   "dependencies": {
     "fs": "^0.0.2",
