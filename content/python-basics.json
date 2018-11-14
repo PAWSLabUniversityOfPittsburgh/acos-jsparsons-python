@@ -324,5 +324,23 @@
     "description": "Creating a class and using its methods",
     "concepts": ["Return", "Sub", "Attribute", "ClassDef", "alias", "Add", "Call", "ImportFrom", "arg", "Mult", "Assign", "FunctionDef"],
     "order": 32
+  },
+  "ps_python_2d_list": {
+    "description": "Constructing a program that deals with lists",
+    "instructions": "Construct a program that prints out [[0, 1, 2], [3, 4, 5], [6, 7, 99]]",
+    "initial": "COUNT = 3\nlist1 = []\nfor i in range(COUNT):\n    list2 = [0] * COUNT\n    for j in range(COUNT):\n        list2[j] = i * COUNT + j\n    list1.append(list2)\nlist1[2][2] = 99\nprint(list1)",
+    "order": 33,
+    "concepts": ["Assign","Call","List","Attribute","Mult","Int","Add","For","Index"],
+    "type": "SIMPLE",
+    "unittest": ""
+  },
+  "ps_python_nested_loops": {
+    "description": "Constrcuting a problem with nested loops",
+    "instructions": "Construct a program that first prints out 5, then 54, then 543, then 5432 and finally 54321 on consecutive lines.",
+    "initial": "HEIGHT = 5\ni = HEIGHT\nwhile i > 0:\n    j = HEIGHT\n    while j >= i:\n        print(j, end = \"\")\n        j -= 1\n    print()\n    i -= 1",
+    "type": "SIMPLE",
+    "unittest": "",
+    "order": 34,
+    "concepts": ["Assign","Int","keyword","AugAssign","Gt","Sub","GtE","While","Str","Call"]
   }
 }
