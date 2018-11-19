@@ -331,14 +331,16 @@
     "initial": "COUNT = 3\nlist1 = []\nfor i in range(COUNT):\n    list2 = [0] * COUNT\n    for j in range(COUNT):\n        list2[j] = i * COUNT + j\n    list1.append(list2)\nlist1[2][2] = 99\nprint(list1)",
     "order": 33,
     "concepts": ["Assign","Call","List","Attribute","Mult","Int","Add","For","Index"],
-    "type": "SIMPLE",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing list1 content\", variables : {  __output: \"[[0, 1, 2], [3, 4, 5], [6, 7, 99]]\n\"}  }]",
     "unittest": ""
   },
   "ps_python_nested_loops": {
     "description": "Constrcuting a problem with nested loops",
-    "instructions": "Construct a program that first prints out 5, then 54, then 543, then 5432 and finally 54321 on consecutive lines.",
-    "initial": "HEIGHT = 5\ni = HEIGHT\nwhile i > 0:\n    j = HEIGHT\n    while j >= i:\n        print(j, end = \"\")\n        j -= 1\n    print()\n    i -= 1",
-    "type": "SIMPLE",
+    "instructions": "Construct a program that first prints out 15, then 14, then 12, then 9 and finally 5 on consecutive lines.",
+    "initial": "MAX = 5\ni = 0\nwhile i < MAX:\n    sum = 0\n    j = MAX\n    while j > i:\n        sum = sum + j\n        j = j - 1\n    print(sum)\n    i = i + 1",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : {  __output: \"15\n14\n12\n9\n5\n\"}  }]",
     "unittest": "",
     "order": 34,
     "concepts": ["Assign","Int","keyword","AugAssign","Gt","Sub","GtE","While","Str","Call"]
