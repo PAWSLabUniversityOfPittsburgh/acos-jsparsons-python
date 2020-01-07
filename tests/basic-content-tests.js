@@ -1,127 +1,136 @@
-describe('acos-jsparsons-python', function() {
+let chai = require('chai');
+chai.should();
 
-	it('should be displayed on the frontpage', function() {
-		return browser
-			.url('http://localhost:3000')
-			.getText('.container').then(function(text) {
-				text.should.contain('jsparsons-python');
-			});
-	});
-  it('ps_hello and ps_simple_function should show up on the frontpage', function() {
-    return browser
-      .url('http://localhost:3000')
-      .getText('.container').then(function(text) {
-      	text.should.contain('ps_hello');
-      });
-  });
+describe('Content module acos-jsparsons-python', () => {
 
-	it('ps_hello should be grade correct and incorrect attempts', function() {
-    var contentUrl = '/html/jsparsons/jsparsons-python/ps_hello';
-		return browser
-  			.url(contentUrl)
-  			.isVisible('#ul-sortableTrash').then(function(vis) {
-  				vis.should.be.equal(true);
-  			})
-        .isVisible('#sortable').then(function(vis) {
-          vis.should.be.equal(true);
-        })
-        .moveToObject('#sortablecodeline0', 15,15)
-        .buttonDown()
-        .moveToObject('#ul-sortable', 35, 5)
-        .buttonUp()
-        .click('#feedbackLink')
-        .alertAccept().then(function(a) {
-          a.state.should.be.equal('success');
-        })
-        .getAttribute('#ul-sortable', 'class').then(function(classes) {
-          classes.should.contain('incorrect');
-        })
-        .moveToObject('#sortablecodeline1', 15,15)
-        .buttonDown()
-        .moveToObject('#ul-sortable', 15, 25)
-        .buttonUp()
-        .click('#feedbackLink')
-        .getAttribute('#ul-sortable', 'class').then(function(classes) {
-          classes.should.contain('correct');
-          classes.should.not.contain('incorrect');
-        });	
+  describe('Frontpage block', () => {
+
+    it('should exist once and have teaser links', () => {
+      browser.url('/');
+
+      let matches = $$('.contentPackage')
+        .filter(div => div.$('.packageTitle').getText() == 'jsparsons-python');
+      matches.should.have.lengthOf(1);
+
+      let items = matches[0].$$('.teaserContent a').map(a => a.getText());
+      items.should.include('ps_hello');
+  items.should.include('ps_simple_function');
     });
 
+  });
 
-    it('ps_simple_function should be grade correct and incorrect attempts', function() {
-      var contentUrl = '/html/jsparsons/jsparsons-python/ps_simple_function';
-      return browser
-          .url(contentUrl)
-          .isVisible('#ul-sortableTrash').then(function(vis) {
-            vis.should.be.equal(true);
-          })
-          .isVisible('#sortable').then(function(vis) {
-            vis.should.be.equal(true);
-          })
-          .moveToObject('#sortablecodeline0', 15,15)
-          .buttonDown()
-          .moveToObject('#ul-sortable', 35, 5)
-          .buttonUp()
-          .click('#feedbackLink')
-          .alertAccept().then(function(a) {
-            a.state.should.be.equal('success');
-          })
-          .moveToObject('#sortablecodeline1', 15,15)
-          .buttonDown()
-          .moveToObject('#ul-sortable', 75, 35)
-          .buttonUp()
-          .click('#feedbackLink')
-          .alertAccept()
-          .getAttribute('#ul-sortable', 'class').then(function(classes) {
-            classes.should.contain('incorrect');
-          })
-          .moveToObject('#sortablecodeline2', 15,15)
-          .buttonDown()
-          .moveToObject('#ul-sortable', 25, 55)
-          .buttonUp()
-          .click('#feedbackLink')
-          .getAttribute('#ul-sortable', 'class').then(function(classes) {
-            classes.should.contain('correct');
-            classes.should.not.contain('incorrect');
-          });
-      });
+  function hasEachOnce(selectors) {
+    selectors.forEach(selector => {
+      let matches = $$(selector);
+      matches.should.have.lengthOf(1);
+      matches[0].isDisplayed().should.be.true;
+    });
+  }
 
-    
-    it('ps_simple_params should be grade correct and incorrect attempts', function() {
-      var contentUrl = '/html/jsparsons/jsparsons-python/ps_simple_params';
-      return browser
-          .url(contentUrl)
-          .isVisible('#ul-sortableTrash').then(function(vis) {
-            vis.should.be.equal(true);
-          })
-          .isVisible('#sortable').then(function(vis) {
-            vis.should.be.equal(true);
-          })
-          .moveToObject('#sortablecodeline0', 15,15)
-          .buttonDown()
-          .moveToObject('#ul-sortable', 35, 5)
-          .buttonUp()
-          .click('#feedbackLink')
-          .alertAccept().then(function(a) {
-            a.state.should.be.equal('success');
-          })
-          .moveToObject('#sortablecodeline1', 15,15)
-          .buttonDown()
-          .moveToObject('#ul-sortable', 75, 35)
-          .buttonUp()
-          .click('#feedbackLink')
-          .alertAccept()
-          .getAttribute('#ul-sortable', 'class').then(function(classes) {
-            classes.should.contain('incorrect');
-          })
-          .moveToObject('#sortablecodeline2', 15,15)
-          .buttonDown()
-          .moveToObject('#ul-sortable', 25, 55)
-          .buttonUp()
-          .click('#feedbackLink')
-          .getAttribute('#ul-sortable', 'class').then(function(classes) {
-            classes.should.contain('correct');
-            classes.should.not.contain('incorrect');
-          });
-      });    
+  function dragAndDropNear(source, target, x, y) {
+    var loc = source.getLocation();
+    let sourceX = parseInt(loc.x + 5);
+    let sourceY = parseInt(loc.y + 5);
+    loc = target.getLocation();
+    let targetX = parseInt(loc.x + x) - sourceX;
+    let targetY = parseInt(loc.y + y) - sourceY;
+    browser.performActions([{
+      type: 'pointer',
+      id: 'finger1',
+      parameters: { pointerType: 'mouse' },
+      actions: [
+        { type: 'pointerMove', duration: 0, x: sourceX, y: sourceY },
+        { type: 'pointerDown', button: 0 },
+        { type: 'pause', duration: 10 },
+        { type: 'pointerMove', duration: 100, origin: 'pointer', x: targetX, y: targetY },
+        { type: 'pointerUp', button: 0 }
+      ]
+    }]);
+  }
+
+  describe('Exercise ps_hello', () => {
+
+    it('exercise page should open and have main components', () => {
+      browser.url('/html/jsparsons/jsparsons-python/ps_hello');
+      hasEachOnce(['#ul-sortableTrash', '#sortable']);
+    });
+
+    it('first line added to solution should yield incorrect', () => {
+      dragAndDropNear($('#sortablecodeline0'), $('#ul-sortable'), 10, 10);
+      $('#feedbackLink').click();
+      browser.acceptAlert();
+      $('#ul-sortable').getAttribute('class').should.contain('incorrect');
+    });
+
+    it('second line added to solution should yield correct', () => {
+      dragAndDropNear($('#sortablecodeline1'), $('#ul-sortable'), 10, 40);
+      $('#feedbackLink').click();
+      let cls = $('#ul-sortable').getAttribute('class');
+      cls.should.not.contain('incorrect');
+      cls.should.contain('correct');
+    });
+  });
+
+  describe('Exercise ps_simple_function', () => {
+
+    it('exercise page should open and have main components', function() {
+      browser.url('/html/jsparsons/jsparsons-python/ps_simple_function');
+      hasEachOnce(['#ul-sortableTrash', '#sortable']);
+    });
+
+    it('first line added to solution should yield incorrect', () => {
+      dragAndDropNear($('#sortablecodeline0'), $('#ul-sortable'), 10, 10);
+      $('#feedbackLink').click();
+      browser.acceptAlert();
+      $('#ul-sortable').getAttribute('class').should.contain('incorrect');
+    });
+
+    it('second line added to solution should yield incorrect', () => {
+      dragAndDropNear($('#sortablecodeline1'), $('#ul-sortable'), 60, 40);
+      $('#feedbackLink').click();
+      browser.acceptAlert();
+      $('#ul-sortable').getAttribute('class').should.contain('incorrect');
+    });
+
+    it('third line added to solution should yield correct', () => {
+      dragAndDropNear($('#sortablecodeline2'), $('#ul-sortable'), 10, 70);
+      $('#feedbackLink').click();
+      let cls = $('#ul-sortable').getAttribute('class');
+      cls.should.not.contain('incorrect');
+      cls.should.contain('correct');
+    });
+
+  });
+
+  describe('Exercise ps_simple_params', () => {
+
+    it('exercise page should open and have main components', function() {
+      browser.url('/html/jsparsons/jsparsons-python/ps_simple_params');
+      hasEachOnce(['#ul-sortableTrash', '#sortable']);
+    });
+
+    it('first line added to solution should yield incorrect', () => {
+      dragAndDropNear($('#sortablecodeline0'), $('#ul-sortable'), 10, 10);
+      $('#feedbackLink').click();
+      browser.acceptAlert();
+      $('#ul-sortable').getAttribute('class').should.contain('incorrect');
+    });
+
+    it('second line added to solution should yield incorrect', () => {
+      dragAndDropNear($('#sortablecodeline1'), $('#ul-sortable'), 60, 40);
+      $('#feedbackLink').click();
+      browser.acceptAlert();
+      $('#ul-sortable').getAttribute('class').should.contain('incorrect');
+    });
+
+    it('third line added to solution should yield correct', () => {
+      dragAndDropNear($('#sortablecodeline2'), $('#ul-sortable'), 10, 70);
+      $('#feedbackLink').click();
+      let cls = $('#ul-sortable').getAttribute('class');
+      cls.should.not.contain('incorrect');
+      cls.should.contain('correct');
+    });
+
+  });
+
 });
