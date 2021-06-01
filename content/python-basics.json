@@ -344,5 +344,371 @@
     "unittest": "",
     "order": 34,
     "concepts": ["Assign","Int","keyword","AugAssign","Gt","Sub","GtE","While","Str","Call"]
+  },
+"ps_python_3digit_combinations": {
+    "description": "Construct a program that creates unique 3 digit combinations",
+    "instructions": "Construct a program which creates and prints all three-digit combinations from numbers 1-4 such that each number appears at most once and the combinations are listed from the smallest to the greatest. The program must also output the total number of the combinations. For example, output 123, 124, 132 ... total: 24.",
+    "initial": "amount = 0\ni = 0\nwhile i < 4:\n  i += 1\n  j = 0\n  while j < 4:\n    j += 1\n    k = 0\n    while k < 4:\n      k += 1\n      if k != i and k != j and i != j:\n          amount += 1\n          print(i, j, k)\n\nprint(\"The total number of 3 digit combinations is\", amount)\n\n\n",
+    "type": "SIMPLE",
+    "title": "",
+    "concepts": ["Lt","If","Call","AugAssign","Str","Int","Add","Assign","And","NotEq","While"],
+    "order": 35
+  },
+  "ps_python_3digit_combinations2": {
+    "descreption": "Construct a program that creates unique 3 digit combinations",
+    "instructions": "Construct a program which creates and prints all three-digit combinations from numbers 1-4 such that each number appears at most once and the combinations are listed from the smallest to the greatest. The program must also output the total number of the combinations. For example, output 123, 124, 132 ... total: 24.",
+    "initial": "amount = 0\ni = 0\nwhile i < 4:\n  i += 1\n  j = 0\n  while j < 4:\n    j += 1\n    k = 0\n    while k < 4:\n      k += 1\n      if k != i $$toggle::and::or::not::$$ k != j $$toggle::or::and::not::$$ i != j:\n          amount += 1\n          print(i, j, k)\n\nprint(\"The total number of 3 digit combinations is\", amount)\n\n\n",
+    "type": "VARTEST",
+    "vartests":"[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : {  __output: \"(1, 2, 3)\n(1, 2, 4)\n(1, 3, 2)\n(1, 3, 4)\n(1, 4, 2)\n(1, 4, 3)\n(2, 1, 3)\n(2, 1, 4)\n(2, 3, 1)\n(2, 3, 4)\n(2, 4, 1)\n(2, 4, 3)\n(3, 1, 2)\n(3, 1, 4)\n(3, 2, 1)\n(3, 2, 4)\n(3, 4, 1)\n(3, 4, 2)\n(4, 1, 2)\n(4, 1, 3)\n(4, 2, 1)\n(4, 2, 3)\n(4, 3, 1)\n(4, 3, 2)\n('The total number of 3 digit combinations is', 24)\n\"}  }]",
+    "concepts": ["Lt","If","Call","AugAssign","Str","Int","Add","Assign","And","NotEq","While"],
+    "order": 36
+  },
+  "ps_python_divsible_by1": {
+    "descreption": "Construct a program with multiple if-elif statements.",
+    "instructions": "Construct a program which checks whether each of the integers in interval from 1 to 100 is divisible by 2, 5, or both.",
+    "initial": "def divisible_by(num):\n    for i in range(1, num + 1):\n        if i % 2 == 0 and i % 5 == 0:\n            print(i, \"is divisible by 2 & 5\")\n        elif i % 5 == 0:\n            print(i, \"is only divisible by 5\")\n        elif i % 2 == 0:\n            print(i, \"is only divisible by 2\")\n        else:\n            print(i, \"is not divisible by 2 nor 5\")\n\ndivisible_by(100)",
+    "type": "SIMPLE",
+    "concepts": ["Call","Assign","Add","Mod","Eq","If","Str","Int","And","For"],
+    "order": 37
+  },
+  "ps_python_divisible_by2": {
+    "descreption": "Construct a program with multiple if-elif statements.",
+    "instructions": "Construct a program which checks whether each of the integers in interval from 1 to 100 is divisible by 2, 5, or both.",
+    "initial":  "\nnum = 100\nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        print(i, \"is divisible by 2 & 5\")\n    elif i % 5 == 0:\n        print(i, \"is only divisible by 5\")\n    elif i % 2 == 0:\n        print(i, \"is only divisible by 2\")\n    else:           \n        print(i, \"is not divisible by 2 nor 5\")\n",
+    "type": "SIMPLE",
+    "concepts": ["Call","Assign","Add","Mod","Eq","If","Str","Int","And","For"],
+    "order": 38
+  },
+  "ps_python_divisible_by3": {
+    "descreption": "Construct a program with multiple if-elif statements.",
+    "instructions": "Construct a program which checks which of the integers in interval from 1 to 50 is divisible by only 2, only 5, or both. The program should store each group in its own list and finally print the lists in this order.",
+    "initial":"\nnum = 50\nlist = []\nlist2= []\nlist3= []\n    \nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        list.append(i)\n    elif i % 2 == 0:\n        list2.append(i)\n    elif i % 5 == 0:\n        list3.append(i)\nprint(\"divisible by only 2:\")\nprint(list)\nprint(\"divisible by only 5:\")\nprint(list2)\nprint(\"divisible by 2 & 5:\")\nprint(list3)\n\n\n\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : {  __output: \"divisible by only 2:\n[2, 4, 6, 8, 12, 14, 16, 18, 22, 24, 26, 28, 32, 34, 36, 38, 42, 44, 46, 48]\ndivisible by only 5:\n[5, 15, 25, 35, 45]\ndivisible by 2 & 5:\n[10, 20, 30, 40, 50]\n\"}  }]",
+    "concepts": ["Call","Assign","Add","Mod","Eq","If","Str","Int","And","For"],
+    "order": 39
+  },
+  "ps_python_freq_of_char1": {
+    "descreption": "Letter frequency",
+    "instructions":"Construct a function which counts the frequency of each character in the string given as a parameter and returns a dictionary containing the fequencies.",
+    "initial":  "def freq_of_char(str):\n    num_of_char = {}\n    for letter in str:\n        if letter in num_of_char:\n            num_of_char[letter] += 1\n        else:\n            num_of_char[letter] = 1\n    return num_of_char\n",
+    "type": "UNITTEST",
+    "unittest": "\nimport unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(freq_of_char(\"Summer\"),{\"S\": 1, \"u\": 1, \"m\": 2, \"e\": 1, \"r\": 1}, \"Testing <code>freq_of_char(Summer)</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Index","Int","For","arg","Call","AugAssign","In","Return","Str","Add","FunctionDef","Dict","Assign","If"],
+    "order": 40
+  },
+  "ps_python_freq_of_char2": {
+    "descreption": "Letter frequency",
+    "instructions": "Construct a program which counts the frequency of each character in string 'Summer' and stores it in a dictionary. Finally, the program should print the dictionary.",
+    "initial": "str = \"Summer\"\nnum_of_char = {}\nfor letter in str:\n    if letter in num_of_char:\n        num_of_char[letter] += 1\n    else:\n        num_of_char[letter] = 1\n\nprint(num_of_char)",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output: \"{'S': 1, 'u': 1, 'm': 2, 'e': 1, 'r': 1}\n\"}  }]",
+    "concepts": ["Index","Int","For","arg","Call","AugAssign","In","Return","Str","Add","FunctionDef","Dict","Assign","If"],
+    "order": 41
+  },
+  "ps_python_palindrome1": {
+    "description": "Creating a function that checks if the string is a palindrome or not.",
+    "instructions": "Construct a function which determines whether the string given as a paramter is a palindrome. The function should be case insensitive i.e. upper and lowercase letters are intepreted as being the same.",
+    "initial": "def is_palindrome(str):\n    n_str = str.lower()\n    revers_str = \"\"\n    for char in n_str:\n        revers_str = char + revers_str\n    if n_str == revers_str:\n            print(\"This string is a palindrome!\")\n    else:\n        print(\"The string is not a palindrome!\")",
+    "type":  "VARTEST",
+    "vartests":"[{ initcode : \"str ='Madam'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Madam'\", variables : { __output: \"This string is a palindrome!\nNone\n\"} }, { initcode : \"str= 'text'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Text'\", variables : { __output : \"The string is not a palindrome!\nNone\n\" } },  { initcode : \"str= 'Notion'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Notion'\", variables : { __output : \"The string is not a palindrome!\nNone\n\" } }]",
+    "concepts": ["Attribute","Try","arg","Assign","Str","ExceptHandler","If","For","Eq","FunctionDef","Add","Call"],
+    "order": 42
+  },
+  "ps_python_palindrome2": {
+    "description": "Creating a function that checks if the string is a palindrome or not.",
+    "instructions": "Construct a program which determines whether the original string is a palindrome. The function should be case insensitive i.e. upper and lowercase letters are intepreted as being the same.",
+    "initial": "str = \"Madam\"\nn_str = str.lower()\nrevers_str = \"\"\nfor char in n_str:\n    revers_str = char + revers_str\nif n_str == revers_str:\n    print(\"This string is a palindrome!\")\nelse:\n    print(\"The string is not a palindrome!\")",
+    "type":  "VARTEST",
+    "vartests":"[{ initcode : \"str ='Madam'\", code : \"\", message : \"Testing string: 'Madam'\", variables : { __output: \"This string is a palindrome!\n\"} }]",
+    "concepts": ["Attribute","Try","arg","Assign","Str","ExceptHandler","If","For","Eq","FunctionDef","Add","Call"],
+    "order": 43
+  },
+  "ps_python_palindrome3": {
+    "description": "Creating a function that checks if the string is a palindrome or not.",
+    "instructions": "Construct a function which determines whether the string given as a paramter is a palindrome. The function should be case insensitive i.e. upper and lowercase letters are intepreted as being the same.",
+    "initial":  "def is_palindrome(str):\n    n_str = str.lower()\n    revers_str = \"\"\n    for char in n_str:\n        revers_str = char + revers_str\n    if n_str == revers_str:\n        return True\n    else:\n        return False\n",
+    "type":  "VARTEST",
+    "vartests":"[{ initcode : \"str ='Madam'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Madam'\", variables : { __output: \"True\n\"} }, { initcode : \"str= 'text'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Text'\", variables : { __output : \"False\n\" } },  { initcode : \"str= 'Notion'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Notion'\", variables : { __output : \"False\n\" } }]",
+    "concepts": ["Attribute","Try","arg","Assign","Str","ExceptHandler","If","For","Eq","FunctionDef","Add","Call"],
+    "order": 44
+  },
+  "ps_python_palindrome4": {
+    "description": "Construct a function which determines whether the string given as a paramter is a palindrome.",
+    "instructions": "Construct a function that checks if the string is a palindrome or not. The function should be case insensitive i.e. upper and lowercase letters are intepreted as being the same",
+    "initial":  "def is_palindrome(str):\n    i = 0\n    j = len(str) - 1\n    n_str = str.lower()\n    while i < j:\n        if n_str[i] != n_str[j]:\n            return False\n        i += 1\n        j -= 1\n    return True\n",
+    "type":  "VARTEST",
+    "vartests":"[{ initcode : \"str ='Madam'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Madam'\", variables : { __output: \"True\n\"} }, { initcode : \"str= 'text'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Text'\", variables : { __output : \"False\n\" } },  { initcode : \"str= 'Notion'\", code : \"print(is_palindrome(str))\", message : \"Testing string: 'Notion'\", variables : { __output : \"False\n\" } }]",
+    "concepts": ["Attribute","Try","arg","Assign","Str","ExceptHandler","If","For","Eq","FunctionDef","Add","Call"],
+    "order": 45
+  },
+  "ps_python_list_of_remainders1": {
+    "description": "Construct a function that returns a list of remainders from the input.",
+    "instructions": "Construct a function which calculates the remainder of each element of the first list and the element with the same index in the second list. The remainders are stored in a new list. If the number in the second list is 0, the function should directly add number 2 to the new list instead of the remainder.",
+    "initial": "def list_of_remainders(list1, list2):\n    new_list = []\n    if len(list1) == len(list2):\n        for i in range(len(list1)):\n            if list2[i] == 0:\n                new_list.append(2)\n            else:\n                result = list1[i] % list2[i]\n                new_list.append(result)\n    return new_list\n\nlist1 = [19, 3, 4, 2]\nlist2 = [4, 2, 1, 0]\nprint(list_of_remainders(list1, list2))\n",
+    "type": "UNITTEST",
+    "unittest": "\nimport unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(list_of_remainders([19, 3, 4, 2], [4, 2, 1, 0]),[3, 1, 0, 2], \"function <code>list_of_remainders([19, 3, 4, 2], [4, 2, 1, 0])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Eq","ExceptHandler","Assign","Int","Return","If","Attribute","Mod","For","arg","List","Index","Try","Call","FunctionDef","Str"],
+    "order": 46
+  },
+  "ps_python_list_of_remainders2": {
+    "description": "Construct a function that returns a list of remainders from the input.",
+    "instructions": "Construct a program which calculates the remainder of each element of the first list and the element with the same index in the second list. The remainders are stored in a new list. If the number in the second list is 0, the program should directly add number 2 to the new list instead of the remainder. Finally, the program should print the new list.",
+    "initial": "list1 = [19, 3, 4, 2]\nlist2 = [4, 2, 1, 9]\n\nnew_list = []\nif len(list1) == len(list2):\n    for i in range(len(list1)):\n        if list2[i] == 0:\n            new_list.append(2)\n        else:\n            result = list1[i] % list2[i]\n            new_list.append(result)\n\nprint(new_list)",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : {  __output: \"[3, 1, 0, 2]\n\"}  }]",
+    "concepts": ["Eq","ExceptHandler","Assign","Int","Return","If","Attribute","Mod","For","arg","List","Index","Try","Call","FunctionDef","Str"],
+    "order": 47
+  },
+  "ps_python_list_reverse1": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is reverse of list [1, 2, 3, 4, 5].",
+    "initial": "def list_reverse(lst):\n    new_list = []\n    i = 0\n    while i < len(lst):\n        element = lst[i]\n        new_list.insert(0, element)\n        i += 1\n    return new_list\n\n\nlist1 = [1, 2, 3, 4, 5]\nlist2 = list_reverse(list1)\nprint(list2)\n\n\n\n\n",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(list_reverse([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"function <code>list_reverse([1, 2, 3, 4, 5])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Attribute","Return","Add","List","arg","Call","Index","AugAssign","While","FunctionDef","Assign","Lt","Int"],
+    "order": 48
+  },
+  "ps_python_list_reverse2": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is the reverse of the orginal list.",
+    "initial": "list1 = [1, 2, 3, 4, 5]\nnew_list = []\ni = 0\nwhile i < len(list1):\n    element = list1[i]\n    new_list.insert(0, element)\n    i += 1\nprint(new_list)\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+    "concepts":["While","Attribute","Call","Lt","AugAssign","Add","List","Int","Index","Assign"],
+    "order": 49
+  },
+  "ps_python_list_reverse3": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is reverse of list [1, 2, 3, 4, 5].",
+    "initial": "def list_reverse(lst):\n    new_list = [0] * len(lst)\n    i = 0\n    j = len(lst) - 1\n    while i < len(lst):\n        j = j - 1\n        new_list[j] = lst[i]\n        i += 1\n    return new_list\n\nlist1 = [1, 2, 3, 4, 5]\nlist2 = list_reverse(list1)\nprint(list2)",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(list_reverse([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"function <code>list_reverse([1, 2, 3, 4, 5])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Attribute","Return","Add","List","arg","Call","Index","AugAssign","While","FunctionDef","Assign","Lt","Int"],
+    "order": 50
+  },
+  "ps_python_list_reverse4": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is the reverse of the orginal list.",
+    "initial": "list1 = [1, 2, 3, 4, 5]\nnew_list = [0] * len(list1)\ni = 0\nj = len(list1) - 1\nwhile i < len(list1):\n    j = j - 1\n    new_list[j] = list1[i]\n    i += 1\nprint(new_list)",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+    "concepts":["While","Attribute","Call","Lt","AugAssign","Add","List","Int","Index","Assign"],
+    "order": 51
+  },
+  "ps_python_list_reverse5": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is reverse of list [1, 2, 3, 4, 5].",
+    "initial":  "def list_reverse(lst):\n    new_list = [0] * len(lst)\n    j = len(lst) - 1\n    for i in range(len(lst)):\n        j = j - 1\n        new_list[j] = lst[i]\n    return new_list\n\nlist1 = [1, 2, 3, 4, 5]\nlist2 = list_reverse(list1)\nprint(list2)",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(list_reverse([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"function <code>list_reverse([1, 2, 3, 4, 5])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Attribute","Return","Add","List","arg","Call","Index","AugAssign","While","FunctionDef","Assign","Lt","Int"],
+    "order": 52
+  },
+  "ps_python_list_reverse6": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is the reverse of the orginal list.",
+    "initial": "list1 = [1, 2, 3, 4, 5]\nnew_list = [0] * len(list1)\nj = len(list1)\nfor i in range(len(list1)):\n    j = j - 1\n    new_list[j] = list1[i]\n    print(new_list)\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+    "concepts":["While","Attribute","Call","Lt","AugAssign","Add","List","Int","Index","Assign"],
+    "order": 53
+  },
+  "ps_python_list_reverse7": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is reverse of list [1, 2, 3, 4, 5].",
+    "initial": "def list_reverse(lst):\n    new_list = [0] * len(lst)\n    j = len(lst)\n    for number in lst:\n        j = j - 1\n        new_list[j] = number \n    return new_list\n\nlist1 = [1, 2, 3, 4, 5]\nlist2 = list_reverse(list1)\nprint(list2)",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(list_reverse([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"function <code>list_reverse([1, 2, 3, 4, 5])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Attribute","Return","Add","List","arg","Call","Index","AugAssign","While","FunctionDef","Assign","Lt","Int"],
+    "order": 54
+  },
+  "ps_python_list_reverse8": {
+    "description": "Reverse the list",
+    "instructions": "Construct a program which creates a new list that is the reverse of the orginal list.",
+    "initial": "list1 = [1, 2, 3, 4, 5]\nnew_list = [0] * len(list1)\nj = len(list1)\nfor number in list1:\n    j = j - 1 \n    new_list[j] = number\nprint(new_list)\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+    "concepts":["While","Attribute","Call","Lt","AugAssign","Add","List","Int","Index","Assign"],
+    "order": 55
+  },
+  "ps_python_sum_of_two1": {
+    "description": "Checks whether the sum of two integers are equal as the third integer ",
+    "instructions": "Construct a function which determines whether one of the paraters is the sum of the two other parameters.",
+    "initial": "def sum_of_two(x, y, z):\n    if x + y == z $$toggle::and::or::not$$ x + z == y $$toggle::and::or::not$$ y + z == x:\n        return True\n    else:\n        return False\n\n",
+    "type": "UNITTEST",
+    "unittest": "\nimport unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(sum_of_two(2, 4, 6), True, \"function <code>sum_of_two(2, 4, 6)</code>.\")\n  def testTwo(self):\n    self.assertEqual(sum_of_two(1, 4, 0),False, \"function <code>sum_of_two(1, 4, 0)</code>.\") \n  def testThree(self):\n    self.assertEqual(sum_of_two(4, 1, 3),True, \"function <code>sum_of_two(4, 1, 3)</   code>.\")\n_test_result = myTests().main()\n" ,
+    "concepts": ["False","If","FunctionDef","Call","Or","Int","Assign","arg","Eq","Add","Return","True"],
+    "order": 56
+  },
+  "ps_python_sum_of_two2": {
+    "description": "Checks whether the sum of two integers are equal as the third integer ",
+    "instructions": "Construct a program which determines whether the value of one of variables x, y, and z is the sum of the values of the two other variables.",
+    "initial": "if x + y == z $$toggle::and::or::not$$ x + z == y $$toggle::and::or::not$$ y + z == x:\n    print(\"True\")\nelse:\n    print(\"False\")",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"x = 2\ny = 4\nz = 6 \", code : \"\", message :\"Testing with x = 2 and y = 4 and z = 6\", variables : { __output : \"True\n\" } },{ initcode : \"x = 1\ny = 4\nz = 0\", code : \"\", message : \"Testing with x = 1 and y = 4 and z = 0\", variables : { __output : \"False\n\" } }, { initcode : \"x = 4\ny = 1\nz = 3\", code : \"\", message : \"Testing with x=4 and y = 1 and z = 3\", variables : { __output : \"True\n\" } }]" ,
+    "concepts": ["False","If","FunctionDef","Call","Or","Int","Assign","arg","Eq","Add","Return","True"],
+    "order": 57
+  },
+  "ps_python_find_and_square1": {
+    "description": "Updating  elements to the new list",
+    "instructions": "Construct a function which finds even numbers from the list given as a parameter, calculates the square of each such number and adds the squares to a new list. The function should return the new list.",
+    "initial":  "def find_and_square(lst):\n    new_list = []\n    i = 0\n    while i < len(lst):\n        num = lst[i]\n        if num % 2 == 0:\n            new_list.append(num * num)\n        i += 1\n    return new_list\n",
+    "type": "UNITTEST",
+    "unittest": "\nimport unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(find_and_square([1, 2, 3, 4, 5]),[4, 16], \"function <code>find_and_square([1, 2, 3, 4, 5])</code>.\")\n  def testTwo(self):\n    self.assertEqual(find_and_square([1, 3, 17, 9]),[], \"function <code>find_and_square([1, 3, 17, 9])</code>.\") \n  def testThree(self):\n    self.assertEqual(find_and_square([]),[], \"function <code>find_and_square([])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Return","Int","Index","List","FunctionDef","Lt","Assign","While","Call","arg","Attribute","Mod","Mult","AugAssign","If","Add","Eq"],
+    "order": 58
+  },
+  "ps_python_find_and_square2": {
+    "description": "Updating required elements to the new list",
+    "instructions": "Construct a program which finds even numbers from the original list, calculates the square of each such number and adds the squares to a new list. The program should print the new list.",
+    "initial": "\nlist1 = [1, 2, 3, 4, 5]\nnew_list = []\ni = 0\nwhile i < len(list1):\n    num = list1[i]\n    if num % 2 == 0:\n        new_list.append(num * num)\n    i += 1\nprint(new_list)" ,
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"[4, 16]\n\" } }]",
+    "concepts": ["Return","Int","Index","List","FunctionDef","Lt","Assign","While","Call","arg","Attribute","Mod","Mult","AugAssign","If","Add","Eq"],
+    "order": 59
+  },
+  "ps_python_find_and_square3": {
+    "description": "Updating the elements to the new list",
+    "instructions": "Construct a function which finds even numbers from the list given as a parameter, calculates the square of each such number and adds the squares to a new list. The function should return the new list.",
+    "initial": "def find_and_square(lst):\n    new_list = []\n    for i in range(len(lst)):\n        num = lst[i]\n        if num % 2 == 0:\n            new_list.append(num * num)\n    return new_list\n" ,
+    "type": "UNITTEST",
+    "unittest": "\nimport unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(find_and_square([1, -2, 3, 4, 5]),[4, 16], \"function <code>find_and_square([1, -2, 3, 4, 5])</code>.\")\n  def testTwo(self):\n    self.assertEqual(find_and_square([1, 3, 17, 9]),[], \"function <code>find_and_square([1, 3, 17, 9])</code>.\") \n  def testThree(self):\n    self.assertEqual(find_and_square([]),[], \"function <code>find_and_square([])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Return","Int","Index","List","FunctionDef","Lt","Assign","While","Call","arg","Attribute","Mod","Mult","AugAssign","If","Add","Eq"],
+    "order": 60
+ },
+ "ps_python_find_and_square4": {
+   "description": "Updating the elements to the new list",
+   "instructions": "Construct a function which finds even numbers from the list given as a parameter, calculates the square of each such number and adds the squares to a new list. The function should return the new list.",
+   "initial": "def find_and_square(lst):\n    new_list = []\n    for i in lst:\n        num = i\n        if num % 2 == 0:\n            new_list.append(num * num)\n    return new_list\n",
+   "type": "UNITTEST",
+   "unittest": "\nimport unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(find_and_square([1, -2, 3, 4, 5]),[4, 16], \"function <code>find_and_square([1, -2, 3, 4, 5])</code>.\")\n  def testTwo(self):\n    self.assertEqual(find_and_square([1, 3, 17, 9]),[], \"function <code>find_and_square([1, 3, 17, 9])</code>.\") \n  def testThree(self):\n    self.assertEqual(find_and_square([]),[], \"function <code>find_and_square([])</   code>.\")\n_test_result = myTests().main()\n",
+   "concepts": ["Return","Int","Index","List","FunctionDef","Lt","Assign","While","Call","arg","Attribute","Mod","Mult","AugAssign","If","Add","Eq"],
+   "order": 61
+ },
+ "ps_python_find_and_square5": {
+   "description": "Updating required elements to the new list",
+   "instructions": "Construct a program which finds even numbers from the original list, calculates the square of each such number and adds the squares to a new list. The program should print the new list.",
+   "initial": "\nlist1 = [1, 2, 3, 4, 5]\nnew_list = []\nfor i in range(len(list1)):\n    num = list1[i]\n    if num % 2 == 0:\n        new_list.append(num * num)\nprint(new_list)" ,
+   "type": "VARTEST",
+   "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"[4, 16]\n\" } }]",
+   "concepts": ["Return","Int","Index","List","FunctionDef","Lt","Assign","While","Call","arg","Attribute","Mod","Mult","AugAssign","If","Add","Eq"],
+   "order": 62
+  },
+  "ps_python_find_and_square6": {
+    "description": "Updating required elements to the new list",
+    "instructions": "Construct a program which finds even numbers from the original list, calculates the square of each such number and adds the squares to a new list. The program should print the new list.",
+    "initial": "list1 = [1, 2, 3, 4, 5]\n    new_list = []\n    for i in list1:\n        num = i\n        if num % 2 == 0:\n            new_list.append(num * num)\n    print(new_list)\n" ,
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"[4, 16]\n\" } }]",
+    "concepts": ["Return","Int","Index","List","FunctionDef","Lt","Assign","While","Call","arg","Attribute","Mod","Mult","AugAssign","If","Add","Eq"],
+    "order": 63
+  },
+  "ps_python_easy_power1": {
+    "description": "power calculation",
+    "instructions": "Construct a function which takes the base and the exponent as parameters and returns the base raised to the exponent. Call the function to calculate 2 raised to the power of 5.",
+    "initial": "def power(base, exp):\n\n    result = 1\n    i = 1\n    while i $$toggle::<::>::<=::>=$$ exp:\n        result = result * base\n        i += 1\n\n    return result\n\nnew_num = power(2, 5)\nprint(new_num)\n",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(power(2, 5), 32, \"function <code>power(2,5))</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["And","Eq","If","LtE","Mult","False","While","Call","AugAssign","Add","Assign","Return","aßrg","Int","FunctionDef"],
+    "order": 64
+  },
+  "ps_python_easy_power2": {
+    "description": "power calculation",
+    "instructions": "Construct a program which calculates the base raised to the power of the non-negative exponent.",
+    "initial": "base = 2\nexp = 5\nif exp == 0 and base == 0 or exp < 0:\n    print(\"Error!\")\nelse:\n    result = 1\n    i = 1\n    while i <= exp:\n        result = result * base\n        i += 1\n    print(result)\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"32\n\" } }]",
+    "concepts": ["And","Eq","If","LtE","Mult","False","While","Call","AugAssign","Add","Assign","Return","arg","Int","FunctionDef"],
+    "order": 65
+  },
+  "ps_python_fast_power1": {
+    "description": "Calculating power ",
+    "instructions": "Construct a program which calculates the base raised to the power of the exponent.",
+    "initial": "base = 2\nexp = 5\ntemp = 1\nwhile exp > 0:\n    if exp % 2 == 0:\n        base = base * base\n        exp = exp // 2\n    else:\n        temp = base * temp\n        exp = exp - 1\nresult = temp\nprint(result)\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"base=2\nexp=5\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"32\n\" } }]",
+    "concepts": ["Assign","Float","Mult","Call","Int","FloorDiv","FunctionDef","Gt","Mod","Sub","While","Eq","If"],
+    "order": 66
+  },
+  "ps_python_fast_power2": {
+    "description": "Calculating power ",
+    "instructions": "Construct a function which calculates the power of a number. The function takes two integers as parameters (the base number and a non-negative exponent) and calculates the power.",
+    "initial": "\ndef power(base, exp):\n    temp = 1.0\n    while exp > 0:\n        if exp % 2 == 0:\n            base = base * base\n            exp = exp // 2\n        else:\n            temp = base * temp\n            exp = exp - 1\n    result = temp\n    return result\n",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(power(2,5),(32.0), \"function <code>power(2,5)</code>.\")\n  def testTwo(self):\n    self.assertEqual(power(3,4),(81.0), \"function <code>power(3,4)</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Sub","Eq","FloorDiv","Call","arg","If","Gt","FunctionDef","Assign","Return","Float","Mult","Mod","Int","While"],
+    "order": 67
+  },
+  "ps_python_power_with_loops1": {
+    "description": "Calculating power ",
+    "instructions": "Construct a function which takes a base and a non-negative exponent as parameters and calculates the base raised to the power of the exponent without using multiplication.",
+    "initial": "def power(base, exp):\n    if exp == 0:\n        return 1\n\n    result = base\n    temp = base\n\n    for i in range(1, exp):\n        for j in range(1, base):\n            result += temp\n        temp = result\n    return result\n\n",
+    "type": "UNITTEST",
+    "unittest":"import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(power(2,5),32, \"function <code>power(2,5)</code>.\")\n  def testTwo(self):\n    self.assertEqual(power(3,4),81, \"function <code>power(3,4)</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["If","Return","FunctionDef","Int","Add","For","Call","Eq","Assign","arg","AugAssign"],
+    "order": 68
+  },
+  "ps_python_power_with_loops2": {
+    "description": "Calculating power ",
+    "instructions": "Construct a program that calculates the base raised to the power of the non-negative exponent without using multiplication.",
+    "initial": "base = 2\nexp = 5\n\nif(exp == 0):\n    print(1)\n\nelse:\n    result = base\n    temp = base\n\n    for i in range(1, exp):\n        for j in range (1, base):\n            result += temp\n        temp = result\n    print(result)",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"base=2\nexp=5\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"32\n\" } }]",
+    "concepts": ["Return","Int","Assign","Call","AugAssign","If","Add","For","Eq"],
+    "order": 69
+  },
+  "ps_python_remove_dublicates": {
+    "description": "remove dublicates from the list ",
+    "instructions": "Construct a function which creates a new list where it stores all elements except the duplicates from the list given as a parameter. Finally, the function should return a new list.",
+    "initial": "def remove_dup(list_of_num):\n    new_list = []\n    for element in list_of_num:\n        if element not in new_list:\n            new_list.append(element)\n    return new_list\n",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(remove_dup([1, 2, 3, 4, 3, 2, 1]),[1, 2, 3, 4], \"function <code>remove_dup([1, 2, 3, 4, 3, 2, 1])</code>.\")\n  def testTwo(self):\n    self.assertEqual(remove_dup([]),[], \"function <code>remove_dup([]),[]</code>.\")\n  def testThree(self):\n    self.assertEqual(remove_dup([1,44,3,23,42,562,23,44,23,2,0,5,32,0,1]),[1, 44, 3, 23, 42, 562, 2, 0, 5, 32], \"function <code>find_and_multiply([])</   code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["Return","Int","Assign","Call","AugAssign","If","Add","For","Eq"],
+    "order": 70
+  },
+  "ps_python_remove_dublicates2": {
+    "description": "remove dublicates from the list ",
+    "instructions": "Construct a program which creates a new list where it stores all elements except the duplicates from the original list. Finally, the program should print the original list and the new list.",
+    "initial": "new_list = []\nfor element in old_list:\n    if element not in new_list:\n        new_list.append(element)\n\nprint(\"The original list:\", old_list)\nprint(\"The new list:\", new_list)",
+    "type": "SIMPLE",
+    "concepts": ["Return","Int","Assign","Call","AugAssign","If","Add","For","Eq"],
+    "order": 71
+  },
+  "ps_python_even_first1": {
+    "description": "Reorganize the list",
+    "instructions": "Construct a program which partition the original list of integers such that all even numbers come first and all odd numbers come after them.",
+    "initial": "list_num = [7, 2, 4, 1, 3, 5, 6, 8]\ni = 0\nj = len(list_num) - 1\nwhile i < j:\n    while i <= j and list_num[i] % 2 == 0:\n        i += 1\n    while i <= j and list_num[j] % 2 != 0:\n        j -= 1\n    if i < j:\n        temp = list_num[i]\n        list_num[i] = list_num[j]\n        list_num[j] = temp\n\nprint(list_num)\n\n\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"list_of_num= [7, 2, 4, 1, 3, 5, 6, 8]\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"[8, 2, 4, 6, 3, 5, 1, 7]\n\" } }]",
+    "concepts": ["Lt","Sub","Mod","Assign","While","Call","Index","NotEq","If","Add","AugAssign","List","Eq","Int"],
+    "order": 72
+  },
+  "ps_python_even_first2": {
+    "description": "Reorganize the list",
+    "instructions": "Construct a function which partition the original list of integers such that all even numbers come first and all odd numbers come after them.",
+    "initial": "def even_first(num_list):\n    i = 0\n    j = len(num_list) - 1\n    while i < j:\n        while i < j and num_list[i] % 2 == 0:\n            i += 1\n        while i < j and num_list[j] % 2 != 0:\n            j -= 1\n        if i < j:\n            temp = num_list[i]\n            num_list[i] = num_list[j]\n            num_list[j] = temp\n    return num_list\n",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(even_first([8, 4, 2, 5, 7, 3, 5]),[8, 4, 2, 5, 7, 3, 5], \"function <code>even_first([1, 2, 3, 4, 3, 2, 1])</code>.\")\n  def testTwo(self):\n    self.assertEqual(even_first([12,11,43,11,1,0, 3, 2, 5, 7, 4, 5]),[12, 4, 2, 0, 1, 11, 3, 43, 5, 7, 11, 5], \"function <code>even_first([12,11,43,11,1,0, 3, 2, 5, 7, 4, 5]</code>.\")\n  def testThree(self):\n    self.assertEqual(even_first([]), [], \"function <code>even_first([])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["FunctionDef","And","Assign","AugAssign","arg","Sub","Return","If","NotEq","Lt","Index","Eq","While","Add","Constant","Call","Mod"],
+    "order": 73
+  },
+  "ps_python_even_first3": {
+    "description": "Reorganize the list",
+    "instructions": "Construct a function which partition the list of integers given as a parameter such that all even numbers come first and all odd numbers come after them.",
+    "initial":  "def even_first(num_list):\n    result = []\n    odds = []\n    for n in num_list:\n        if n % 2 == 0:\n            result.append(n)\n        else:\n            odds.append(n)\n\n    for i in range(len(odds)):\n        result.append(odds[i])\n    return result",
+    "type": "UNITTEST",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(even_first([8, 4, 2, 5, 7, 3, 5]),[8, 4, 2, 5, 7, 3, 5], \"function <code>even_first([1, 2, 3, 4, 3, 2, 1])</code>.\")\n  def testTwo(self):\n    self.assertEqual(even_first([12,11,43,11,1,0, 3, 2, 5, 7, 4, 5]),[12, 0, 2, 4, 11, 43, 11, 1, 3, 5, 7, 5], \"function <code>even_first([12,11,43,11,1,0, 3, 2, 5, 7, 4, 5]</code>.\")\n  def testThree(self):\n    self.assertEqual(even_first([]), [], \"function <code>even_first([])</code>.\")\n_test_result = myTests().main()\n",
+    "concepts": ["FunctionDef","And","Assign","AugAssign","arg","Sub","Return","If","NotEq","Lt","Index","Eq","While","Add","Constant","Call","Mod"],
+    "order": 74
+  },
+  "ps_python_even_first4": {
+    "description": "Reorganize the list",
+    "instructions": "Construct a program which partition the original list of integers such that all even numbers come first and all odd numbers come after them.",
+    "initial": "lst = [8, 3, 2, 5, 7, 5, 6]\nresult = []\nodds = []\nfor n in lst:\n    if n % 2 == 0:\n        result.append(n)\n    else:\n        odds.append(n)\n\nfor i in range(len(odds)):\n    result.append(odds[i])\nprint(result)",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"list_of_num= [7, 2, 4, 1, 3, 5, 6, 8]\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"[8, 2, 6, 3, 5, 7, 5]\n\" } }]",
+    "concepts": ["Lt","Sub","Mod","Assign","While","Call","Index","NotEq","If","Add","AugAssign","List","Eq","Int"],
+    "order": 75
   }
 }
