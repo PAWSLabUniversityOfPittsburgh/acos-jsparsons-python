@@ -6,7 +6,7 @@
   "author": "Lassi Haaranen",
   "repository": {
     "type": "git",
-    "url": "https://github.com/acos-server/acos-jsparsons-python"
+    "url": "https://github.com/PAWSLabUniversityOfPittsburgh/acos-jsparsons-python"
   },
   "license": "MIT",
   "dependencies": {

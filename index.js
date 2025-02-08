@@ -13,23 +13,27 @@ JSPARSONSPython.initialize = function(req, params, handlers, cb) {
   var templateDir = baseDir + '/templates/';
   nj.configure(templateDir, { autoescape: false });
 
-  var initial = content[params.name].initial.replace(/\n/g,'\\n');
-  var instructions = content[params.name].instructions;
+  var parson_content = content[params.name]
 
-  var unitTestDiv;
+  var initial = parson_content.initial.replace(/\n/g,'\\n');
+  var instructions = parson_content.instructions;
+  var has_starter_code = parson_content.starter_code !==undefined
+  var constructed_lines = parson_content.constructed_lines ? parson_content.constructed_lines: []
+
   if(content[params.name].type === 'UNITTEST') {
     var unittests = content[params.name].unittest.replace(/\n/g,'\\n');
-    unitTestDiv = '<div id="unittest"></div>';
-    params.headContent += nj.render('head_unittest.html', {'initial': initial, 'unittests': unittests });
+    params.headContent += nj.render('head_unittest.html', {'initial': initial, 'unittests': unittests , 'constructed_lines': constructed_lines, 'has_starter_code':has_starter_code});
   } else if (content[params.name].type === 'VARTEST') {
     var vartests = content[params.name].vartests.replace(/\n/g, '\\n');
-    unitTestDiv = '<div id="unittest"></div>';
-    params.headContent += nj.render('head_vartest.html', {'initial': initial, 'vartests': vartests });
+    var starter_code = has_starter_code? parson_content.starter_code.replace(/\n/g, '\\n'):undefined;
+    params.headContent += nj.render('head_vartest.html', {'initial': initial, 'vartests': vartests , 'constructed_lines': constructed_lines, 'has_starter_code':has_starter_code, 'starter_code':starter_code});
   } else {
-    params.headContent += nj.render('head_simple.html', {'initial': initial });
+    params.headContent += nj.render('head_simple.html', {'initial': initial , 'constructed_lines': constructed_lines, 'has_starter_code':has_starter_code});
   }
 
-  params.bodyContent += nj.render('body.html', {'instructions': instructions, 'unittest': unitTestDiv});
+  params.bodyContent += nj.render('body.html', {'instructions': instructions, 'starter_code':parson_content.starter_code});
+
+  params.footer = nj.render('unittest.html');
   cb();
 };
 

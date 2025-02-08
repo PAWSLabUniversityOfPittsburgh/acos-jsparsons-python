@@ -1,11 +1,29 @@
 <script> 
   $(document).ready(function(){
-      
+
+    var has_starter_code = '{{has_starter_code}}' == 'true'
+    var starter_code = '{{starter_code}}'
     var vartests = {{vartests}};
+
+    if(has_starter_code) {
+        var editor = ace.edit("ace-editor", {
+        maxLines: Infinity,
+        wrap: true,
+        autoScrollEditorIntoView: true
+      });
+      editor.setTheme("ace/theme/xcode");
+      editor.getSession().setMode("ace/mode/python");
+      editor.setReadOnly(true);
+      vartests.forEach(e=> e.initcode = e.initcode.length==0 ? starter_code:e.initcode)
+    }
+      
+    
     parson = new ParsonsWidget({
       "sortableId": "sortable",
       "trashId": "sortableTrash",
       "vartests": vartests,
+      "constructed_lines": '{{constructed_lines}}',
+      "python3": true,
       "toggleTypeHandlers": {ab: ["<", ">"]}
     });
       

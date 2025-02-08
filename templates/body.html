@@ -1,4 +1,13 @@
-{{unittest}}
 <div id="instructions">
-	{{instructions}}
+	<div>
+		{{instructions}}
+	</div>
+	<hr>
+	{% if starter_code %}
+	<div id="ace-editor-parent">
+		<div id="ace-editor">{{starter_code}}</div>
+	</div>
+	{% endif %}
+
+	
 </div>

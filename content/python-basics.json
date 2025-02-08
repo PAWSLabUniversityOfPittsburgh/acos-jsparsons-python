@@ -39,187 +39,168 @@
       "order": 4
   },
   "ps_python_addition": {
-    "description": "python_addition",
+  "title": "python_addition",
     "instructions": "Construct a program that prints the value 8.",
     "initial": "first = 3\nfirst = first + 1\nfirst = first + first\nprint(first)",
     "description": "Practise ordering of lines to add to a correct number",
     "type": "SIMPLE",
-    "title": "",
     "concepts": ["Int", "Add", "Call", "Assign"],
     "order": 5
   },
   "ps_python_iteration_addition": {
-    "description": "python_iteration_addition",
+  "title": "python_iteration_addition",
     "instructions": "Construct a program that prints the value 8.",
     "description": "Creating a program with a while loop",
     "initial": "i = 0\nwhile i < 7:\n  i = i + 2\nprint(i)",
     "type": "SIMPLE",
-    "title": "",
     "concepts": ["Int", "Add", "Lt", "While", "Call", "Assign"],
     "order": 6
   },
   "ps_python_iteration_multiplication" : {
-    "description": "python_iteration_multiplication",
+  "title": "python_iteration_multiplication",
     "instructions": "Construct a program that prints values 1,2,4,8 and finally prints \"The end!\".",
     "initial": "value = 1\nwhile value < 9:\n  print(value)\n  value = value * 2\nprint(\"The end!\")",
     "type": "SIMPLE",
-    "title": "",
     "description": "Creating a program that compares a value in a loop",
     "concepts": ["Int", "Lt", "While", "Call", "Str", "Assign", "Mult"],
     "order": 7
   },
   "ps_python_calculate_function": {
-    "description": "python_calculate_function",
+  "title": "python_calculate_function",
     "instructions": "Define a function that returns the second value multiplied by two and added by the first value. The program should print 23 at the end.",
     "initial": "def calculate(first, second):\n  return second * 2 + first\nresult = calculate(3, 2)\nprint(calculate(result, result + 1))",
     "type": "SIMPLE",
-    "title": "",
     "description": "Creating and calling a function",
     "concepts": ["Return", "Int", "Add", "Call", "FunctionDef", "arg", "Assign", "Mult"],
     "order": 8
   },
   "ps_python_nested_calls": {
-    "description": "python_nested_calls",
+  "title": "python_nested_calls",
     "instructions": "First define a calculate function and then define double function (that returns the given value doubled). Then write a program that first prints out 20 and then 36.",
     "initial": "def calculate(first, second):\n  return second * 3 + first\ndef double(value):\n  return value * 2\nprint(double(double(5)))\nprint(calculate(double(3), 2 + calculate(5, 1)))",
     "type": "SIMPLE",
-    "title": "",
     "description": "Creating multiple functions and nested function calls",
     "concepts": ["Return", "Int", "Add", "Call", "FunctionDef", "arg", "Mult"],
     "order": 9
   },
   "ps_python_recursive_factorial": {
-    "description": "python_recursive_factorial",
+  "title": "python_recursive_factorial",
     "instructions": "Define a function that returns the factorial of a given positive integer.",
     "initial": "def factorial(n):\n  if n < 3:\n    return n\n  else:\n    return factorial(n-1) * n\n",
     "type": "SIMPLE",
-    "title": "",
     "description": "Creating a recursive function",
     "concepts": ["Return", "Sub", "Int", "Lt", "Call", "Mult", "arg", "FunctionDef", "If"],
     "order": 10
   },
   "ps_python_class_person": {
-    "description": "python_class_person",
+  "title": "python_class_person",
     "instructions": "Write a program that will print out \"Safiira. Nice to meet you!\"",
     "initial": "class Person:\n  def __init__(self, firstname, profession):\n    self.__name = firstname\n  def greet(self):\n    return self.__name + \". Nice to meet you!\"\nsafira = Person(\"Safiira\", \"biologist\")\nprint(safira.greet())",
     "type": "SIMPLE",
-    "title": "",
     "description": "Creating a class and using it",
     "concepts": ["Return", "Attribute", "ClassDef", "Add", "Call", "Str", "arg", "Assign", "FunctionDef"],
     "order": 11
   },
   "ps_python_modulo_is_even": {
-    "description": "python_modulo_is_even",
+  "title": "python_modulo_is_even",
     "instructions": "Construct a function that will return True if a given number is even, otherwise false.",
     "initial": "def is_even(number):\n  if number % 2 == 0:\n    return True\n  else:\n   return False",
     "type": "SIMPLE",
-    "title": "",
     "description": "Creating a function and using modulo",
     "concepts": ["Return", "Int", "arg", "Mod", "Eq", "FunctionDef", "If"],
     "order": 12
   },
   "ps_python_list_iteration_zoo": {
-    "description": "python_list_iteration_zoo",
+  "title": "python_list_iteration_zoo",
     "instructions": "Construct a program that prints out all the animals in the zoo-variable.",
     "initial": "zoo = [\"bear\", \"lion\", \"camel\"]\nfor animal in zoo:\n  print(animal)",
     "type": "SIMPLE",
-    "title": "",
     "description": "Iterating over a list",
     "concepts": ["For", "Call", "List", "Assign", "Str"],
     "order": 13
   },
   "ps_python_nested_lists_indexing": {
-    "description": "python_nested_lists_indexing",
+  "title": "python_nested_lists_indexing",
     "instructions": "Construct a program that first prints out [[1, 2, 3], [4, 5, 6]], then [4, 5, 6], and finally 6.",
     "initial": "some_list = [[1, 2, 3], [4, 5, 6]]\nprint(some_list)\nprint(some_list[1])\nprint(some_list[1][2])",
     "type": "SIMPLE",
-    "title": "",
     "description": "Practising list indexing",
     "concepts": ["Int", "Call", "List", "Assign", "Index"],
     "order": 14
   },
   "ps_python_string_indexing": {
-    "description": "Python string indexing",
+  "title": "Python string indexing",
     "instructions": "Construct a program that first prints out strings \"Py\", \"th\", \"o\", and \"n\"",
     "initial": "word = \"Python\"\nprint(word[:2])\nprint(word[2:4])\nprint(word[-2])\nprint(word[5:])\n",
     "type": "SIMPLE",
-    "title": "",
     "description": "Practising string slicing",
     "concepts": ["Index", "Slice", "Int", "Call", "USub", "Str", "Assign"],
     "order": 15
   },
   "ps_python_dict_keys": {
-    "description": "Items in storage",
+  "title": "Items in storage",
     "instructions": "storage-dictionary stores the amount of certain items in storage. Construct a program that prints out a list of all the items that there are more than one currently stored.",
     "initial": "storage = {\"cup\": 7, \"pen\": 0, \"lamp\": 4}\nfor item in storage:\n  if storage[item] > 0:\n    print(item)",
     "type": "SIMPLE",
-    "title": "",
     "description": "Iterating a dictionary",
     "concepts": ["Index", "Gt", "For", "Int", "Dict", "Str", "Call", "Assign", "If"],
     "order": 16
   },
   "ps_python_dict_values": {
-    "description": "dict values sum",
+  "title": "dict values sum",
     "instructions": "Construct a program that prints out how many items in total are in storage. You can assume that a dictionary called storage has already been initialized.",
     "initial": "total_items = 0\nfor item_count in storage.values():\n  total_items += item_count\nprint(total_items)",
     "type": "SIMPLE",
-    "title": "",
     "description": "Accessing dictionary values",
     "concepts": ["For", "Int", "Attribute", "AugAssign", "Add", "Call", "Assign"],
     "order": 17
   },
   "ps_python_list_to_dict": {
-    "description": "ps_python_list_to_dict",
+  "title": "ps_python_list_to_dict",
     "instructions": "Construct a program that prints out moo and oink, in that order.",
     "initial": "pairs = [(\"pig\", \"oink\"), (\"cow\", \"moo\")]\nanimals = dict(pairs)\nprint(animals.get(\"cow\"))\nprint(animals.get(\"pig\"))",
     "type": "SIMPLE",
-    "title": "",
     "description": "Converting a list of tuples into a dictionary",
     "concepts": ["Tuple", "Attribute", "List", "Call", "Str", "Assign"],
     "order": 18
   },
   "ps_python_dict_filter": {
-    "description": "ps_python_dict_filter",
+  "title": "ps_python_dict_filter",
     "instructions": "Construct a program that prints out all the circles that are larger than 5.",
     "initial": "circles = {\"blue\": 8, \"red\": 5, \"grey\": 7}\nfor circle in circles.items():\n  if(circle[1] > 5):\n    print(circle[0], \"circle is larger than\", 5)",
     "type": "SIMPLE",
-    "title": "",
     "description": "Iterating over dictionary items",
     "concepts": ["Index", "Gt", "For", "Int", "Attribute", "Call", "Str", "Dict", "Assign", "If"],
     "order": 19
   },
   "ps_python_bigger_than": {
-    "description": "ps_python_bigger_than",
+  "title": "ps_python_bigger_than",
     "instructions": "Assume that num1 and num2 have been initialized to numbers, so that number1 is bigger. Construct a program that correctly prints out that number1 is indeed bigger",
     "initial": "print(\"num1 is bigger:\", num1 > num2)\nprint(\"num1 is bigger:\", num1 < num2) #distractor",
     "type": "SIMPLE",
     "description": "Boolean statements as a function parameter",
-    "title": "",
     "concepts": ["Lt", "Gt", "Call", "Str"],
     "order": 20
   },
   "ps_python_conditionals_temperature": {
-    "description": "",
+  "title": "ps_python_conditionals_temperature",
     "instructions": "Construct a program that prints out 'Cold', when the temperature is 15 degrees celcius or below, 'Moderate' when it is over 15 degrees but no more than 25 degrees, and 'Hot' when the temperature is over 25 degrees.",
     "initial": "if temperature  $$toggle::<::>::<=::>=$$ $$toggle::15::25$$:\nif temperature  $$toggle::<::>::<=::>=$$ $$toggle::15::25$$:\nprint(\"Cold\")\nelif temperature $$toggle::<::>::<=::>=$$ $$toggle::15::25$$:\nprint(\"Moderate\")\nelse:\nprint(\"Hot\")\n",
     "vartests": "[{ initcode : \"temperature=10\", code : \"\", message : \"Temperature is under 15 degrees\", variables : { __output : \"Cold\n\" } },{ initcode : \"temperature=15\", code : \"\", message : \"Temperature is 15 degrees\", variables : { __output : \"Cold\n\" } },{ initcode : \"temperature=20\", code : \"\", message : \"Temperature is 15-25 degrees\", variables : { __output : \"Moderate\n\" } },{ initcode : \"temperature=25\", code : \"\", message : \"Temperature is 25 degrees\", variables : { __output : \"Moderate\n\" } },{ initcode : \"temperature=30\", code : \"\", message : \"Temperature is over 25 degrees\", variables : { __output : \"Hot\n\" } } ] ",
     "type": "VARTEST",
     "description": "Practising if...elif...else statements",
-    "title": "",
     "order": 21
   },
   "ps_python_printing_file_contents": {
-    "description": "",
     "instructions": "Construct a program that opens up a file and prints out each line of the file",
     "initial": "try:\nfile_to_read = open(filename, \"r\")\nrow = file_to_read.readline()\nwhile row != \"\":\nprint(row)\nrow = file_to_read.readline()\nfile_to_read.close()\nexcept OSError:\nprint(\"Error reading the file. The program execution ends.\")",
-    "vartests": "[{ initcode : \"class OSError():\n\tdef __init__(self,text):\n\t\tpass\nfile_opened = 'False'\nfilename = 'text.txt'\nclass MockFile:\n\tdef __init__(self):\n\t\tglobal file_opened\n\t\tfile_opened = 'True'\n\t\tself.content = ['Some','sample','text']\n\t\tself.counter = 0\n\tdef readline(self):\n\t\tif file_opened == 'False':\n\t\t\traise ValueError('I/O operation on closed file')\n\t\tif self.counter < len(self.content):\n\t\t\tline = self.content[self.counter] + '\\\n' \n\t\t\tself.counter = self.counter + 1\n\t\telse:\n\t\t\tline = ''\n\t\treturn line\n\tdef close(self):\n\t\tglobal file_opened\n\t\tfile_opened = 'False'\ndef open(open_file, mode):\n\tif open_file == 'text.txt':\n\t\treturn MockFile()\n\telse:\n\t\traise OSError('No such file or directory:' + str(open_file))\n\", code : \"\", message : \"Testing with filename set to 'text.txt'\", variables : { file_opened: 'False', __output : \"Some\n\nsample\n\ntext\n\n\" }  },{ initcode : \"class OSError():\n\tdef __init__(self,text):\n\t\tpass\nfilename = 'file_does_not_exist.txt'\nclass MockFile:\n\tdef __init__(self):\n\t\tself.content = ['Some','sample','text']\n\t\tself.counter = 0\n\tdef readline(self):\n\t\tif self.counter < len(self.content):\n\t\t\tline = self.content[self.counter] + '\\\n' \n\t\t\tself.counter = self.counter + 1\n\t\telse:\n\t\t\tline = ''\n\t\treturn line\n\tdef close(self):\n\t\tpass\ndef open(open_file, mode):\n\tif open_file == 'text.txt':\n\t\treturn MockFile()\n\telse:\n\t\traise OSError('No such file or directory:' + str(open_file))\n\", code : \"\", message : \"Testing with filename set to 'file_does_not_exist.txt'\", variables : { __output : \"Error reading the file. The program execution ends.\n\" }  }] ",
+  "vartests": "[{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\nfile_opened = 'False'\nfilename = 'text.txt'\nclass MockFile:\n\tdef __init__(self):\n\t\tglobal file_opened\n\t\tfile_opened = 'True'\n\t\tself.content = ['Some','sample','text']\n\t\tself.counter = 0\n\tdef readline(self):\n\t\tif file_opened == 'False':\n\t\t\traise ValueError('I/O operation on closed file')\n\t\tif self.counter < len(self.content):\n\t\t\tline = self.content[self.counter] + '\\\n' \n\t\t\tself.counter = self.counter + 1\n\t\telse:\n\t\t\tline = ''\n\t\treturn line\n\tdef close(self):\n\t\tglobal file_opened\n\t\tfile_opened = 'False'\ndef open(open_file, mode):\n\tif open_file == 'text.txt':\n\t\treturn MockFile()\n\telse:\n\t\traise OSError('No such file or directory:' + str(open_file))\n\", code : \"\", message : \"Testing with filename set to 'text.txt'\", variables : { file_opened: 'False', __output : \"Some\n\nsample\n\ntext\n\n\" }  },{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\nfilename = 'file_does_not_exist.txt'\nclass MockFile:\n\tdef __init__(self):\n\t\tself.content = ['Some','sample','text']\n\t\tself.counter = 0\n\tdef readline(self):\n\t\tif self.counter < len(self.content):\n\t\t\tline = self.content[self.counter] + '\\\n' \n\t\t\tself.counter = self.counter + 1\n\t\telse:\n\t\t\tline = ''\n\t\treturn line\n\tdef close(self):\n\t\tpass\ndef open(open_file, mode):\n\tif open_file == 'text.txt':\n\t\treturn MockFile()\n\telse:\n\t\traise OSError('No such file or directory:' + str(open_file))\n\", code : \"\", message : \"Testing with filename set to 'file_does_not_exist.txt'\", variables : { __output : \"Error reading the file. The program execution ends.\n\" }  }] ",
     "type": "VARTEST",
     "description": "Practising reading a file and printing its contents",
     "title": "",
     "order": 22
   },
   "ps_python_try_except": {
-    "description": "",
     "instructions": "Construct a program that prints out various Celcius temperatures in Fahrenheit.",
     "initial": "def centigrade_to_fahrenheit(temp):\n\tif temp < -273.15:\n\t\traise ValueError(\"Temperature below absolute zero!\") \n\treturn temp*1.8+32\ntry:\n\tprint(centigrade_to_fahrenheit(temp_to_convert))\nexcept ValueError:\n\tprint(\"Temperature set impossibly low!\")\n",
     "vartests": "[{ initcode : \"temp_to_convert = 20\" , message: \"Converting temperature of 20 centigrades\", variables : { __output : \"68.0\n\" } }, { initcode : \"temp_to_convert = -30\" , message: \"Converting temperature of -30 centigrades\", variables : { __output : \"-22.0\n\" } }, { initcode : \"temp_to_convert = -300\" , message: \"Converting temperature of -300 centigrades\", variables : { __output : \"Temperature set impossibly low!\n\" }  }] ",
@@ -230,7 +211,6 @@
     "order": 23
   },
   "ps_python_nested_ifs": {
-    "description": "",
     "instructions": "Construct a program that prints out a sentence depending on the time of day. Night is considered to be before 7 a.m., morning is from 7 a.m. until noon, afternoon is until 5 p.m. and rest is considered evening.",
     "initial": "if am_or_pm == \"am\":\n\tif hour < 7:\n\t\tprint(\"It is still night\")\n\telse:\n\t\tprint(\"It is morning\")\nelif am_or_pm == \"pm\":\n\tif hour <= 5:\n\t\tprint(\"It is afternoon\")\n\telse:\n\t\tprint(\"It is evening\")\n",
     "vartests": "[{ initcode : \"hour=4\nam_or_pm='am'\", code : \"\", message : \"4 a.m.\", variables : { __output : \"It is still night\n\" } },{ initcode : \"hour=8\nam_or_pm='am'\", code : \"\", message : \"8 a.m.\", variables : { __output : \"It is morning\n\" } },{ initcode : \"hour=2\nam_or_pm='pm'\", code : \"\", message : \"2 p.m.\", variables : { __output : \"It is afternoon\n\" } },{ initcode : \"hour=9\nam_or_pm='pm'\", code : \"\", message : \"9 p.m.\", variables : { __output : \"It is evening\n\" } }] ",
@@ -241,7 +221,6 @@
     "order": 24
   },
   "ps_python_comparisons": {
-    "description": "",
     "instructions": "Construct a program that prints out whether variable a is bigger than b.",
     "initial": "a_is_bigger = a $$toggle::<::>::<=::>=$$ b\nprint(a_is_bigger)\n",
     "vartests": "[{ initcode : \"a = 3\nb = 1\", code : \"\", message : \"\", variables : { __output : \"True\n\" } },{ initcode : \"a = 3\nb = 5\", code : \"\", message : \"\", variables : { __output : \"False\n\" } }, { initcode : \"a = 3\nb = 3\", code : \"\", message : \"\", variables : { __output : \"False\n\" } }] ",
@@ -251,7 +230,6 @@
     "order": 25
   },
   "ps_python_add_to_list": {
-    "description": "",
     "instructions": "Construct a function that adds a given amount to all items in a list.",
     "initial": "def add_to_list_items(alist, amount):\n\tfor x in range(len(alist)):\n\t\talist[x] += amount\n",
     "vartests": "[{ initcode : \"some_list = [0,1,5]\nnumber = 7\", code : \"add_to_list_items(some_list,number)\nprint(some_list)\", message : \"some_list = [0,1,5], calling add_to_list_items(some_list,7) and  printing some_list.\", variables : { __output: \"[7, 8, 12]\n\" } }] ",
@@ -262,7 +240,6 @@
     "order": 26
   },
   "ps_python_swap": {
-    "description": "",
     "instructions": "Construct a program that swaps the values of x and y variables.",
     "initial": "$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n$$toggle::x::y::tmp$$ = $$toggle::x::y::tmp$$\n",
     "vartests": "[{initcode: \"x = 0\ny=2\", code: \"\", message: \"Testing with initial variable values x = 0 and y = 2\", variables: {x: 2}},{initcode: \"x = 3\ny=4\n\", code: \"\", message: \"Testing with initial variable values x = 3 and y = 4\", variables: {x: 4, y: 3}}]",
@@ -272,7 +249,6 @@
     "order": 27
   },
   "ps_python_xor": {
-    "description": "",
     "instructions": "Construct a program that mimics a XOR gate (exclusive or). When input_a and input_b are the same, it should print out 0 and in other cases print out 1.",
     "initial": "if input_a == 1 $$toggle::and::or::not::$$ input_b == 1:\n\tprint($$toggle::0::1::$$)\nelif input_a == 0 $$toggle::and::or::not::$$ input_b == 0:\n\tprint($$toggle::0::1::$$)\nelse:\n\tprint($$toggle::0::1::$$)",
     "vartests": "[{ initcode : \"input_a = 0\ninput_b = 0\", code : \"\", message : \"Testing with input_a=0 and input_b=0\", variables : { __output : \"0\n\" } },{ initcode : \"input_a = 1\ninput_b = 1\", code : \"\", message : \"Testing with input_a=1 and input_b=1\", variables : { __output : \"0\n\" } }, { initcode : \"input_a = 1\ninput_b = 0\", code : \"\", message : \"Testing with input_a=1 and input_b=0\", variables : { __output : \"1\n\" } }, { initcode : \"input_a = 0\ninput_b = 1\", code : \"\", message : \"Testing with input_a=0 and input_b=1\", variables : { __output : \"1\n\" } }] ",
@@ -282,7 +258,6 @@
     "order": 28
   },
   "ps_python_for_odd_or_even": {
-    "description": "",
     "instructions": "Construct a program that goes through a list of numbers and prints out whether they are odd or even.",
     "initial": "for number in some_list:\n\tif number%2 == 0:\n\t\tprint(\"Even\")\n\telse:\n\t\tprint(\"Odd\")",
     "vartests": "[{ initcode : \"some_list = [4,2,9,5,3,12]\", code : \"\", message : \"Testing with some_list = [4,2,9,5,3,12]\", variables : { __output : \"Even\nEven\nOdd\nOdd\nOdd\nEven\n\" } }]",
@@ -293,7 +268,6 @@
     "order": 29
   },
   "ps_python_string_join": {
-    "description": "",
     "instructions": "Construct a program that prints out a sentence from a given list of words.",
     "initial": "words = [\"this\", \"is\", \"a\", \"sentence\"]\nsentence = \" \".join(words)\nprint(sentence.capitalize() + \".\")",
     "type": "VARTEST",
@@ -304,7 +278,6 @@
     "order": 30
   },
   "ps_python_try_adding": {
-    "description": "",
     "instructions": "Construct a function that adds two numbers together and handles non-numeric input.",
     "initial": "def add_two_numbers(a,b):\n\ttry:\n\t\treturn a + b\n\texcept TypeError:\n\t\tprint(\"Can only add numbers together.\")",
     "type": "VARTEST",
@@ -315,7 +288,6 @@
     "order": 31
   },
   "ps_python_class_point": {
-    "description": "",
     "instructions": "Construct a class Point which has a method to tell distance from another instance of Point.",
     "initial": "from math import sqrt\nclass Point:\n\tdef __init__(self, loc_x, loc_y):\n\t\tself.x = loc_x\n\t\tself.y = loc_y\n\tdef distance_from(self, another_point):\n\t\tx_dist = self.x - another_point.x\n\t\ty_dist = self.y - another_point.y\n\t\treturn sqrt(x_dist * x_dist + y_dist * y_dist)\n",
     "type": "VARTEST",
@@ -355,7 +327,7 @@
     "order": 35
   },
   "ps_python_3digit_combinations2": {
-    "descreption": "Construct a program that creates unique 3 digit combinations",
+  "description": "Construct a program that creates unique 3 digit combinations",
     "instructions": "Construct a program which creates and prints all three-digit combinations from numbers 1-4 such that each number appears at most once and the combinations are listed from the smallest to the greatest. The program must also output the total number of the combinations. For example, output 123, 124, 132 ... total: 24.",
     "initial": "amount = 0\ni = 0\nwhile i < 4:\n  i += 1\n  j = 0\n  while j < 4:\n    j += 1\n    k = 0\n    while k < 4:\n      k += 1\n      if k != i $$toggle::and::or::not::$$ k != j $$toggle::or::and::not::$$ i != j:\n          amount += 1\n          print(i, j, k)\n\nprint(\"The total number of 3 digit combinations is\", amount)\n\n\n",
     "type": "VARTEST",
@@ -364,7 +336,7 @@
     "order": 36
   },
   "ps_python_divsible_by1": {
-    "descreption": "Construct a program with multiple if-elif statements.",
+  "description": "Construct a program with multiple if-elif statements.",
     "instructions": "Construct a program which checks whether each of the integers in interval from 1 to 100 is divisible by 2, 5, or both.",
     "initial": "def divisible_by(num):\n    for i in range(1, num + 1):\n        if i % 2 == 0 and i % 5 == 0:\n            print(i, \"is divisible by 2 & 5\")\n        elif i % 5 == 0:\n            print(i, \"is only divisible by 5\")\n        elif i % 2 == 0:\n            print(i, \"is only divisible by 2\")\n        else:\n            print(i, \"is not divisible by 2 nor 5\")\n\ndivisible_by(100)",
     "type": "SIMPLE",
@@ -372,7 +344,7 @@
     "order": 37
   },
   "ps_python_divisible_by2": {
-    "descreption": "Construct a program with multiple if-elif statements.",
+  "description": "Construct a program with multiple if-elif statements.",
     "instructions": "Construct a program which checks whether each of the integers in interval from 1 to 100 is divisible by 2, 5, or both.",
     "initial":  "\nnum = 100\nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        print(i, \"is divisible by 2 & 5\")\n    elif i % 5 == 0:\n        print(i, \"is only divisible by 5\")\n    elif i % 2 == 0:\n        print(i, \"is only divisible by 2\")\n    else:           \n        print(i, \"is not divisible by 2 nor 5\")\n",
     "type": "SIMPLE",
@@ -380,7 +352,7 @@
     "order": 38
   },
   "ps_python_divisible_by3": {
-    "descreption": "Construct a program with multiple if-elif statements.",
+  "description": "Construct a program with multiple if-elif statements.",
     "instructions": "Construct a program which checks which of the integers in interval from 1 to 50 is divisible by only 2, only 5, or both. The program should store each group in its own list and finally print the lists in this order.",
     "initial":"\nnum = 50\nlist = []\nlist2= []\nlist3= []\n    \nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        list.append(i)\n    elif i % 2 == 0:\n        list2.append(i)\n    elif i % 5 == 0:\n        list3.append(i)\nprint(\"divisible by only 2:\")\nprint(list)\nprint(\"divisible by only 5:\")\nprint(list2)\nprint(\"divisible by 2 & 5:\")\nprint(list3)\n\n\n\n",
     "type": "VARTEST",
@@ -389,7 +361,7 @@
     "order": 39
   },
   "ps_python_freq_of_char1": {
-    "descreption": "Letter frequency",
+  "description": "Letter frequency",
     "instructions":"Construct a function which counts the frequency of each character in the string given as a parameter and returns a dictionary containing the fequencies.",
     "initial":  "def freq_of_char(str):\n    num_of_char = {}\n    for letter in str:\n        if letter in num_of_char:\n            num_of_char[letter] += 1\n        else:\n            num_of_char[letter] = 1\n    return num_of_char\n",
     "type": "UNITTEST",
@@ -398,7 +370,7 @@
     "order": 40
   },
   "ps_python_freq_of_char2": {
-    "descreption": "Letter frequency",
+  "description": "Letter frequency",
     "instructions": "Construct a program which counts the frequency of each character in string 'Summer' and stores it in a dictionary. Finally, the program should print the dictionary.",
     "initial": "str = \"Summer\"\nnum_of_char = {}\nfor letter in str:\n    if letter in num_of_char:\n        num_of_char[letter] += 1\n    else:\n        num_of_char[letter] = 1\n\nprint(num_of_char)",
     "type": "VARTEST",
@@ -710,5 +682,186 @@
     "vartests": "[{ initcode : \"list_of_num= [7, 2, 4, 1, 3, 5, 6, 8]\", code : \"\", message : \"Testing printed out content\", variables : { __output : \"[8, 2, 6, 3, 5, 7, 5]\n\" } }]",
     "concepts": ["Lt","Sub","Mod","Assign","While","Call","Index","NotEq","If","Add","AugAssign","List","Eq","Int"],
     "order": 75
+},
+  "ps_python_file_reading_third_element": {
+    "description": "Practising reading a file and printing the third element in each line of the file",
+    "instructions": "Construct a program that opens up a file and prints out the third element in each line of the file",
+    "initial": "try:\n\tmyfile=open(filename, \"r\")\n\tlinenum=1\n\tfor line in myfile:\n\t\twords = line.split()\n\t\tword=words[2]\n\t\tprint(\"The third word in line\",linenum,\"is\",word)\n\t\tlinenum+=1\nexcept OSError:\n\tprint(\"Error reading the file.\")\n",
+    "vartests": "[{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\nfilename = 'text.txt'\nclass MockFile:\n\tdef __init__(self):\n\t\tself.content = ['Jonh Alex 6 Sonia','Lily Roy Mike 7']\n\t\tself.counter = 0\n\tdef __iter__(self):\n\t\treturn self\n\tdef __next__(self):\n\t\tif self.counter < len(self.content):\n\t\t\tline = self.content[self.counter] + \\'\\\n\\'\n\t\t\tself.counter += 1\n\t\t\treturn line\n\t\traise StopIteration\ndef open(open_file, mode):\n\tif open_file == 'text.txt':\n\t\treturn MockFile()\n\telse:\n\t\traise OSError('No such file or directory:' + str(open_file))\n\", code : \"\", message : \"Testing with filename set to 'text.txt'\", variables : { __output : \"The third word in line 1 is 6\nThe third word in line 2 is Mike\n\" }  },{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\nfilename = 'file_does_not_exist.txt'\nclass MockFile:\n\tdef __init__(self):\n\t\tself.content = ['Ryan Alex Sonia 6','Lily Roy 7 Mike']\n\t\tself.counter = 0\n\tdef readline(self):\n\t\tif self.counter < len(self.content):\n\t\t\tline = self.content[self.counter] + '\\\n' \n\t\t\tself.counter = self.counter + 1\n\t\telse:\n\t\t\tline = ''\n\t\treturn line\n\tdef close(self):\n\t\tpass\ndef open(open_file, mode):\n\tif open_file == 'text.txt':\n\t\treturn MockFile()\n\telse:\n\t\traise OSError('No such file or directory:' + str(open_file))\n\", code : \"\", message : \"Testing with filename set to 'file_does_not_exist.txt'\", variables : { __output : \"Error reading the file.\n\" }  }] ",
+    "type": "VARTEST",
+    "title": "",
+    "order": 76,
+    "concepts": ["Constant","Try","Assign","ExceptHandler","Attribute","AugAssign","For","Index","Add","Call"]
+  },
+  "ps_python_math_library": {
+    "title": "Math Library",
+    "instructions": "Construct a program that accesses math.pi and check its type",
+    "description": "Practicing using math library and check a variable's type",
+    "initial": "import math\na = math.pi\nprint(type(a) is int)",
+    "type": "SIMPLE",
+    "concepts": ["Assign","Import","Attribute","alias","Call","Is"],
+    "order": 77
+  },
+  "ps_python_data_type": {
+    "title": "Data type",
+    "description": "Practicing manipulating variables and checking types",
+    "instructions": "Construct a program that calculate two variables' modulus and check the type of the modulus",
+    "initial": "a, b = 7.0, 5.0\nc = a % b\nprint(type(c))",
+    "type": "SIMPLE",
+    "concepts": ["Constant","Call","Mod","Assign"],
+    "order": 78
+  },
+  "ps_python_nested_whiles": {
+    "description": "Practicing nested while loops",
+    "instructions": "Construct a program to print an upside-down right triangle. Assume that 'size' is defined, and holds an integer value.",
+    "initial": "while size > 0:\n\tm=0\n\twhile m < size:\n\t\tprint(\"*\",end=\"\")\n\t\tm=m+1\n\tsize=size-1\n\tprint()",
+    "vartests": "[{ initcode : \"size=4\", code : \"\", message : \"4\", variables : { __output : \"****\n***\n**\n*\n\" } },{ initcode : \"size=3\", code : \"\", message : \"3\", variables : { __output : \"***\n**\n*\n\" } }]",
+    "type": "VARTEST",
+    "title": "",
+    "order": 79,
+    "concepts": ["Call","Lt","Gt","Constant","Sub","Assign","While","keyword","Add"]
+  },
+  "ps_python_nested_loop_2" : {
+    "name": "Nested loop 2",
+    "description": "Practicing using nested while and for loops",
+    "instructions": "Construct a program to print a multiplication chart given the chart_size. Assume that chart_size is set to a positive integer. ",
+    "initial": "j = 1\nwhile j < chart_size + 1:\n\tfor i in range(1, chart_size + 1):\n\t\tprint(i * j, \" \", end = \"\")\n\tprint()\n\tj += 1",
+    "order": 79,
+    "vartests": "[{ initcode : \"chart_size = 2\", code : \"\", message : \"chart_size = 2\", variables : { __output : \"1  2  \n2  4  \n\" } },{ initcode : \"chart_size = 3\", code : \"\", message : \"chart_size = 3\", variables : { __output : \"1  2  3  \n2  4  6  \n3  6  9  \n\" } }]",
+    "concepts": ["Call","Constant","For","keyword","Mult"],
+    "type": "VARTEST"
+   },
+  "ps_python_class_inheritance": {
+    "description": "Practicing class inheritance",
+    "instructions": "Construct a program using inheritance of classes to display a student’s name and score. Consider student as an instance of class Score. ",
+    "initial": "class Student():\n\tdef __init__(self, name):\n\t\tself.name=name\n\tdef getName(self):\n\t\treturn self.name\nclass Score(Student):\n\tdef __init__(self, name, score):\n\t\tself.score=score\n\t\tStudent.__init__(self,name)\n\tdef getScore(self):\n\t\treturn self.score",
+    "vartests": "[{ initcode : \"\", code : \"student_score = Score('John', 85)\nprint(student_score.getName(),student_score.getScore())\", message : \"student_score=Score('John', 85)<br/>print(student_score.getName(), student_score.getScore())\", variables : { __output : \"John 85\n\" } },{ initcode : \"\", code : \"student_score = Score('Sara', 99)\nprint(student_score.getName(),student_score.getScore())\", message : \"student_score=Score('Sara', 99)<br/>print(student_score.getName(), student_score.getScore())\", variables : { __output : \"Sara 99\n\" } }]",
+    "type": "VARTEST",
+    "concepts": ["Attribute","FunctionDef","Constant","Return","arg","Call","ClassDef","Assign"]
+   },
+   "ps_python_print_specific_element": {
+    "name": "Print specific element",
+    "description": "Dictionary manipulation.",
+    "instructions": "Construct a program that prints a blue Toyota car.",
+    "initial":  "car = cardict[\"brand\"]\ncolor = cardict[\"colors\"]\nprint(\"The car\"s brand is\", car[2],\"and it is\",color[2] )",
+    "starter_code":"cardict = {\"brand\": [\"Ford\",\"Lexis\",\"Toyota\"],\n\t\"electric\": [False, True],\n\t\"year\": [2020, 2021, 2019],\n\t\"colors\": [\"red\", \"white\", \"blue\"]}\n",
+    "type": "SIMPLE",
+    "concepts": ["List","Assign","Constant","Index","Call","Dict"]
+   },
+   "ps_python_calculation_in_dictionary": {
+    "name": "Calculation in a dictionary",
+    "description": "Dictionary calculations",
+    "instructions": "Construct  a program that calculates each student’s average score by using `studentdict` dictionary that is already defined as follows:",
+    "initial": "for item in studentdict.items():\n\tname=item[0]\n\tscores=item[1]\n\ttotal=0\n\tfor score in scores:\n\t\ttotal+=score\n\tave = total/len(scores)\n\tprint(\"The average score of\",name, \"is\",ave)",
+    "starter_code": "studentdict = {\"Lily\": [90,100,100,85],\n\t\"Anna\": [88,87,99,100]}\n",
+    "type": "VARTEST",
+    "vartests": "[{ initcode : \"\", code : \"\", message : \"studentdict = {\\\"Lily\\\": [90,100,100,85],<br/>   \\\"Anna\\\": [88,87,99,100]}\", variables : { __output : \"The average score of Lily is 93.75\nThe average score of Anna is 93.5\n\" } },{ initcode : \"studentdict = {\\\"Mark\\\": [70,75,80],\n\t\\\"Susan\\\": [80,82,84,86,88]}\n\", code : \"\", message : \"studentdict = {\\\"Mark\\\": [70,75,80],<br/>   \\\"Susan\\\": [80,82,84,86,88]}\", variables : { __output : \"The average score of Mark is 75.0\nThe average score of Susan is 84.0\n\" } },]"
+   },
+   "ps_python_add_to_list_2": {
+    "name": "Add to list 2",
+    "description": "List values and references.",
+    "instructions": "Construct a function that add k values to the given list. The added values is k's increment (increment by 1) in each iteration.",
+    "initial": "def add(alist,k):\n\tfor i in range(k):\n\t\talist.append(k)\n\t\tk=k+1\n\treturn alist",
+    "unittest": "import unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(add([1, 2, 3, 4],5),[1, 2, 3, 4, 5, 6, 7, 8, 9], \"function <code>even_first([1, 2, 3, 4, 3, 2, 1])</code>.\")\n  def testTwo(self):\n    self.assertEqual(add([1, 2, 3, 4],5),[1, 2, 3, 4, 5, 6, 7, 8, 9], \"function <code>even_first([12,11,43,11,1,0, 3, 2, 5, 7, 4, 5]</code>.\")\n_test_result = myTests().main()\n",
+    "type": "UNITTEST",
+    "concepts": ["Constant","Add","For","Call","FunctionDef","Return","Attribute","arg","Assign"]
+   },
+   "ps_python_search_min_index": {
+    "description": "Practicing searching the index of the min element",
+    "instructions": "Construct a program that finds the index of the minimum element in a list. num_list is a test case where you need to find the min index from. The program then needs to print the index of the minimum element.",
+    "initial": "index_min = 0\nfor index in range(1,len(num_list)):\n\tif (num_list[index] < num_list[index_min]):\n\t\tindex_min = index\nprint(index_min)",
+    "vartests": "[{ initcode : \"num_list=[5, -30, 20]\", code : \"\", message : \"[5, -30, 20]\", variables : { __output : \"1\n\" } },{ initcode : \"num_list=[1, 5, 2, 4, -1]\", code : \"\", message : \"[1, 5, 2, 4, -1]\", variables : { __output : \"4\n\" } }]",
+    "type": "VARTEST",
+    "title": "Index of Min Element",
+    "order": 77,
+    "concepts": ["Assign","Constant","For","Lt","If","Call","Index"]
+   },
+   "ps_python_search_min_max_index": {
+    "description": "Practicing searching the index of the min and max elements",
+    "instructions": "Construct a program that finds the indexes of both the max and min elements in a list. num_list is a test case where you need to find the min and max indexes from. The program then needs to print the index of the minimum and the maximum elements. This program does not need to consider duplicate elements.",
+    "initial": "index_min = 0\nindex_max = 0\nfor index in range(1, len(num_list)):\n\tif num_list[index] < num_list[index_min]:\n\t\tindex_min = index\n\tif num_list[index] > num_list[index_max]:\n\t\tindex_max = index\nprint(index_min, index_max)",
+    "vartests": "[{ initcode : \"num_list = [5, 20, -30, 0, 5, 200]\", code : \"\", message : \"[5, 20, -30, 0, 5, 200]\", variables : { __output : \"2 5\n\" } },{ initcode : \"num_list = [0, 7, -1, -30, 9]\", code : \"\", message : \"[0, 7, -1, -30, 9]\", variables : { __output : \"3 4\n\" } }]",
+    "type": "VARTEST",
+    "title": "",
+    "order": 77,
+    "concepts": ["For","Gt","Assign","Index","Constant","Lt","Call","If"]
+   },
+   "ps_python_stack": {
+    "name": "Stack",
+    "description": "Construct a program that creates a Stack Structure",
+    "instructions": "Construct a program that creates two functions in a  Stack Structure. The first one is \"push\" function and the second one is \"pop\" function. Your pop function should also check if the current stack is empty. is_empty() is a predefined function.",
+    "initial": "def push(self, item):\n\tself.items.insert(0, item)\ndef pop(self):\n\tif self.is_empty():\n\t\tprint(\"error stack is empty\")\n\telse:\n\t\treturn self.items.pop(0)",
+    "type": "SIMPLE",
+    "concepts": ["arg","FunctionDef","Return","Constant","Call","Attribute","If"]
+    },
+    "ps_python_queue": {
+      "name": "Queue",
+      "description": "Construct a function that uses Queue Structure",
+      "instructions": "Construct a function that uses Queue Structure to solve a Josephus problem that removes the kth element in a given list and returns the last left element. All Queue's functions are predefined (is_empty(), enqueue() and dequeue()). Your function should also return a \"The list is empty\" message if the given list is empty.",
+      "initial":"def circle(k,name_list):\n\tq = Queue()\n\tif not q.is_empty():\n\t\tfor i in range(len(name_list)):\n\t\t\tq.enqueue(name_list[i])\n\t\ti = 1\n\t\twhile q.size()!=1:\n\t\t\ttemp=q.dequeue()\n\t\t\tif i != k+1:\n\t\t\t\tq.enqueue(temp)\n\t\t\telse:\n\t\t\t\ti = 0\n\t\t\ti += 1\n\telse:\n\t\treturn (\\'the list is empty!\\')\n\treturn q.dequeue()",
+      "type": "SIMPLE",
+      "concepts": ["Attribute","NotEq","AugAssign","While","FunctionDef","Not","Index","Add","arg","Return","Call","Constant","Assign","If","For"]
+    },
+    "ps_python_linked_list_traversal": {
+      "name": "Linked list traversal",
+      "description": "Construct a function that traverse a linked list",
+      "instructions": "Construct a function that prints all elements of a Doubly Linked List in forwards and then reverse order.<br/>DoublyLinkedList class implementation is given below.",
+      "starter_code": "class Node:\n  def __init__(self, data):\n    self.data = data\n    self.next = None\n    self.prev = None\nclass DoublyLinkedList:\n  def __init__(self):\n    self.head = None\n\n  def push(self, new_data):\n    new_node = Node(new_data)\n    new_node.next = self.head\n    if self.head is not None:\n      self.head.prev = new_node\n    self.head = new_node\n",
+      "initial": "def traverse_list(doubly_linked_list):\n  current = doubly_linked_list.head\n  while current:\n    print(current.data, end=\" \")\n    last = current\n    current = current.next\n  while last:\n    print(last.data, end=\" \")\n    last = last.prev",
+      "vartests": "[{ initcode : \"\", code : \"doubly_linked_list = DoublyLinkedList()\ndoubly_linked_list.push(\\\"world\\\")\ndoubly_linked_list.push(\\\"hello\\\")\ntraverse_list(doubly_linked_list)\n\", message : \"doubly_linked_list = DoublyLinkedList()<br/>doubly_linked_list.push(\\\"world\\\")<br/>doubly_linked_list.push(\\\"hello\\\")<br/>traverse_list(doubly_linked_list)\n\", variables : { __output : \"hello world world hello \" } },{ initcode : \"\", code : \"doubly_linked_list = DoublyLinkedList()\ndoubly_linked_list.push(4)\ndoubly_linked_list.push(6)\ndoubly_linked_list.push(8)\ntraverse_list(doubly_linked_list)\n\", message : \"doubly_linked_list = DoublyLinkedList()<br/>doubly_linked_list.push(4)<br/>doubly_linked_list.push(6)<br/>doubly_linked_list.push(8)<br/>traverse_list(doubly_linked_list)\n\", variables : { __output : \"8 6 4 4 6 8 \" } }]",
+      "type": "VARTEST",
+      "concepts": ["arg","Attribute","keyword","Call","Constant","FunctionDef","Assign","While"]
+    },
+    "ps_python_linked_list_size": {
+      "name": "Check linked list size",
+      "description": "Construct a function that checks the size of a linked list",
+      "instructions": "Construct a function that calculates the number of elements in a singly linked list.<br/>LinkedList class implementation is given below.",
+      "starter_code": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    def push(self, new):\n        new_node = Node(new)\n        new_node.next = self.head\n        self.head = new_node\n",
+      "initial":"def get_size(linked_list):\n\tcount = 0\n\ttemp = linked_list.head\n\twhile temp:\n\t\tcount = count + 1\n\t\ttemp = temp.next\n\treturn count",
+      "vartests": "[{ initcode : \"\", code : \"linked_list = LinkedList()\nlinked_list.push(1)\nlinked_list.push(3)\nlinked_list.push(3)\nlinked_list.push(7)\nprint(get_size(linked_list))\", message : \"linked_list = LinkedList()<br/>linked_list.push(1)<br/>linked_list.push(3)<br/>linked_list.push(3)<br/>linked_list.push(7)<br/>print(get_size(linked_list))\", variables : { __output : \"4\n\" } },{ initcode : \"\", code : \"linked_list = LinkedList()\nprint(get_size(linked_list))\n\", message : \"linked_list = LinkedList()<br/>print(get_size(linked_list))\n\", variables : { __output : \"0\n\" } }]",
+      "type": "VARTEST",
+      "concepts": ["While","Constant","Attribute","FunctionDef","Assign","Add","Return","arg"]
+    },
+    "ps_python_merge_sort": {
+      "name": "Merge Sorting",
+      "description": "Construct a function that sorts a numeric array using Merge Sort.",
+      "instructions": "Construct a merge function that recursively splits a numeric array and takes a list as a parameter called data.<br/>Consider that merge_sort() function is already defined and given below.",
+      "initial": "def merge(data):\n\tif len(data) <= 1:\n\t\treturn data\n\tmiddle = len(data)//2\n\tleft = merge(data[:middle])\n\tright = merge(data[middle:])\n\treturn merge_sort(left, right)",
+      "starter_code":"def merge_sort(left, right):\n\tresult = []\n\ti, j = 0, 0\n\twhile i < len(left) and j < len(right):\n\t\tif left[i] <= right[j]:\n\t\t\tresult.append(left[i])\n\t\t\ti += 1\n\t\telse:\n\t\t\tresult.append(right[j])\n\t\t\tj += 1\n\tresult += left[i:]\n\tresult += right[j:]\n\treturn result",
+      "vartests": "[{ initcode : \"\", code : \"print(merge([5, -1, 3, 4]))\n\", message : \"print(merge([5, -1, 3, 4]))\", variables : { __output : \"[-1, 3, 4, 5]\n\" } },{ initcode : \"\", code : \"print(merge([5, 9, -10, -1, 0, 12]))\n\", message : \"print(merge([5, 9, -10, -1, 0, 12]))\", variables : { __output : \"[-10, -1, 0, 5, 9, 12]\n\"} }]",
+      "type": "VARTEST",
+      "concepts": ["LtE","Constant","Call","Return","Assign","FloorDiv","FunctionDef","If","arg","Slice"]
+    },
+    "ps_python_quick_sorting" : {
+      "description": "Practicing quick sort algorithm",
+      "instructions": "Construct a function that implements quick sort algorithm. The partition() function has been pre defined and displayed below.<br/>Consider data is a list, first is the first element's index and last is the last element's index",
+      "initial": "def quick_sort(data, first, last):\n\tif first < last:\n\t\tpivot = partition(data, first, last)\n\t\tquick_sort(data, first, pivot-1)\n\t\tquick_sort(data, pivot+1, last)\n\treturn data",
+      "starter_code": "def partition(data, first, last):\n\tpivot_value = data[first]\n\tleft_mark = first+1\n\tright_mark = last\n\tdone = False\n\twhile not done:\n\t\twhile left_mark <= right_mark and data[left_mark] <= pivot_value:\n\t\t\tleft_mark = left_mark + 1\n\t\t\twhile data[right_mark] >= pivot_value:\n\t\t\t\tright_mark = right_mark-1\n\t\t\tif right_mark < left_mark:\n\t\t\t\tdone = True\n\t\t\telse:\n\t\t\t\ttemp = data[left_mark]\n\t\t\t\tdata[left_mark] = data[right_mark]\n\t\t\t\tdata[right_mark] = temp\n\ttemp = data[first]\n\tdata[first] = data[right_mark]\n\tdata[right_mark] = temp\n\treturn right_mark",
+      "vartests": "[{ initcode : \"\", code : \"print(quick_sort([5, -1, 3, 4], 0, 3))\n\", message : \"print(quick_sort([5, -1, 3, 4], 0, 3))\", variables : { __output : \"[-1, 3, 4, 5]\n\" } }]",
+      "type": "VARTEST",
+      "concepts": ["Lt","Sub","Return","arg","If","FunctionDef","Assign","Constant","Add","Call"]
+     },      
+    "ps_python_tree_inorder_traversal": {
+      "name": "Tree",
+      "description": "Construct an inorder traversal function",
+      "instructions": "Construct an inorder traversal function that recursively traverse a tree from left node, root node and right node. We store the traversed tree in a list called res=[]. The traversal function is inside of the tree class. Consider the tree class has been predefined.",
+      "initial": "def inorder_traversal(self, root):\n\tres = []\n\tif root:\n\t\tres = self.inorder_traversal(root.left)\n\t\tres.append(root.data)\n\t\tres = res + self.inorder_traversal(root.right)\n\treturn res",
+      "type": "SIMPLE",
+      "concepts": ["Attribute","Add","Assign","List","arg","If","FunctionDef","Return","Call"]
+    },
+    "ps_python_tree_preorder_traversal": {
+      "name": "Tree",
+      "description": "Construct a preorder traversal function",
+      "instructions": "Construct a preorder traversal function that recursively traverse a tree from root node, left node and right node. We store the traversed tree in a list called res=[]. The traversal function is inside of the tree class. Consider the tree class has been predefined.",
+      "initial": "def preorder_traversal(self, root):\n\tres = []\n\tif root:\n\t\tres.append(root.data)\n\t\tres = res + self.preorder_traversal(root.left)\n\t\tres = res + self.preorder_traversal(root.right)\n\treturn res",
+      "type": "SIMPLE",
+      "concepts": ["Add","If","Return","Attribute","Call","FunctionDef","List","arg","Assign"]
+    },
+    "ps_csedpad_java_tallest_person": {
+      "name": "Tree",
+      "description": "Find the tallest among three individuals whose heights are given.",
+      "instructions": "Find the tallest among three individuals whose heights are given.",
+      "initial": "public class TallestPerson{\n\tpublic static void main(String[] args) {\n\t\tint Mary = 140, Lisa = 150, Rose = 140;\n\n\t\tif( Mary >= Lisa && Mary >= Rose)\n\t\t\tSystem.out.println(\" Mary is the tallest\");\n\t\telse if (Lisa >= Mary && Lisa >= Rose)\n\t\t\tSystem.out.println(\"Lisa is the tallest\");\n\t\telse\n\t\t\tSystem.out.println(\"Rose is the tallest\");\n\t}\n}",
+      "type": "SIMPLE"
   }
 }

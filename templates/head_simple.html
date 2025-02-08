@@ -1,10 +1,25 @@
 <script> 
   $(document).ready(function(){
+
+    var has_starter_code = '{{has_starter_code}}' == 'true'
+
+    if(has_starter_code) {
+        var editor = ace.edit("ace-editor", {
+        maxLines: Infinity,
+        wrap: true,
+        autoScrollEditorIntoView: true
+      });
+      editor.setTheme("ace/theme/xcode");
+      editor.getSession().setMode("ace/mode/python");
+      editor.setReadOnly(true);
+    }
       
     parson = new ParsonsWidget({
       "sortableId": "sortable",
       "trashId": "sortableTrash",
       "max_wrong_lines": 1,
+      "constructed_lines": '{{constructed_lines}}',
+      "python3": true,
       "feedback_cb" : function(){ }
     });
       
