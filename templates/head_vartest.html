@@ -33,6 +33,7 @@
     $("#newInstanceLink").click(function(event){
        event.preventDefault();
        parson.shuffleLines();
+       $('#unittest').html('');
     });
     
     $("#feedbackLink").click(function(event){
@@ -41,7 +42,7 @@
       var fb = parson.getFeedback();
       parsonsGrade(fb);
       displayErrors(fb);
-      $("#unittest").html("<h2>Feedback from testing your program:</h2>" + fb.feedback);
+      $("#unittest").html("<h3>Feedback from testing your program:</h3>" + fb.feedback);
       if (fb.success) { display_feedback("Good, you solved the assignment!"); }      
     });
 
