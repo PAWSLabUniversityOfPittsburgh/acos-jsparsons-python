@@ -43,7 +43,8 @@
       parsonsGrade(fb);
       displayErrors(fb);
       $("#unittest").html("<h3>Feedback from testing your program:</h3>" + fb.feedback);
-      if (fb.success) { display_feedback("Good, you solved the assignment!"); }      
+      if (fb.success) { display_feedback("Good, you solved this problem!"); }      
+      resizePostMessage();
     });
 
   });

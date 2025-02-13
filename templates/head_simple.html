@@ -38,6 +38,8 @@
       var fb = parson.getFeedback();
       parsonsGrade(fb);
       displayErrors(fb);
+      if (fb.length === 0) { showDialog("Feedback","Good, you solved this problem!"); }      
+      resizePostMessage();
     });
 
   });
