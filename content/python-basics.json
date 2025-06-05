@@ -863,5 +863,1834 @@
       "instructions": "Find the tallest among three individuals whose heights are given.",
       "initial": "public class TallestPerson{\n\tpublic static void main(String[] args) {\n\t\tint Mary = 140, Lisa = 150, Rose = 140;\n\n\t\tif( Mary >= Lisa && Mary >= Rose)\n\t\t\tSystem.out.println(\" Mary is the tallest\");\n\t\telse if (Lisa >= Mary && Lisa >= Rose)\n\t\t\tSystem.out.println(\"Lisa is the tallest\");\n\t\telse\n\t\t\tSystem.out.println(\"Rose is the tallest\");\n\t}\n}",
       "type": "SIMPLE"
-  }
+  },
+    "ps_hello_es": {
+      "initial": "print(\"hola\")\nprint(\"mundo\")",
+      "unittest": "",
+      "instructions": "Construye un programa que imprima hola y mundo en lineas separadas.",
+      "type": "SIMPLE",
+      "title": "",
+      "description": "Printing hello world",
+      "concepts": [
+        "Call",
+        "Str"
+      ],
+      "order": 1
+    },
+    "ps_simple_function_es": {
+      "initial": "def funcion():\n\tprint(\"Hola funciones!\")\nfuncion()",
+      "unittest": "",
+      "instructions": "Construye un programa que imprima Hola funciones.",
+      "description": "Creating a function that prints hello world",
+      "type": "SIMPLE",
+      "title": "",
+      "concepts": [
+        "Call",
+        "Str",
+        "FunctionDef"
+      ],
+      "order": 2
+    },
+    "ps_simple_params_es": {
+      "initial": "def sumar_dos(numero):\n\treturn numero+2\nprint(sumar_dos(1))",
+      "unittest": "",
+      "instructions": "Construye un programa que imprima 3",
+      "type": "SIMPLE",
+      "description": "Creating a function that takes a number, adds two to it, and returns it",
+      "title": "",
+      "concepts": [
+        "Return",
+        "Int",
+        "Add",
+        "Call",
+        "arg",
+        "FunctionDef"
+      ],
+      "order": 3
+    },
+    "ps_return_bigger_or_none_es": {
+      "initial": "pass\ndef devolver_mayor_o_none(a,b):\nreturn a\nif a <span class=\"jsparson-toggle\" data-type=\"ab\"></span> b:\nreturn b\nelif a <span class=\"jsparson-toggle\" data-type=\"ab\"></span> b:\nreturn None",
+      "unittest": "\nimport unittestparson\nclass myTests(unittestparson.unittest):\n  def testOne(self):\n    self.assertEqual(devolver_mayor_o_none(1,2),2, \"function <code>devolver_mayor(1, 2)</code>.\")\n  def testTwo(self):\n    self.assertEqual(devolver_mayor_o_none(2,1),2, \"function <code>devolver_mayor(2, 1)</code>.\")\n  def testThree(self):\n    self.assertEqual(devolver_mayor_o_none(2,2),None, \"function <code>devolver_mayor(2, 2)</code>.\")\n_test_result = myTests().main()\n",
+      "description": "Creating a function that returns a bigger value out of two numbers",
+      "instructions": "Construye una funcion que devuelva el valor mayor de los argumentos dados. Si a y b son iguales, debe devolver None.",
+      "type": "UNITTEST",
+      "title": "",
+      "order": 4
+    },
+    "ps_python_addition_es": {
+      "title": "python_addition",
+      "instructions": "Construye un programa que imprima el valor 8.",
+      "initial": "primero = 3\nprimero = primero + 1\nprimero = primero + primero\nprint(primero)",
+      "description": "Practise ordering of lines to add to a correct number",
+      "type": "SIMPLE",
+      "concepts": [
+        "Int",
+        "Add",
+        "Call",
+        "Assign"
+      ],
+      "order": 5
+    },
+    "ps_python_iteration_addition_es": {
+      "title": "python_iteration_addition",
+      "instructions": "Construye un programa que imprima el valor 8.",
+      "description": "Creating a program with a while loop",
+      "initial": "i = 0\nwhile i < 7:\n  i = i + 2\nprint(i)",
+      "type": "SIMPLE",
+      "concepts": [
+        "Int",
+        "Add",
+        "Lt",
+        "While",
+        "Call",
+        "Assign"
+      ],
+      "order": 6
+    },
+    "ps_python_iteration_multiplication_es": {
+      "title": "python_iteration_multiplication",
+      "instructions": "Construye un programa que imprima los valores 1,2,4,8 y finalmente imprima \"El fin!\".",
+      "initial": "valor = 1\nwhile valor < 9:\n  print(valor)\n  valor = valor * 2\nprint(\"El fin!\")",
+      "type": "SIMPLE",
+      "description": "Creating a program that compares a value in a loop",
+      "concepts": [
+        "Int",
+        "Lt",
+        "While",
+        "Call",
+        "Str",
+        "Assign",
+        "Mult"
+      ],
+      "order": 7
+    },
+    "ps_python_calculate_function_es": {
+      "title": "python_calculate_function",
+      "instructions": "Define una funcion que devuelva el segundo valor multiplicado por dos y sumado al primer valor. El programa debe imprimir 23 al final.",
+      "initial": "def calcular(primero, segundo):\n  return segundo * 2 + primero\nresultado = calcular(3, 2)\nprint(calcular(resultado, resultado + 1))",
+      "type": "SIMPLE",
+      "description": "Creating and calling a function",
+      "concepts": [
+        "Return",
+        "Int",
+        "Add",
+        "Call",
+        "FunctionDef",
+        "arg",
+        "Assign",
+        "Mult"
+      ],
+      "order": 8
+    },
+    "ps_python_nested_calls_es": {
+      "title": "python_nested_calls",
+      "instructions": "Primero define una funcion calcular y luego define una funcion doble (que devuelva el valor dado multiplicado por dos). Luego escribe un programa que primero imprima 20 y luego 36.",
+      "initial": "def calcular(primero, segundo):\n  return segundo * 3 + primero\ndef doble(valor):\n  return valor * 2\nprint(doble(doble(5)))\nprint(calcular(doble(3), 2 + calcular(5, 1)))",
+      "type": "SIMPLE",
+      "description": "Creating multiple functions and nested function calls",
+      "concepts": [
+        "Return",
+        "Int",
+        "Add",
+        "Call",
+        "FunctionDef",
+        "arg",
+        "Mult"
+      ],
+      "order": 9
+    },
+    "ps_python_recursive_factorial_es": {
+      "title": "python_recursive_factorial",
+      "instructions": "Define una funcion que devuelva el factorial de un entero positivo dado.",
+      "initial": "def factorial(n):\n  if n < 3:\n    return n\n  else:\n    return factorial(n-1) * n\n",
+      "type": "SIMPLE",
+      "description": "Creating a recursive function",
+      "concepts": [
+        "Return",
+        "Sub",
+        "Int",
+        "Lt",
+        "Call",
+        "Mult",
+        "arg",
+        "FunctionDef",
+        "If"
+      ],
+      "order": 10
+    },
+    "ps_python_class_person_es": {
+      "title": "python_class_person",
+      "instructions": "Escribe un programa que imprima \"Safiira. Encantado de conocerte!\"",
+      "initial": "class Person:\n  def __init__(self, nombre, profesion):\n    self.__nombre = nombre\n  def saludar(self):\n    return self.__nombre + \". Encantado de conocerte!\"\nsafiira = Person(\"Safiira\", \"biologa\")\nprint(safiira.saludar())",
+      "type": "SIMPLE",
+      "description": "Creating a class and using it",
+      "concepts": [
+        "Return",
+        "Attribute",
+        "ClassDef",
+        "Add",
+        "Call",
+        "Str",
+        "arg",
+        "Assign",
+        "FunctionDef"
+      ],
+      "order": 11
+    },
+    "ps_python_modulo_is_even_es": {
+      "title": "python_modulo_is_even",
+      "instructions": "Construye una funcion que devuelva True si un numero dado es par, de lo contrario False.",
+      "initial": "def es_par(numero):\n  if numero % 2 == 0:\n    return True\n  else:\n   return False",
+      "type": "SIMPLE",
+      "description": "Creating a function and using modulo",
+      "concepts": [
+        "Return",
+        "Int",
+        "arg",
+        "Mod",
+        "Eq",
+        "FunctionDef",
+        "If"
+      ],
+      "order": 12
+    },
+    "ps_python_list_iteration_zoo_es": {
+      "title": "python_list_iteration_zoo",
+      "instructions": "Construye un programa que imprima todos los animales en la variable zoologico.",
+      "initial": "zoologico = [\"oso\", \"leon\", \"camello\"]\nfor animal in zoologico:\n  print(animal)",
+      "type": "SIMPLE",
+      "description": "Iterating over a list",
+      "concepts": [
+        "For",
+        "Call",
+        "List",
+        "Assign",
+        "Str"
+      ],
+      "order": 13
+    },
+    "ps_python_nested_lists_indexing_es": {
+      "title": "python_nested_lists_indexing",
+      "instructions": "Construye un programa que primero imprima [[1, 2, 3], [4, 5, 6]], luego [4, 5, 6], y finalmente 6.",
+      "initial": "algunos_elementos = [[1, 2, 3], [4, 5, 6]]\nprint(algunos_elementos)\nprint(algunos_elementos[1])\nprint(algunos_elementos[1][2])",
+      "type": "SIMPLE",
+      "description": "Practising list indexing",
+      "concepts": [
+        "Int",
+        "Call",
+        "List",
+        "Assign",
+        "Index"
+      ],
+      "order": 14
+    },
+    "ps_python_string_indexing_es": {
+      "title": "Python string indexing",
+      "instructions": "Construye un programa que primero imprima las cadenas \"Py\", \"th\", \"o\" y \"n\"",
+      "initial": "palabra = \"Python\"\nprint(palabra[:2])\nprint(palabra[2:4])\nprint(palabra[-2])\nprint(palabra[5:])\n",
+      "type": "SIMPLE",
+      "description": "Practising string slicing",
+      "concepts": [
+        "Index",
+        "Slice",
+        "Int",
+        "Call",
+        "USub",
+        "Str",
+        "Assign"
+      ],
+      "order": 15
+    },
+    "ps_python_dict_keys_es": {
+      "title": "Items in storage",
+      "instructions": "El diccionario almacen almacena la cantidad de ciertos articulos en almacenamiento. Construye un programa que imprima una lista de todos los articulos de los que hay mas de uno actualmente almacenado.",
+      "initial": "almacen = {\"taza\": 7, \"boligrafo\": 0, \"lampara\": 4}\nfor articulo in almacen:\n  if almacen[articulo] > 0:\n    print(articulo)",
+      "type": "SIMPLE",
+      "description": "Iterating a dictionary",
+      "concepts": [
+        "Index",
+        "Gt",
+        "For",
+        "Int",
+        "Dict",
+        "Str",
+        "Call",
+        "Assign",
+        "If"
+      ],
+      "order": 16
+    },
+    "ps_python_dict_values_es": {
+      "title": "dict values sum",
+      "instructions": "Construye un programa que imprima cuantos articulos en total hay en el almacenamiento. Puedes asumir que un diccionario llamado almacen ya ha sido inicializado.",
+      "initial": "total_articulos = 0\nfor cantidad in almacen.values():\n  total_articulos += cantidad\nprint(total_articulos)",
+      "type": "SIMPLE",
+      "description": "Accessing dictionary values",
+      "concepts": [
+        "For",
+        "Int",
+        "Attribute",
+        "AugAssign",
+        "Add",
+        "Call",
+        "Assign"
+      ],
+      "order": 17
+    },
+    "ps_python_list_to_dict_es": {
+      "title": "ps_python_list_to_dict",
+      "instructions": "Construye un programa que imprima mu y oink, en ese orden.",
+      "initial": "pares = [(\"cerdo\", \"oink\"), (\"vaca\", \"mu\")]\nanimales = dict(pares)\nprint(animales.get(\"vaca\"))\nprint(animales.get(\"cerdo\"))",
+      "type": "SIMPLE",
+      "description": "Converting a list of tuples into a dictionary",
+      "concepts": [
+        "Tuple",
+        "Attribute",
+        "List",
+        "Call",
+        "Str",
+        "Assign"
+      ],
+      "order": 18
+    },
+    "ps_python_dict_filter_es": {
+      "title": "ps_python_dict_filter",
+      "instructions": "Construye un programa que imprima todos los circulos que son mayores que 5.",
+      "initial": "circulos = {\"azul\": 8, \"rojo\": 5, \"gris\": 7}\nfor circulo in circulos.items():\n  if(circulo[1] > 5):\n    print(circulo[0], \"circulo es mayor que\", 5)",
+      "type": "SIMPLE",
+      "description": "Iterating over dictionary items",
+      "concepts": [
+        "Index",
+        "Gt",
+        "For",
+        "Int",
+        "Attribute",
+        "Call",
+        "Str",
+        "Dict",
+        "Assign",
+        "If"
+      ],
+      "order": 19
+    },
+    "ps_python_bigger_than_es": {
+      "title": "ps_python_bigger_than",
+      "instructions": "Asume que num1 y num2 han sido inicializados a numeros, de modo que numero1 es mayor. Construye un programa que imprima correctamente que numero1 es realmente mayor",
+      "initial": "print(\"num1 es mayor:\", num1 > num2)\nprint(\"num1 es mayor:\", num1 < num2) #distractor",
+      "type": "SIMPLE",
+      "description": "Boolean statements as a function parameter",
+      "concepts": [
+        "Lt",
+        "Gt",
+        "Call",
+        "Str"
+      ],
+      "order": 20
+    },
+    "ps_python_conditionals_temperature_es": {
+      "title": "ps_python_conditionals_temperature",
+      "instructions": "Construye un programa que imprima 'Frio' cuando la temperatura sea de 15 grados centigrados o menos, 'Moderado' cuando sea mayor de 15 pero no mayor de 25 grados, y 'Caliente' cuando la temperatura sea mayor de 25 grados.",
+      "initial": "if temperatura  $$toggle::<::>::<=::>=$$ $$toggle::15::25$$:\nif temperatura  $$toggle::<::>::<=::>=$$ $$toggle::15::25$$:\nprint(\"Frio\")\nelif temperatura $$toggle::<::>::<=::>=$$ $$toggle::15::25$$:\nprint(\"Moderado\")\nelse:\nprint(\"Caliente\")\n",
+      "vartests": "[{ initcode : \"temperatura=10\", code : \"\", message : \"Temperatura menor de 15 grados\", variables : { __output : \"Frio\n\" } },{ initcode : \"temperatura=15\", code : \"\", message : \"Temperatura es 15 grados\", variables : { __output : \"Frio\n\" } },{ initcode : \"temperatura=20\", code : \"\", message : \"Temperatura entre 15-25 grados\", variables : { __output : \"Moderado\n\" } },{ initcode : \"temperatura=25\", code : \"\", message : \"Temperatura es 25 grados\", variables : { __output : \"Moderado\n\" } },{ initcode : \"temperatura=30\", code : \"\", message : \"Temperatura mayor de 25 grados\", variables : { __output : \"Caliente\n\" } } ] ",
+      "type": "VARTEST",
+      "description": "Practising if...elif...else statements",
+      "order": 21
+    },
+    "ps_python_printing_file_contents_es": {
+      "instructions": "Construye un programa que abra un archivo e imprima cada linea del archivo",
+      "initial": "try:\narchivo_a_leer = open(nombre_archivo, \"r\")\nfila = archivo_a_leer.readline()\nwhile fila != \"\":\nprint(fila)\nfila = archivo_a_leer.readline()\narchivo_a_leer.close()\nexcept OSError:\nprint(\"Error al leer el archivo. La ejecucion del programa termina.\")",
+      "vartests": "[{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\narchivo_abierto = 'False'\nnombre_archivo = 'texto.txt'\nclass ArchivoSimulado:\n\tdef __init__(self):\n\t\tglobal archivo_abierto\n\t\tarchivo_abierto = 'True'\n\t\tself.contenido = ['Algo','ejemplo','texto']\n\t\tself.contador = 0\n\tdef readline(self):\n\t\tif archivo_abierto == 'False':\n\t\t\traise ValueError('Operacion de E/S en archivo cerrado')\n\t\tif self.contador < len(self.contenido):\n\t\t\tlinea = self.contenido[self.contador] + '\\\n' \n\t\t\tself.contador = self.contador + 1\n\t\telse:\n\t\t\tlinea = ''\n\t\treturn linea\n\tdef close(self):\n\t\tglobal archivo_abierto\n\t\tarchivo_abierto = 'False'\ndef open(archivo, modo):\n\tif archivo == 'texto.txt':\n\t\treturn ArchivoSimulado()\n\telse:\n\t\traise OSError('No existe el archivo o directorio:' + str(archivo))\n\", code : \"\", message : \"Prueba con nombre_archivo asignado a 'texto.txt'\", variables : { archivo_abierto: 'False', __output : \"Algo\n\nejemplo\n\ntexto\n\n\" }  },{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\nnombre_archivo = 'archivo_no_existe.txt'\nclass ArchivoSimulado:\n\tdef __init__(self):\n\t\tself.contenido = ['Algo','ejemplo','texto']\n\t\tself.contador = 0\n\tdef readline(self):\n\t\tif self.contador < len(self.contenido):\n\t\t\tlinea = self.contenido[self.contador] + '\\\n' \n\t\t\tself.contador = self.contador + 1\n\t\telse:\n\t\t\tlinea = ''\n\t\treturn linea\n\tdef close(self):\n\t\tpass\ndef open(archivo, modo):\n\tif archivo == 'texto.txt':\n\t\treturn ArchivoSimulado()\n\telse:\n\t\traise OSError('No existe el archivo o directorio:' + str(archivo))\n\", code : \"\", message : \"Prueba con nombre_archivo asignado a 'archivo_no_existe.txt'\", variables : { __output : \"Error al leer el archivo. La ejecucion del programa termina.\n\" }  }] ",
+      "type": "VARTEST",
+      "description": "Practising reading a file and printing its contents",
+      "title": "",
+      "order": 22
+    },
+    "ps_python_try_except_es": {
+      "instructions": "Construye un programa que imprima varias temperaturas en Celsius convertidas a Fahrenheit.",
+      "initial": "def centigrados_a_fahrenheit(temp):\n\tif temp < -273.15:\n\t\traise ValueError(\"Temperatura por debajo del cero absoluto!\") \n\treturn temp*1.8+32\ntry:\n\tprint(centigrados_a_fahrenheit(temp_a_convertir))\nexcept ValueError:\n\tprint(\"Temperatura configurada demasiado baja!\")\n",
+      "vartests": "[{ initcode : \"temp_a_convertir = 20\" , message: \"Convirtiendo temperatura de 20 centigrados\", variables : { __output : \"68.0\n\" } }, { initcode : \"temp_a_convertir = -30\" , message: \"Convirtiendo temperatura de -30 centigrados\", variables : { __output : \"-22.0\n\" } }, { initcode : \"temp_a_convertir = -300\" , message: \"Convirtiendo temperatura de -300 centigrados\", variables : { __output : \"Temperatura configurada demasiado baja!\n\" }  }] ",
+      "concepts": [
+        "Return",
+        "Raise",
+        "Int",
+        "Float",
+        "Add",
+        "ExceptHandler",
+        "Lt",
+        "Call",
+        "USub",
+        "Str",
+        "arg",
+        "Mult",
+        "TryExcept",
+        "FunctionDef",
+        "If"
+      ],
+      "type": "VARTEST",
+      "description": "Practising exceptions",
+      "title": "",
+      "order": 23
+    },
+    "ps_python_nested_ifs_es": {
+      "instructions": "Construye un programa que imprima una oracion dependiendo de la hora del dia. Noche se considera antes de las 7 a.m., manana es desde las 7 a.m. hasta el mediodia, tarde hasta las 5 p.m. y el resto se considera noche.",
+      "initial": "if am_o_pm == \"am\":\n\tif hora < 7:\n\t\tprint(\"Todavia es de noche\")\n\telse:\n\t\tprint(\"Es de manana\")\nelif am_o_pm == \"pm\":\n\tif hora <= 5:\n\t\tprint(\"Es de tarde\")\n\telse:\n\t\tprint(\"Es de noche\")\n",
+      "vartests": "[{ initcode : \"hora=4\nam_o_pm='am'\", code : \"\", message : \"4 a.m.\", variables : { __output : \"Todavia es de noche\n\" } },{ initcode : \"hora=8\nam_o_pm='am'\", code : \"\", message : \"8 a.m.\", variables : { __output : \"Es de manana\n\" } },{ initcode : \"hora=2\nam_o_pm='pm'\", code : \"\", message : \"2 p.m.\", variables : { __output : \"Es de tarde\n\" } },{ initcode : \"hora=9\nam_o_pm='pm'\", code : \"\", message : \"9 p.m.\", variables : { __output : \"Es de noche\n\" } }] ",
+      "type": "VARTEST",
+      "description": "Practising nested if statements",
+      "concepts": [
+        "LtE",
+        "Int",
+        "Lt",
+        "Call",
+        "Str",
+        "Eq",
+        "If"
+      ],
+      "title": "",
+      "order": 24
+    },
+    "ps_python_comparisons_es": {
+      "instructions": "Construye un programa que imprima si la variable a es mayor que b.",
+      "initial": "a_es_mayor = a $$toggle::<::>::<=::>=$$ b\nprint(a_es_mayor)\n",
+      "vartests": "[{ initcode : \"a = 3\nb = 1\", code : \"\", message : \"\", variables : { __output : \"True\n\" } },{ initcode : \"a = 3\nb = 5\", code : \"\", message : \"\", variables : { __output : \"False\n\" } }, { initcode : \"a = 3\nb = 3\", code : \"\", message : \"\", variables : { __output : \"False\n\" } }] ",
+      "type": "VARTEST",
+      "description": "Practising using comparisons",
+      "title": "",
+      "order": 25
+    },
+    "ps_python_add_to_list_es": {
+      "instructions": "Construye una funcion que agregue una cantidad dada a todos los elementos de una lista.",
+      "initial": "def agregar_a_elementos(lista, cantidad):\n\tfor x in range(len(lista)):\n\t\tlista[x] += cantidad\n",
+      "vartests": "[{ initcode : \"algunos_numeros = [0,1,5]\nnumero = 7\", code : \"agregar_a_elementos(algunos_numeros,numero)\nprint(algunos_numeros)\", message : \"algunos_numeros = [0,1,5], llamando a agregar_a_elementos(algunos_numeros,7) e imprimiendo algunos_numeros.\", variables : { __output: \"[7, 8, 12]\n\" } }] ",
+      "type": "VARTEST",
+      "description": "Practising list indexing and modifying lists",
+      "concepts": [
+        "Index",
+        "For",
+        "AugAssign",
+        "Add",
+        "Call",
+        "arg",
+        "FunctionDef"
+      ],
+      "title": "",
+      "order": 26
+    },
+    "ps_python_swap_es": {
+      "instructions": "Construye un programa que intercambie los valores de las variables x e y.",
+      "initial": "$$toggle::x::y::temporal$$ = $$toggle::x::y::temporal$$\n$$toggle::x::y::temporal$$ = $$toggle::x::y::temporal$$\n$$toggle::x::y::temporal$$ = $$toggle::x::y::temporal$$\n",
+      "vartests": "[{initcode: \"x = 0\ny=2\", code: \"\", message: \"Prueba con los valores iniciales de las variables x = 0 e y = 2\", variables: {x: 2}},{initcode: \"x = 3\ny=4\n\", code: \"\", message: \"Prueba con los valores iniciales de las variables x = 3 e y = 4\", variables: {x: 4, y: 3}}]",
+      "type": "VARTEST",
+      "description": "Practising variable assignment",
+      "title": "",
+      "order": 27
+    },
+    "ps_python_xor_es": {
+      "instructions": "Construye un programa que imite una compuerta XOR (o exclusivo). Cuando input_a y input_b sean iguales, debe imprimir 0 y en otros casos imprimir 1.",
+      "initial": "if entrada_a == 1 $$toggle::and::or::not::$$ entrada_b == 1:\n\tprint($$toggle::0::1::$$)\nelif entrada_a == 0 $$toggle::and::or::not::$$ entrada_b == 0:\n\tprint($$toggle::0::1::$$)\nelse:\n\tprint($$toggle::0::1::$$)",
+      "vartests": "[{ initcode : \"entrada_a = 0\nentrada_b = 0\", code : \"\", message : \"Prueba con entrada_a=0 y entrada_b=0\", variables : { __output : \"0\n\" } },{ initcode : \"entrada_a = 1\nentrada_b = 1\", code : \"\", message : \"Prueba con entrada_a=1 y entrada_b=1\", variables : { __output : \"0\n\" } }, { initcode : \"entrada_a = 1\nentrada_b = 0\", code : \"\", message : \"Prueba con entrada_a=1 y entrada_b=0\", variables : { __output : \"1\n\" } }, { initcode : \"entrada_a = 0\nentrada_b = 1\", code : \"\", message : \"Prueba con entrada_a=0 y entrada_b=1\", variables : { __output : \"1\n\" } }] ",
+      "type": "VARTEST",
+      "description": "Creating a XOR-gate using if...elif statements",
+      "title": "",
+      "order": 28
+    },
+    "ps_python_for_odd_or_even_es": {
+      "instructions": "Construye un programa que recorra una lista de numeros e imprima si son pares o impares.",
+      "initial": "for numero in algunos_numeros:\n\tif numero % 2 == 0:\n\t\tprint(\"Par\")\n\telse:\n\t\tprint(\"Impar\")",
+      "vartests": "[{ initcode : \"algunos_numeros = [4,2,9,5,3,12]\", code : \"\", message : \"Prueba con algunos_numeros = [4,2,9,5,3,12]\", variables : { __output : \"Par\nPar\nImpar\nImpar\nImpar\nPar\n\" } }]",
+      "type": "VARTEST",
+      "description": "Practising iterating a list and using modulo",
+      "title": "",
+      "concepts": [
+        "For",
+        "Int",
+        "Call",
+        "Str",
+        "Mod",
+        "Eq",
+        "If"
+      ],
+      "order": 29
+    },
+    "ps_python_string_join_es": {
+      "instructions": "Construye un programa que imprima una oracion a partir de una lista dada de palabras.",
+      "initial": "palabras = [\"esto\", \"es\", \"una\", \"oracion\"]\noracion = \" \".join(palabras)\nprint(oracion.capitalize() + \".\")",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Prueba\", variables : { __output : \"Esto es una oracion.\n\" } }]",
+      "title": "",
+      "description": "Practising string methods",
+      "concepts": [
+        "Attribute",
+        "List",
+        "Add",
+        "Call",
+        "Str",
+        "Assign"
+      ],
+      "order": 30
+    },
+    "ps_python_try_adding_es": {
+      "instructions": "Construye una funcion que sume dos numeros y maneje entradas no numericas.",
+      "initial": "def sumar_dos_numeros(a,b):\n\ttry:\n\t\treturn a + b\n\texcept TypeError:\n\t\tprint(\"Solo se pueden sumar numeros.\")",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"a = sumar_dos_numeros(1,2)\", message : \"Sumando 1 y 2.\", variables : { a : 3 } }, { initcode : \"\", code : \"a = sumar_dos_numeros(1,'b')\", message : \"Sumando 1 y b.\", variables : { __output: \"Solo se pueden sumar numeros.\n\" } }]",
+      "title": "",
+      "description": "Practising exception handling",
+      "concepts": [
+        "Attribute",
+        "List",
+        "Add",
+        "Call",
+        "Str",
+        "Assign"
+      ],
+      "order": 31
+    },
+    "ps_python_class_point_es": {
+      "instructions": "Construye una clase Punto que tenga un metodo para calcular la distancia desde otra instancia de Punto.",
+      "initial": "from math import sqrt\nclass Punto:\n\tdef __init__(self, loc_x, loc_y):\n\t\tself.x = loc_x\n\t\tself.y = loc_y\n\tdef distancia_desde(self, otro_punto):\n\t\tdist_x = self.x - otro_punto.x\n\t\tdist_y = self.y - otro_punto.y\n\t\treturn sqrt(dist_x * dist_x + dist_y * dist_y)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"punto_b = Punto(4,5)\", message : \"Prueba creando Punto(4,5)\", variables : {  }  }, { initcode : \"\", code : \"punto_a = Punto(1,1)\npunto_b = Punto(4,5)\ndist = punto_a.distancia_desde(punto_b)\", message : \"Prueba distancia_desde Punto(1,1) y Punto(4,5)\", variables : {  dist: 5.0 }  }]",
+      "title": "",
+      "description": "Creating a class and using its methods",
+      "concepts": [
+        "Return",
+        "Sub",
+        "Attribute",
+        "ClassDef",
+        "alias",
+        "Add",
+        "Call",
+        "ImportFrom",
+        "arg",
+        "Mult",
+        "Assign",
+        "FunctionDef"
+      ],
+      "order": 32
+    },
+    "ps_python_2d_list_es": {
+      "description": "Constructing a program that deals with lists",
+      "instructions": "Construye un programa que imprima [[0, 1, 2], [3, 4, 5], [6, 7, 99]]",
+      "initial": "CANTIDAD = 3\nlista1 = []\nfor i in range(CANTIDAD):\n    lista2 = [0] * CANTIDAD\n    for j in range(CANTIDAD):\n        lista2[j] = i * CANTIDAD + j\n    lista1.append(lista2)\nlista1[2][2] = 99\nprint(lista1)",
+      "order": 33,
+      "concepts": [
+        "Assign",
+        "Call",
+        "List",
+        "Attribute",
+        "Mult",
+        "Int",
+        "Add",
+        "For",
+        "Index"
+      ],
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Prueba contenido de lista1\", variables : {  __output: \"[[0, 1, 2], [3, 4, 5], [6, 7, 99]]\n\"}  }]",
+      "unittest": ""
+    },
+    "ps_python_nested_loops_es": {
+      "description": "Constrcuting a problem with nested loops",
+      "instructions": "Construye un programa que primero imprima 15, luego 14, luego 12, luego 9 y finalmente 5 en lineas consecutivas.",
+      "initial": "MAXIMO = 5\ni = 0\nwhile i < MAXIMO:\n    suma = 0\n    j = MAXIMO\n    while j > i:\n        suma = suma + j\n        j = j - 1\n    print(suma)\n    i = i + 1",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Prueba contenido impreso\", variables : {  __output: \"15\n14\n12\n9\n5\n\"}  }]",
+      "unittest": "",
+      "order": 34,
+      "concepts": [
+        "Assign",
+        "Int",
+        "keyword",
+        "AugAssign",
+        "Gt",
+        "Sub",
+        "GtE",
+        "While",
+        "Str",
+        "Call"
+      ]
+    },
+    "ps_python_3digit_combinations_es": {
+      "description": "Construct a program that creates unique 3 digit combinations",
+      "instructions": "Construye un programa que cree e imprima todas las combinaciones de tres digitos de los numeros del 1 al 4 de forma que cada numero aparezca como maximo una vez y las combinaciones se impriman de menor a mayor. El programa tambien debe imprimir el numero total de combinaciones. Por ejemplo: salida 123, 124, 132 ... total: 24.",
+      "initial": "cantidad = 0\ni = 0\nwhile i < 4:\n  i += 1\n  j = 0\n  while j < 4:\n    j += 1\n    k = 0\n    while k < 4:\n      k += 1\n      if k != i and k != j and i != j:\n          cantidad += 1\n          print(i, j, k)\n\nprint(\"El numero total de combinaciones de 3 digitos es\", cantidad)\n\n\n",
+      "type": "SIMPLE",
+      "title": "",
+      "concepts": [
+        "Lt",
+        "If",
+        "Call",
+        "AugAssign",
+        "Str",
+        "Int",
+        "Add",
+        "Assign",
+        "And",
+        "NotEq",
+        "While"
+      ],
+      "order": 35
+    },
+    "ps_python_3digit_combinations2_es": {
+      "description": "Construct a program that creates unique 3 digit combinations",
+      "instructions": "Construye un programa que cree e imprima todas las combinaciones de tres digitos de los numeros del 1 al 4 de forma que cada numero aparezca como maximo una vez y las combinaciones se impriman de menor a mayor. El programa tambien debe imprimir el numero total de combinaciones. Por ejemplo: salida 123, 124, 132 ... total: 24.",
+      "initial": "cantidad = 0\ni = 0\nwhile i < 4:\n  i += 1\n  j = 0\n  while j < 4:\n    j += 1\n    k = 0\n    while k < 4:\n      k += 1\n      if k != i $$toggle::and::or::not::$$ k != j $$toggle::or::and::not::$$ i != j:\n          cantidad += 1\n          print(i, j, k)\n\nprint(\"El numero total de combinaciones de 3 digitos es\", cantidad)\n\n\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Prueba contenido impreso\", variables : {  __output: \"(1, 2, 3)\n(1, 2, 4)\n(1, 3, 2)\n(1, 3, 4)\n(1, 4, 2)\n(1, 4, 3)\n(2, 1, 3)\n(2, 1, 4)\n(2, 3, 1)\n(2, 3, 4)\n(2, 4, 1)\n(2, 4, 3)\n(3, 1, 2)\n(3, 1, 4)\n(3, 2, 1)\n(3, 2, 4)\n(3, 4, 1)\n(3, 4, 2)\n(4, 1, 2)\n(4, 1, 3)\n(4, 2, 1)\n(4, 2, 3)\n(4, 3, 1)\n(4, 3, 2)\n('El numero total de combinaciones de 3 digitos es', 24)\n\"}  }]",
+      "concepts": [
+        "Lt",
+        "If",
+        "Call",
+        "AugAssign",
+        "Str",
+        "Int",
+        "Add",
+        "Assign",
+        "And",
+        "NotEq",
+        "While"
+      ],
+      "order": 36
+    },
+    "ps_python_divsible_by1_es": {
+      "description": "Construct a program with multiple if-elif statements.",
+      "instructions": "Construye un programa que verifique si cada uno de los enteros del intervalo del 1 al 100 es divisible por 2, 5 o ambos.",
+      "initial": "def divisible_por(num):\n    for i in range(1, num + 1):\n        if i % 2 == 0 and i % 5 == 0:\n            print(i, \"es divisible por 2 y 5\")\n        elif i % 5 == 0:\n            print(i, \"es divisible solo por 5\")\n        elif i % 2 == 0:\n            print(i, \"es divisible solo por 2\")\n        else:\n            print(i, \"no es divisible por 2 ni 5\")\n\ndivisible_por(100)",
+      "type": "SIMPLE",
+      "concepts": [
+        "Call",
+        "Assign",
+        "Add",
+        "Mod",
+        "Eq",
+        "If",
+        "Str",
+        "Int",
+        "And",
+        "For"
+      ],
+      "order": 37
+    },
+    "ps_python_divisible_by2_es": {
+      "description": "Construct a program with multiple if-elif statements.",
+      "instructions": "Construye un programa que verifique si cada uno de los enteros del intervalo del 1 al 100 es divisible por 2, 5 o ambos.",
+      "initial": "\nnum = 100\nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        print(i, \"es divisible por 2 y 5\")\n    elif i % 5 == 0:\n        print(i, \"es divisible solo por 5\")\n    elif i % 2 == 0:\n        print(i, \"es divisible solo por 2\")\n    else:           \n        print(i, \"no es divisible por 2 ni 5\")\n",
+      "type": "SIMPLE",
+      "concepts": [
+        "Call",
+        "Assign",
+        "Add",
+        "Mod",
+        "Eq",
+        "If",
+        "Str",
+        "Int",
+        "And",
+        "For"
+      ],
+      "order": 38
+    },
+    "ps_python_divisible_by3_es": {
+      "description": "Construct a program with multiple if-elif statements.",
+      "instructions": "Construye un programa que verifique cuales de los enteros en el intervalo del 1 al 50 son divisibles solo por 2, solo por 5 o por ambos. El programa debe almacenar cada grupo en su propia lista e imprimirlas en este orden.",
+      "initial": "\nnum = 50\nlista1 = []\nlista2 = []\nlista3 = []\n    \nfor i in range(1, num + 1):\n    if i % 2 == 0 and i % 5 == 0:\n        lista1.append(i)\n    elif i % 2 == 0:\n        lista2.append(i)\n    elif i % 5 == 0:\n        lista3.append(i)\nprint(\"divisible solo por 2:\")\nprint(lista2)\nprint(\"divisible solo por 5:\")\nprint(lista3)\nprint(\"divisible por 2 y 5:\")\nprint(lista1)\n\n\n\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Prueba contenido impreso\", variables : {  __output: \"divisible solo por 2:\n[2, 4, 6, 8, 12, 14, 16, 18, 22, 24, 26, 28, 32, 34, 36, 38, 42, 44, 46, 48]\ndivisible solo por 5:\n[5, 15, 25, 35, 45]\ndivisible por 2 y 5:\n[10, 20, 30, 40, 50]\n\"}  }]",
+      "concepts": [
+        "Call",
+        "Assign",
+        "Add",
+        "Mod",
+        "Eq",
+        "If",
+        "Str",
+        "Int",
+        "And",
+        "For"
+      ],
+      "order": 39
+    },
+    "ps_python_freq_of_char1_es": {
+      "description": "Letter frequency",
+      "instructions": "Construye una funcion que cuente la frecuencia de cada caracter en la cadena dada como parametro y devuelva un diccionario que contenga las frecuencias.",
+      "initial": "def frecuencia_de_caracter(cadena):\n    num_de_caracter = {}\n    for letra in cadena:\n        if letra in num_de_caracter:\n            num_de_caracter[letra] += 1\n        else:\n            num_de_caracter[letra] = 1\n    return num_de_caracter\n",
+      "type": "UNITTEST",
+      "unittest": "\nimport unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(frecuencia_de_caracter(\"Summer\"),{\"S\": 1, \"u\": 1, \"m\": 2, \"e\": 1, \"r\": 1}, \"Probando <code>frecuencia_de_caracter(Summer)</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Index",
+        "Int",
+        "For",
+        "arg",
+        "Call",
+        "AugAssign",
+        "In",
+        "Return",
+        "Str",
+        "Add",
+        "FunctionDef",
+        "Dict",
+        "Assign",
+        "If"
+      ],
+      "order": 40
+    },
+    "ps_python_freq_of_char2_es": {
+      "description": "Letter frequency",
+      "instructions": "Construye un programa que cuente la frecuencia de cada caracter en la cadena 'Summer' y la almacene en un diccionario. Finalmente, el programa debe imprimir el diccionario.",
+      "initial": "cadena = \"Summer\"\nnum_de_caracter = {}\nfor letra in cadena:\n    if letra in num_de_caracter:\n        num_de_caracter[letra] += 1\n    else:\n        num_de_caracter[letra] = 1\n\nprint(num_de_caracter)",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output: \"{'S': 1, 'u': 1, 'm': 2, 'e': 1, 'r': 1}\n\"}  }]",
+      "concepts": [
+        "Index",
+        "Int",
+        "For",
+        "arg",
+        "Call",
+        "AugAssign",
+        "In",
+        "Return",
+        "Str",
+        "Add",
+        "FunctionDef",
+        "Dict",
+        "Assign",
+        "If"
+      ],
+      "order": 41
+    },
+    "ps_python_palindrome1_es": {
+      "description": "Creating a function that checks if the string is a palindrome or not.",
+      "instructions": "Construye una funcion que determine si la cadena dada como parametro es un palindromo. La funcion debe ser insensible a mayusculas y minusculas.",
+      "initial": "def es_palindromo(cadena):\n    n_cadena = cadena.lower()\n    cadena_invertida = \"\"\n    for caracter in n_cadena:\n        cadena_invertida = caracter + cadena_invertida\n    if n_cadena == cadena_invertida:\n            print(\"Esta cadena es un palindromo!\")\n    else:\n        print(\"La cadena no es un palindromo!\")",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"cadena ='Madam'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Madam'\", variables : { __output: \"Esta cadena es un palindromo!\nNone\n\"} }, { initcode : \"cadena= 'text'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Text'\", variables : { __output : \"La cadena no es un palindromo!\nNone\n\" } },  { initcode : \"cadena= 'Notion'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Notion'\", variables : { __output : \"La cadena no es un palindromo!\nNone\n\" } }]",
+      "concepts": [
+        "Attribute",
+        "Try",
+        "arg",
+        "Assign",
+        "Str",
+        "ExceptHandler",
+        "If",
+        "For",
+        "Eq",
+        "FunctionDef",
+        "Add",
+        "Call"
+      ],
+      "order": 42
+    },
+    "ps_python_palindrome2_es": {
+      "description": "Creating a function that checks if the string is a palindrome or not.",
+      "instructions": "Construye un programa que determine si la cadena original es un palindromo. La funcion debe ser insensible a mayusculas y minusculas.",
+      "initial": "cadena = \"Madam\"\nn_cadena = cadena.lower()\ncadena_invertida = \"\"\nfor caracter in n_cadena:\n    cadena_invertida = caracter + cadena_invertida\nif n_cadena == cadena_invertida:\n    print(\"Esta cadena es un palindromo!\")\nelse:\n    print(\"La cadena no es un palindromo!\")",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"cadena ='Madam'\", code : \"\", message : \"Probando cadena: 'Madam'\", variables : { __output: \"Esta cadena es un palindromo!\n\"} }]",
+      "concepts": [
+        "Attribute",
+        "Try",
+        "arg",
+        "Assign",
+        "Str",
+        "ExceptHandler",
+        "If",
+        "For",
+        "Eq",
+        "FunctionDef",
+        "Add",
+        "Call"
+      ],
+      "order": 43
+    },
+    "ps_python_palindrome3_es": {
+      "description": "Creating a function that checks if the string is a palindrome or not.",
+      "instructions": "Construye una funcion que determine si la cadena dada como parametro es un palindromo. La funcion debe ser insensible a mayusculas y minusculas.",
+      "initial": "def es_palindromo(cadena):\n    n_cadena = cadena.lower()\n    cadena_invertida = \"\"\n    for caracter in n_cadena:\n        cadena_invertida = caracter + cadena_invertida\n    if n_cadena == cadena_invertida:\n        return True\n    else:\n        return False\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"cadena ='Madam'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Madam'\", variables : { __output: \"True\n\"} }, { initcode : \"cadena= 'text'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Text'\", variables : { __output : \"False\n\" } },  { initcode : \"cadena= 'Notion'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Notion'\", variables : { __output : \"False\n\" } }]",
+      "concepts": [
+        "Attribute",
+        "Try",
+        "arg",
+        "Assign",
+        "Str",
+        "ExceptHandler",
+        "If",
+        "For",
+        "Eq",
+        "FunctionDef",
+        "Add",
+        "Call"
+      ],
+      "order": 44
+    },
+    "ps_python_palindrome4_es": {
+      "description": "Construct a function which determines whether the string given as a paramter is a palindrome.",
+      "instructions": "Construye una funcion que verifique si la cadena es un palindromo o no. La funcion debe ser insensible a mayusculas y minusculas.",
+      "initial": "def es_palindromo(cadena):\n    i = 0\n    j = len(cadena) - 1\n    n_cadena = cadena.lower()\n    while i < j:\n        if n_cadena[i] != n_cadena[j]:\n            return False\n        i += 1\n        j -= 1\n    return True\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"cadena ='Madam'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Madam'\", variables : { __output: \"True\n\"} }, { initcode : \"cadena= 'text'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Text'\", variables : { __output : \"False\n\" } },  { initcode : \"cadena= 'Notion'\", code : \"print(es_palindromo(cadena))\", message : \"Probando cadena: 'Notion'\", variables : { __output : \"False\n\" } }]",
+      "concepts": [
+        "Attribute",
+        "Try",
+        "arg",
+        "Assign",
+        "Str",
+        "ExceptHandler",
+        "If",
+        "For",
+        "Eq",
+        "FunctionDef",
+        "Add",
+        "Call"
+      ],
+      "order": 45
+    },
+    "ps_python_list_of_remainders1_es": {
+      "description": "Construct a function that returns a list of remainders from the input.",
+      "instructions": "Construye una funcion que calcule el residuo de cada elemento de la primera lista con el elemento del mismo indice en la segunda lista. Los residuos se almacenan en una nueva lista. Si el numero en la segunda lista es 0, la funcion debe agregar directamente el numero 2 a la nueva lista en lugar del residuo.",
+      "initial": "def lista_de_residuos(lista1, lista2):\n    nueva_lista = []\n    if len(lista1) == len(lista2):\n        for i in range(len(lista1)):\n            if lista2[i] == 0:\n                nueva_lista.append(2)\n            else:\n                resultado = lista1[i] % lista2[i]\n                nueva_lista.append(resultado)\n    return nueva_lista\n\nlista1 = [19, 3, 4, 2]\nlista2 = [4, 2, 1, 0]\nprint(lista_de_residuos(lista1, lista2))\n",
+      "type": "UNITTEST",
+      "unittest": "\nimport unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(lista_de_residuos([19, 3, 4, 2], [4, 2, 1, 0]),[3, 1, 0, 2], \"funcion <code>lista_de_residuos([19, 3, 4, 2], [4, 2, 1, 0])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Eq",
+        "ExceptHandler",
+        "Assign",
+        "Int",
+        "Return",
+        "If",
+        "Attribute",
+        "Mod",
+        "For",
+        "arg",
+        "List",
+        "Index",
+        "Try",
+        "Call",
+        "FunctionDef",
+        "Str"
+      ],
+      "order": 46
+    },
+    "ps_python_list_of_remainders2_es": {
+      "description": "Construct a function that returns a list of remainders from the input.",
+      "instructions": "Construye un programa que calcule el residuo de cada elemento de la primera lista con el elemento del mismo indice en la segunda lista. Los residuos se almacenan en una nueva lista. Si el numero en la segunda lista es 0, el programa debe agregar directamente el numero 2 a la nueva lista en lugar del residuo. Finalmente, el programa debe imprimir la nueva lista.",
+      "initial": "lista1 = [19, 3, 4, 2]\nlista2 = [4, 2, 1, 9]\n\nnueva_lista = []\nif len(lista1) == len(lista2):\n    for i in range(len(lista1)):\n        if lista2[i] == 0:\n            nueva_lista.append(2)\n        else:\n            resultado = lista1[i] % lista2[i]\n            nueva_lista.append(resultado)\n\nprint(nueva_lista)",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : {  __output: \"[3, 1, 0, 2]\n\"}  }]",
+      "concepts": [
+        "Eq",
+        "ExceptHandler",
+        "Assign",
+        "Int",
+        "Return",
+        "If",
+        "Attribute",
+        "Mod",
+        "For",
+        "arg",
+        "List",
+        "Index",
+        "Try",
+        "Call",
+        "FunctionDef",
+        "Str"
+      ],
+      "order": 47
+    },
+    "ps_python_list_reverse1_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista [1, 2, 3, 4, 5].",
+      "initial": "def lista_invertida(lista):\n    nueva_lista = []\n    i = 0\n    while i < len(lista):\n        elemento = lista[i]\n        nueva_lista.insert(0, elemento)\n        i += 1\n    return nueva_lista\n\n\nlista1 = [1, 2, 3, 4, 5]\nlista2 = lista_invertida(lista1)\nprint(lista2)\n",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(lista_invertida([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"funcion <code>lista_invertida([1, 2, 3, 4, 5])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Attribute",
+        "Return",
+        "Add",
+        "List",
+        "arg",
+        "Call",
+        "Index",
+        "AugAssign",
+        "While",
+        "FunctionDef",
+        "Assign",
+        "Lt",
+        "Int"
+      ],
+      "order": 48
+    },
+    "ps_python_list_reverse2_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista original.",
+      "initial": "lista1 = [1, 2, 3, 4, 5]\nnueva_lista = []\ni = 0\nwhile i < len(lista1):\n    elemento = lista1[i]\n    nueva_lista.insert(0, elemento)\n    i += 1\nprint(nueva_lista)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+      "concepts": [
+        "While",
+        "Attribute",
+        "Call",
+        "Lt",
+        "AugAssign",
+        "Add",
+        "List",
+        "Int",
+        "Index",
+        "Assign"
+      ],
+      "order": 49
+    },
+    "ps_python_list_reverse3_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista [1, 2, 3, 4, 5].",
+      "initial": "def lista_invertida(lista):\n    nueva_lista = [0] * len(lista)\n    i = 0\n    j = len(lista) - 1\n    while i < len(lista):\n        j = j - 1\n        nueva_lista[j] = lista[i]\n        i += 1\n    return nueva_lista\n\nlista1 = [1, 2, 3, 4, 5]\nlista2 = lista_invertida(lista1)\nprint(lista2)",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(lista_invertida([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"funcion <code>lista_invertida([1, 2, 3, 4, 5])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Attribute",
+        "Return",
+        "Add",
+        "List",
+        "arg",
+        "Call",
+        "Index",
+        "AugAssign",
+        "While",
+        "FunctionDef",
+        "Assign",
+        "Lt",
+        "Int"
+      ],
+      "order": 50
+    },
+    "ps_python_list_reverse4_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista original.",
+      "initial": "lista1 = [1, 2, 3, 4, 5]\nnueva_lista = [0] * len(lista1)\ni = 0\nj = len(lista1) - 1\nwhile i < len(lista1):\n    j = j - 1\n    nueva_lista[j] = lista1[i]\n    i += 1\nprint(nueva_lista)",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+      "concepts": [
+        "While",
+        "Attribute",
+        "Call",
+        "Lt",
+        "AugAssign",
+        "Add",
+        "List",
+        "Int",
+        "Index",
+        "Assign"
+      ],
+      "order": 51
+    },
+    "ps_python_list_reverse5_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista [1, 2, 3, 4, 5].",
+      "initial": "def lista_invertida(lista):\n    nueva_lista = [0] * len(lista)\n    j = len(lista) - 1\n    for i in range(len(lista)):\n        j = j - 1\n        nueva_lista[j] = lista[i]\n    return nueva_lista\n\nlista1 = [1, 2, 3, 4, 5]\nlista2 = lista_invertida(lista1)\nprint(lista2)",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(lista_invertida([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"funcion <code>lista_invertida([1, 2, 3, 4, 5])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Attribute",
+        "Return",
+        "Add",
+        "List",
+        "arg",
+        "Call",
+        "Index",
+        "AugAssign",
+        "While",
+        "FunctionDef",
+        "Assign",
+        "Lt",
+        "Int"
+      ],
+      "order": 52
+    },
+    "ps_python_list_reverse6_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista original.",
+      "initial": "lista1 = [1, 2, 3, 4, 5]\nnueva_lista = [0] * len(lista1)\nj = len(lista1)\nfor i in range(len(lista1)):\n    j = j - 1\n    nueva_lista[j] = lista1[i]\n    print(nueva_lista)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+      "concepts": [
+        "While",
+        "Attribute",
+        "Call",
+        "Lt",
+        "AugAssign",
+        "Add",
+        "List",
+        "Int",
+        "Index",
+        "Assign"
+      ],
+      "order": 53
+    },
+    "ps_python_list_reverse7_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista [1, 2, 3, 4, 5].",
+      "initial": "def lista_invertida(lista):\n    nueva_lista = [0] * len(lista)\n    j = len(lista)\n    for numero in lista:\n        j = j - 1\n        nueva_lista[j] = numero \n    return nueva_lista\n\nlista1 = [1, 2, 3, 4, 5]\nlista2 = lista_invertida(lista1)\nprint(lista2)",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(lista_invertida([1, 2, 3, 4, 5]),[5, 4, 3, 2, 1], \"funcion <code>lista_invertida([1, 2, 3, 4, 5])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Attribute",
+        "Return",
+        "Add",
+        "List",
+        "arg",
+        "Call",
+        "Index",
+        "AugAssign",
+        "While",
+        "FunctionDef",
+        "Assign",
+        "Lt",
+        "Int"
+      ],
+      "order": 54
+    },
+    "ps_python_list_reverse8_es": {
+      "description": "Reverse the list",
+      "instructions": "Construye un programa que cree una nueva lista que sea la inversa de la lista original.",
+      "initial": "lista1 = [1, 2, 3, 4, 5]\nnueva_lista = [0] * len(lista1)\nj = len(lista1)\nfor numero in lista1:\n    j = j - 1 \n    nueva_lista[j] = numero\nprint(nueva_lista)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output: \"[5, 4, 3, 2, 1]\n\"}  }]",
+      "concepts": [
+        "While",
+        "Attribute",
+        "Call",
+        "Lt",
+        "AugAssign",
+        "Add",
+        "List",
+        "Int",
+        "Index",
+        "Assign"
+      ],
+      "order": 55
+    },
+    "ps_python_sum_of_two1_es": {
+      "description": "Checks whether the sum of two integers are equal as the third integer ",
+      "instructions": "Construye una funcion que determine si uno de los parametros es la suma de los otros dos parametros.",
+      "initial": "def suma_de_dos(x, y, z):\n    if x + y == z $$toggle::and::or::not$$ x + z == y $$toggle::and::or::not$$ y + z == x:\n        return True\n    else:\n        return False\n\n",
+      "type": "UNITTEST",
+      "unittest": "\nimport unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(suma_de_dos(2, 4, 6), True, \"funcion <code>suma_de_dos(2, 4, 6)</code>.\")\n  def testDos(self):\n    self.assertEqual(suma_de_dos(1, 4, 0),False, \"funcion <code>suma_de_dos(1, 4, 0)</code>.\") \n  def testTres(self):\n    self.assertEqual(suma_de_dos(4, 1, 3),True, \"funcion <code>suma_de_dos(4, 1, 3)</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "False",
+        "If",
+        "FunctionDef",
+        "Call",
+        "Or",
+        "Int",
+        "Assign",
+        "arg",
+        "Eq",
+        "Add",
+        "Return",
+        "True"
+      ],
+      "order": 56
+    },
+    "ps_python_sum_of_two2_es": {
+      "description": "Checks whether the sum of two integers are equal as the third integer ",
+      "instructions": "Construye un programa que determine si el valor de una de las variables x, y o z es la suma de los valores de las otras dos variables.",
+      "initial": "if x + y == z $$toggle::and::or::not$$ x + z == y $$toggle::and::or::not$$ y + z == x:\n    print(\"True\")\nelse:\n    print(\"False\")",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"x = 2\ny = 4\nz = 6 \", code : \"\", message :\"Prueba con x = 2, y = 4 y z = 6\", variables : { __output : \"True\n\" } },{ initcode : \"x = 1\ny = 4\nz = 0\", code : \"\", message : \"Prueba con x = 1, y = 4 y z = 0\", variables : { __output : \"False\n\" } }, { initcode : \"x = 4\ny = 1\nz = 3\", code : \"\", message : \"Prueba con x = 4, y = 1 y z = 3\", variables : { __output : \"True\n\" } }]",
+      "concepts": [
+        "False",
+        "If",
+        "FunctionDef",
+        "Call",
+        "Or",
+        "Int",
+        "Assign",
+        "arg",
+        "Eq",
+        "Add",
+        "Return",
+        "True"
+      ],
+      "order": 57
+    },
+    "ps_python_find_and_square1_es": {
+      "description": "Updating  elements to the new list",
+      "instructions": "Construye una funcion que encuentre los numeros pares en la lista dada como parametro, calcule el cuadrado de cada uno de esos numeros y agregue los cuadrados a una nueva lista. La funcion debe devolver la nueva lista.",
+      "initial": "def encontrar_y_elevar_al_cuadrado(lista):\n    nueva_lista = []\n    i = 0\n    while i < len(lista):\n        numero = lista[i]\n        if numero % 2 == 0:\n            nueva_lista.append(numero * numero)\n        i += 1\n    return nueva_lista\n",
+      "type": "UNITTEST",
+      "unittest": "\nimport unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([1, 2, 3, 4, 5]),[4, 16], \"funcion <code>encontrar_y_elevar_al_cuadrado([1, 2, 3, 4, 5])</code>.\")\n  def testDos(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([1, 3, 17, 9]),[], \"funcion <code>encontrar_y_elevar_al_cuadrado([1, 3, 17, 9])</code>.\") \n  def testTres(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([]),[], \"funcion <code>encontrar_y_elevar_al_cuadrado([])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Return",
+        "Int",
+        "Index",
+        "List",
+        "FunctionDef",
+        "Lt",
+        "Assign",
+        "While",
+        "Call",
+        "arg",
+        "Attribute",
+        "Mod",
+        "Mult",
+        "AugAssign",
+        "If",
+        "Add",
+        "Eq"
+      ],
+      "order": 58
+    },
+    "ps_python_find_and_square2_es": {
+      "description": "Updating required elements to the new list",
+      "instructions": "Construye un programa que encuentre los numeros pares en la lista original, calcule el cuadrado de cada uno de esos numeros y agregue los cuadrados a una nueva lista. El programa debe imprimir la nueva lista.",
+      "initial": "\nlista1 = [1, 2, 3, 4, 5]\nnueva_lista = []\ni = 0\nwhile i < len(lista1):\n    numero = lista1[i]\n    if numero % 2 == 0:\n        nueva_lista.append(numero * numero)\n    i += 1\nprint(nueva_lista)",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"[4, 16]\n\" } }]",
+      "concepts": [
+        "Return",
+        "Int",
+        "Index",
+        "List",
+        "FunctionDef",
+        "Lt",
+        "Assign",
+        "While",
+        "Call",
+        "arg",
+        "Attribute",
+        "Mod",
+        "Mult",
+        "AugAssign",
+        "If",
+        "Add",
+        "Eq"
+      ],
+      "order": 59
+    },
+    "ps_python_find_and_square3_es": {
+      "description": "Updating the elements to the new list",
+      "instructions": "Construye una funcion que encuentre los numeros pares en la lista dada como parametro, calcule el cuadrado de cada uno de esos numeros y agregue los cuadrados a una nueva lista. La funcion debe devolver la nueva lista.",
+      "initial": "def encontrar_y_elevar_al_cuadrado(lista):\n    nueva_lista = []\n    for i in range(len(lista)):\n        numero = lista[i]\n        if numero % 2 == 0:\n            nueva_lista.append(numero * numero)\n    return nueva_lista\n",
+      "type": "UNITTEST",
+      "unittest": "\nimport unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([1, -2, 3, 4, 5]),[4, 16], \"funcion <code>encontrar_y_elevar_al_cuadrado([1, -2, 3, 4, 5])</code>.\")\n  def testDos(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([1, 3, 17, 9]),[], \"funcion <code>encontrar_y_elevar_al_cuadrado([1, 3, 17, 9])</code>.\") \n  def testTres(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([]),[], \"funcion <code>encontrar_y_elevar_al_cuadrado([])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Return",
+        "Int",
+        "Index",
+        "List",
+        "FunctionDef",
+        "Lt",
+        "Assign",
+        "While",
+        "Call",
+        "arg",
+        "Attribute",
+        "Mod",
+        "Mult",
+        "AugAssign",
+        "If",
+        "Add",
+        "Eq"
+      ],
+      "order": 60
+    },
+    "ps_python_find_and_square4_es": {
+      "description": "Updating the elements to the new list",
+      "instructions": "Construye una funcion que encuentre los numeros pares en la lista dada como parametro, calcule el cuadrado de cada uno de esos numeros y agregue los cuadrados a una nueva lista. La funcion debe devolver la nueva lista.",
+      "initial": "def encontrar_y_elevar_al_cuadrado(lista):\n    nueva_lista = []\n    for i in lista:\n        numero = i\n        if numero % 2 == 0:\n            nueva_lista.append(numero * numero)\n    return nueva_lista\n",
+      "type": "UNITTEST",
+      "unittest": "\nimport unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([1, -2, 3, 4, 5]),[4, 16], \"funcion <code>encontrar_y_elevar_al_cuadrado([1, -2, 3, 4, 5])</code>.\")\n  def testDos(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([1, 3, 17, 9]),[], \"funcion <code>encontrar_y_elevar_al_cuadrado([1, 3, 17, 9])</code>.\") \n  def testTres(self):\n    self.assertEqual(encontrar_y_elevar_al_cuadrado([]),[], \"funcion <code>encontrar_y_elevar_al_cuadrado([])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Return",
+        "Int",
+        "Index",
+        "List",
+        "FunctionDef",
+        "Lt",
+        "Assign",
+        "While",
+        "Call",
+        "arg",
+        "Attribute",
+        "Mod",
+        "Mult",
+        "AugAssign",
+        "If",
+        "Add",
+        "Eq"
+      ],
+      "order": 61
+    },
+    "ps_python_find_and_square5_es": {
+      "description": "Updating required elements to the new list",
+      "instructions": "Construye un programa que encuentre los numeros pares en la lista original, calcule el cuadrado de cada uno de esos numeros y agregue los cuadrados a una nueva lista. El programa debe imprimir la nueva lista.",
+      "initial": "\nlista1 = [1, 2, 3, 4, 5]\nnueva_lista = []\nfor i in range(len(lista1)):\n    numero = lista1[i]\n    if numero % 2 == 0:\n        nueva_lista.append(numero * numero)\nprint(nueva_lista)",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"[4, 16]\n\" } }]",
+      "concepts": [
+        "Return",
+        "Int",
+        "Index",
+        "List",
+        "FunctionDef",
+        "Lt",
+        "Assign",
+        "While",
+        "Call",
+        "arg",
+        "Attribute",
+        "Mod",
+        "Mult",
+        "AugAssign",
+        "If",
+        "Add",
+        "Eq"
+      ],
+      "order": 62
+    },
+    "ps_python_find_and_square6_es": {
+      "description": "Updating required elements to the new list",
+      "instructions": "Construye un programa que encuentre los numeros pares en la lista original, calcule el cuadrado de cada uno de esos numeros y agregue los cuadrados a una nueva lista. El programa debe imprimir la nueva lista.",
+      "initial": "lista1 = [1, 2, 3, 4, 5]\n    nueva_lista = []\n    for i in lista1:\n        numero = i\n        if numero % 2 == 0:\n            nueva_lista.append(numero * numero)\n    print(nueva_lista)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"[4, 16]\n\" } }]",
+      "concepts": [
+        "Return",
+        "Int",
+        "Index",
+        "List",
+        "FunctionDef",
+        "Lt",
+        "Assign",
+        "While",
+        "Call",
+        "arg",
+        "Attribute",
+        "Mod",
+        "Mult",
+        "AugAssign",
+        "If",
+        "Add",
+        "Eq"
+      ],
+      "order": 63
+    },
+    "ps_python_easy_power1_es": {
+      "description": "power calculation",
+      "instructions": "Construye una funcion que tome la base y el exponente como parametros y devuelva la base elevada al exponente. Llama a la funcion para calcular 2 elevado a la 5.",
+      "initial": "def potencia(base, exp):\n\n    resultado = 1\n    i = 1\n    while i $$toggle::<::>::<=::>=$$ exp:\n        resultado = resultado * base\n        i += 1\n\n    return resultado\n\nnuevo_num = potencia(2, 5)\nprint(nuevo_num)\n",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(potencia(2, 5), 32, \"funcion <code>potencia(2,5)</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "And",
+        "Eq",
+        "If",
+        "LtE",
+        "Mult",
+        "False",
+        "While",
+        "Call",
+        "AugAssign",
+        "Add",
+        "Assign",
+        "Return",
+        "aßrg",
+        "Int",
+        "FunctionDef"
+      ],
+      "order": 64
+    },
+    "ps_python_easy_power2_es": {
+      "description": "power calculation",
+      "instructions": "Construye un programa que calcule la base elevada al exponente no negativo.",
+      "initial": "base = 2\nexp = 5\nif exp == 0 and base == 0 or exp < 0:\n    print(\"Error!\")\nelse:\n    resultado = 1\n    i = 1\n    while i <= exp:\n        resultado = resultado * base\n        i += 1\n    print(resultado)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"32\n\" } }]",
+      "concepts": [
+        "And",
+        "Eq",
+        "If",
+        "LtE",
+        "Mult",
+        "False",
+        "While",
+        "Call",
+        "AugAssign",
+        "Add",
+        "Assign",
+        "Return",
+        "arg",
+        "Int",
+        "FunctionDef"
+      ],
+      "order": 65
+    },
+    "ps_python_fast_power1_es": {
+      "description": "Calculating power ",
+      "instructions": "Construye un programa que calcule la base elevada al exponente.",
+      "initial": "base = 2\nexp = 5\ntemp = 1\nwhile exp > 0:\n    if exp % 2 == 0:\n        base = base * base\n        exp = exp // 2\n    else:\n        temp = base * temp\n        exp = exp - 1\nresultado = temp\nprint(resultado)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"base=2\nexp=5\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"32\n\" } }]",
+      "concepts": [
+        "Assign",
+        "Float",
+        "Mult",
+        "Call",
+        "Int",
+        "FloorDiv",
+        "FunctionDef",
+        "Gt",
+        "Mod",
+        "Sub",
+        "While",
+        "Eq",
+        "If"
+      ],
+      "order": 66
+    },
+    "ps_python_fast_power2_es": {
+      "description": "Calculating power ",
+      "instructions": "Construye una funcion que calcule la potencia de un numero. La funcion recibe dos enteros como parametros (la base y un exponente no negativo) y calcula la potencia.",
+      "initial": "\ndef potencia(base, exp):\n    temp = 1.0\n    while exp > 0:\n        if exp % 2 == 0:\n            base = base * base\n            exp = exp // 2\n        else:\n            temp = base * temp\n            exp = exp - 1\n    resultado = temp\n    return resultado\n",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(potencia(2,5),(32.0), \"funcion <code>potencia(2,5)</code>.\")\n  def testDos(self):\n    self.assertEqual(potencia(3,4),(81.0), \"funcion <code>potencia(3,4)</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Sub",
+        "Eq",
+        "FloorDiv",
+        "Call",
+        "arg",
+        "If",
+        "Gt",
+        "FunctionDef",
+        "Assign",
+        "Return",
+        "Float",
+        "Mult",
+        "Mod",
+        "Int",
+        "While"
+      ],
+      "order": 67
+    },
+    "ps_python_power_with_loops1_es": {
+      "description": "Calculating power ",
+      "instructions": "Construye una funcion que tome una base y un exponente no negativo como parametros y calcule la base elevada al exponente sin usar multiplicacion.",
+      "initial": "def potencia(base, exp):\n    if exp == 0:\n        return 1\n\n    resultado = base\n    temp = base\n\n    for i in range(1, exp):\n        for j in range(1, base):\n            resultado += temp\n        temp = resultado\n    return resultado\n\n",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(potencia(2,5),32, \"funcion <code>potencia(2,5)</code>.\")\n  def testDos(self):\n    self.assertEqual(potencia(3,4),81, \"funcion <code>potencia(3,4)</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "If",
+        "Return",
+        "FunctionDef",
+        "Int",
+        "Add",
+        "For",
+        "Call",
+        "Eq",
+        "Assign",
+        "arg",
+        "AugAssign"
+      ],
+      "order": 68
+    },
+    "ps_python_power_with_loops2_es": {
+      "description": "Calculating power ",
+      "instructions": "Construye un programa que calcule la base elevada al exponente no negativo sin usar multiplicacion.",
+      "initial": "base = 2\nexp = 5\n\nif(exp == 0):\n    print(1)\n\nelse:\n    resultado = base\n    temp = base\n\n    for i in range(1, exp):\n        for j in range (1, base):\n            resultado += temp\n        temp = resultado\n    print(resultado)",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"base=2\nexp=5\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"32\n\" } }]",
+      "concepts": [
+        "Return",
+        "Int",
+        "Assign",
+        "Call",
+        "AugAssign",
+        "If",
+        "Add",
+        "For",
+        "Eq"
+      ],
+      "order": 69
+    },
+    "ps_python_remove_dublicates_es": {
+      "description": "remove dublicates from the list ",
+      "instructions": "Construye una funcion que cree una nueva lista donde se almacenen todos los elementos excepto los duplicados de la lista dada como parametro. Finalmente, la funcion debe devolver la nueva lista.",
+      "initial": "def eliminar_duplicados(lista_de_num):\n    nueva_lista = []\n    for elemento in lista_de_num:\n        if elemento not in nueva_lista:\n            nueva_lista.append(elemento)\n    return nueva_lista\n",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(eliminar_duplicados([1, 2, 3, 4, 3, 2, 1]),[1, 2, 3, 4], \"funcion <code>eliminar_duplicados([1, 2, 3, 4, 3, 2, 1])</code>.\")\n  def testDos(self):\n    self.assertEqual(eliminar_duplicados([]),[], \"funcion <code>eliminar_duplicados([])</code>.\")\n  def testTres(self):\n    self.assertEqual(eliminar_duplicados([1,44,3,23,42,562,23,44,23,2,0,5,32,0,1]),[1, 44, 3, 23, 42, 562, 2, 0, 5, 32], \"funcion <code>eliminar_duplicados([...])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "Return",
+        "Int",
+        "Assign",
+        "Call",
+        "AugAssign",
+        "If",
+        "Add",
+        "For",
+        "Eq"
+      ],
+      "order": 70
+    },
+    "ps_python_remove_dublicates2_es": {
+      "description": "remove dublicates from the list ",
+      "instructions": "Construye un programa que cree una nueva lista donde se almacenen todos los elementos excepto los duplicados de la lista original. Finalmente, el programa debe imprimir la lista original y la nueva lista.",
+      "initial": "nueva_lista = []\nfor elemento in lista_original:\n    if elemento not in nueva_lista:\n        nueva_lista.append(elemento)\n\nprint(\"La lista original:\", lista_original)\nprint(\"La nueva lista:\", nueva_lista)",
+      "type": "SIMPLE",
+      "concepts": [
+        "Return",
+        "Int",
+        "Assign",
+        "Call",
+        "AugAssign",
+        "If",
+        "Add",
+        "For",
+        "Eq"
+      ],
+      "order": 71
+    },
+    "ps_python_even_first1_es": {
+      "description": "Reorganize the list",
+      "instructions": "Construye un programa que divida la lista original de enteros de manera que todos los numeros pares vengan primero y todos los impares despues.",
+      "initial": "lista_numeros = [7, 2, 4, 1, 3, 5, 6, 8]\ni = 0\nj = len(lista_numeros) - 1\nwhile i < j:\n    while i <= j and lista_numeros[i] % 2 == 0:\n        i += 1\n    while i <= j and lista_numeros[j] % 2 != 0:\n        j -= 1\n    if i < j:\n        temp = lista_numeros[i]\n        lista_numeros[i] = lista_numeros[j]\n        lista_numeros[j] = temp\n\nprint(lista_numeros)\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"lista_de_num= [7, 2, 4, 1, 3, 5, 6, 8]\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"[8, 2, 4, 6, 3, 5, 1, 7]\n\" } }]",
+      "concepts": [
+        "Lt",
+        "Sub",
+        "Mod",
+        "Assign",
+        "While",
+        "Call",
+        "Index",
+        "NotEq",
+        "If",
+        "Add",
+        "AugAssign",
+        "List",
+        "Eq",
+        "Int"
+      ],
+      "order": 72
+    },
+    "ps_python_even_first2_es": {
+      "description": "Reorganize the list",
+      "instructions": "Construye una funcion que divida la lista original de enteros de manera que todos los numeros pares vengan primero y todos los impares despues.",
+      "initial": "def pares_primero(lista_num):\n    i = 0\n    j = len(lista_num) - 1\n    while i < j:\n        while i < j and lista_num[i] % 2 == 0:\n            i += 1\n        while i < j and lista_num[j] % 2 != 0:\n            j -= 1\n        if i < j:\n            temp = lista_num[i]\n            lista_num[i] = lista_num[j]\n            lista_num[j] = temp\n    return lista_num\n",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(pares_primero([8, 4, 2, 5, 7, 3, 5]),[8, 4, 2, 5, 7, 3, 5], \"funcion <code>pares_primero([...])</code>.\")\n  def testDos(self):\n    self.assertEqual(pares_primero([12,11,43,11,1,0, 3, 2, 5, 7, 4, 5]),[12, 4, 2, 0, 1, 11, 3, 43, 5, 7, 11, 5], \"funcion <code>pares_primero([...])</code>.\")\n  def testTres(self):\n    self.assertEqual(pares_primero([]), [], \"funcion <code>pares_primero([])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "FunctionDef",
+        "And",
+        "Assign",
+        "AugAssign",
+        "arg",
+        "Sub",
+        "Return",
+        "If",
+        "NotEq",
+        "Lt",
+        "Index",
+        "Eq",
+        "While",
+        "Add",
+        "Constant",
+        "Call",
+        "Mod"
+      ],
+      "order": 73
+    },
+    "ps_python_even_first3_es": {
+      "description": "Reorganize the list",
+      "instructions": "Construye una funcion que divida la lista de enteros dada como parametro de manera que todos los numeros pares vengan primero y todos los impares despues.",
+      "initial": "def pares_primero(lista_num):\n    resultado = []\n    impares = []\n    for n in lista_num:\n        if n % 2 == 0:\n            resultado.append(n)\n        else:\n            impares.append(n)\n\n    for i in range(len(impares)):\n        resultado.append(impares[i])\n    return resultado",
+      "type": "UNITTEST",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(pares_primero([8, 4, 2, 5, 7, 3, 5]),[8, 4, 2, 5, 7, 3, 5], \"funcion <code>pares_primero([...])</code>.\")\n  def testDos(self):\n    self.assertEqual(pares_primero([12,11,43,11,1,0, 3, 2, 5, 7, 4, 5]),[12, 0, 2, 4, 11, 43, 11, 1, 3, 5, 7, 5], \"funcion <code>pares_primero([...])</code>.\")\n  def testTres(self):\n    self.assertEqual(pares_primero([]), [], \"funcion <code>pares_primero([])</code>.\")\n_test_result = misPruebas().main()\n",
+      "concepts": [
+        "FunctionDef",
+        "And",
+        "Assign",
+        "AugAssign",
+        "arg",
+        "Sub",
+        "Return",
+        "If",
+        "NotEq",
+        "Lt",
+        "Index",
+        "Eq",
+        "While",
+        "Add",
+        "Constant",
+        "Call",
+        "Mod"
+      ],
+      "order": 74
+    },
+    "ps_python_even_first4_es": {
+      "description": "Reorganize the list",
+      "instructions": "Construye un programa que divida la lista original de enteros de manera que todos los numeros pares vengan primero y todos los impares despues.",
+      "initial": "lista = [8, 3, 2, 5, 7, 5, 6]\nresultado = []\nimpares = []\nfor n in lista:\n    if n % 2 == 0:\n        resultado.append(n)\n    else:\n        impares.append(n)\n\nfor i in range(len(impares)):\n    resultado.append(impares[i])\nprint(resultado)",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"lista_de_num= [7, 2, 4, 1, 3, 5, 6, 8]\", code : \"\", message : \"Probando contenido impreso\", variables : { __output : \"[8, 2, 6, 3, 5, 7, 5]\n\" } }]",
+      "concepts": [
+        "Lt",
+        "Sub",
+        "Mod",
+        "Assign",
+        "While",
+        "Call",
+        "Index",
+        "NotEq",
+        "If",
+        "Add",
+        "AugAssign",
+        "List",
+        "Eq",
+        "Int"
+      ],
+      "order": 75
+    },
+    "ps_python_file_reading_third_element_es": {
+      "description": "Practising reading a file and printing the third element in each line of the file",
+      "instructions": "Construye un programa que abra un archivo y muestre el tercer elemento de cada linea del archivo.",
+      "initial": "try:\n\tmiarchivo=open(nombre_archivo, \"r\")\n\tnum_linea=1\n\tfor linea in miarchivo:\n\t\tpalabras = linea.split()\n\t\tpalabra=palabras[2]\n\t\tprint(\"La tercera palabra en la linea\",num_linea,\"es\",palabra)\n\t\tnum_linea+=1\nexcept OSError:\n\tprint(\"Error al leer el archivo.\")\n",
+      "vartests": "[{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\nnombre_archivo = 'text.txt'\nclass ArchivoSimulado:\n\tdef __init__(self):\n\t\tself.content = ['Jonh Alex 6 Sonia','Lily Roy Mike 7']\n\t\tself.counter = 0\n\tdef __iter__(self):\n\t\treturn self\n\tdef __next__(self):\n\t\tif self.counter < len(self.content):\n\t\t\tlinea = self.content[self.counter] + '\\n'\n\t\t\tself.counter += 1\n\t\t\treturn linea\n\t\traise StopIteration\ndef open(archivo, modo):\n\tif archivo == 'text.txt':\n\t\treturn ArchivoSimulado()\n\telse:\n\t\traise OSError('No existe el archivo o directorio: ' + str(archivo))\n\", code : \"\", message : \"Probando con nombre_archivo = 'text.txt'\", variables : { __output : \"La tercera palabra en la linea 1 es 6\nLa tercera palabra en la linea 2 es Mike\n\" } },{ initcode : \"class OSError(Exception):\n\tdef __init__(self,text):\n\t\tpass\nnombre_archivo = 'archivo_no_existe.txt'\nclass ArchivoSimulado:\n\tdef __init__(self):\n\t\tself.content = ['Ryan Alex Sonia 6','Lily Roy 7 Mike']\n\t\tself.counter = 0\n\tdef readline(self):\n\t\tif self.counter < len(self.content):\n\t\t\tlinea = self.content[self.counter] + '\\n'\n\t\t\tself.counter = self.counter + 1\n\t\telse:\n\t\t\tlinea = ''\n\t\treturn linea\n\tdef close(self):\n\t\tpass\ndef open(archivo, modo):\n\tif archivo == 'text.txt':\n\t\treturn ArchivoSimulado()\n\telse:\n\t\traise OSError('No existe el archivo o directorio: ' + str(archivo))\n\", code : \"\", message : \"Probando con nombre_archivo = 'archivo_no_existe.txt'\", variables : { __output : \"Error al leer el archivo.\n\" } }]",
+      "type": "VARTEST",
+      "title": "",
+      "order": 76,
+      "concepts": [
+        "Constant",
+        "Try",
+        "Assign",
+        "ExceptHandler",
+        "Attribute",
+        "AugAssign",
+        "For",
+        "Index",
+        "Add",
+        "Call"
+      ]
+    },
+    "ps_python_math_library_es": {
+      "title": "Math Library",
+      "instructions": "Construye un programa que acceda a math.pi y verifique su tipo.",
+      "description": "Practicing using math library and check a variable's type",
+      "initial": "import math\na = math.pi\nprint(type(a) is int)",
+      "type": "SIMPLE",
+      "concepts": [
+        "Assign",
+        "Import",
+        "Attribute",
+        "alias",
+        "Call",
+        "Is"
+      ],
+      "order": 77
+    },
+    "ps_python_data_type_es": {
+      "title": "Data type",
+      "description": "Practicing manipulating variables and checking types",
+      "instructions": "Construye un programa que calcule el modulo de dos variables y verifique el tipo del resultado.",
+      "initial": "a, b = 7.0, 5.0\nc = a % b\nprint(type(c))",
+      "type": "SIMPLE",
+      "concepts": [
+        "Constant",
+        "Call",
+        "Mod",
+        "Assign"
+      ],
+      "order": 78
+    },
+    "ps_python_nested_whiles_es": {
+      "description": "Practicing nested while loops",
+      "instructions": "Construye un programa que imprima un triangulo rectangulo invertido. Supone que 'tamano' esta definido y contiene un valor entero.",
+      "initial": "while tamano > 0:\n\tm=0\n\twhile m < tamano:\n\t\tprint(\"*\",end=\"\")\n\t\tm=m+1\n\ttamano=tamano-1\n\tprint()",
+      "vartests": "[{ initcode : \"tamano=4\", code : \"\", message : \"4\", variables : { __output : \"****\n***\n**\n*\n\" } },{ initcode : \"tamano=3\", code : \"\", message : \"3\", variables : { __output : \"***\n**\n*\n\" } }]",
+      "type": "VARTEST",
+      "title": "",
+      "order": 79,
+      "concepts": [
+        "Call",
+        "Lt",
+        "Gt",
+        "Constant",
+        "Sub",
+        "Assign",
+        "While",
+        "keyword",
+        "Add"
+      ]
+    },
+    "ps_python_nested_loop_2_es": {
+      "name": "Nested loop 2",
+      "description": "Practicing using nested while and for loops",
+      "instructions": "Construye un programa que imprima una tabla de multiplicar segun el valor de tabla_tamano. Supone que tabla_tamano es un entero positivo.",
+      "initial": "j = 1\nwhile j < tabla_tamano + 1:\n\tfor i in range(1, tabla_tamano + 1):\n\t\tprint(i * j, \" \", end = \"\")\n\tprint()\n\tj += 1",
+      "order": 79,
+      "vartests": "[{ initcode : \"tabla_tamano = 2\", code : \"\", message : \"tabla_tamano = 2\", variables : { __output : \"1  2  \n2  4  \n\" } },{ initcode : \"tabla_tamano = 3\", code : \"\", message : \"tabla_tamano = 3\", variables : { __output : \"1  2  3  \n2  4  6  \n3  6  9  \n\" } }]",
+      "concepts": [
+        "Call",
+        "Constant",
+        "For",
+        "keyword",
+        "Mult"
+      ],
+      "type": "VARTEST"
+    },
+    "ps_python_class_inheritance_es": {
+      "description": "Practicing class inheritance",
+      "instructions": "Construye un programa que use herencia de clases para mostrar el nombre y la nota de un estudiante. Considera que estudiante es una instancia de la clase Puntaje.",
+      "initial": "class Estudiante():\n\tdef __init__(self, nombre):\n\t\tself.nombre=nombre\n\tdef obtenerNombre(self):\n\t\treturn self.nombre\nclass Puntaje(Estudiante):\n\tdef __init__(self, nombre, puntaje):\n\t\tself.puntaje=puntaje\n\t\tEstudiante.__init__(self,nombre)\n\tdef obtenerPuntaje(self):\n\t\treturn self.puntaje",
+      "vartests": "[{ initcode : \"\", code : \"estudiante_puntaje = Puntaje('Juan', 85)\nprint(estudiante_puntaje.obtenerNombre(),estudiante_puntaje.obtenerPuntaje())\", message : \"estudiante_puntaje=Puntaje('Juan', 85)<br/>print(estudiante_puntaje.obtenerNombre(), estudiante_puntaje.obtenerPuntaje())\", variables : { __output : \"Juan 85\n\" } },{ initcode : \"\", code : \"estudiante_puntaje = Puntaje('Sara', 99)\nprint(estudiante_puntaje.obtenerNombre(),estudiante_puntaje.obtenerPuntaje())\", message : \"estudiante_puntaje=Puntaje('Sara', 99)<br/>print(estudiante_puntaje.obtenerNombre(), estudiante_puntaje.obtenerPuntaje())\", variables : { __output : \"Sara 99\n\" } }]",
+      "type": "VARTEST",
+      "concepts": [
+        "Attribute",
+        "FunctionDef",
+        "Constant",
+        "Return",
+        "arg",
+        "Call",
+        "ClassDef",
+        "Assign"
+      ]
+    },
+    "ps_python_print_specific_element_es": {
+      "name": "Print specific element",
+      "description": "Dictionary manipulation.",
+      "instructions": "Construye un programa que imprima un coche Toyota azul.",
+      "initial": "coche = dicc_coche[\"marca\"]\ncolor = dicc_coche[\"colores\"]\nprint(\"La marca del coche es\", coche[2],\"y es\", color[2])",
+      "starter_code": "cardict = {\"brand\": [\"Ford\",\"Lexis\",\"Toyota\"],\n\t\"electric\": [False, True],\n\t\"year\": [2020, 2021, 2019],\n\t\"colors\": [\"red\", \"white\", \"blue\"]}\n",
+      "type": "SIMPLE",
+      "concepts": [
+        "List",
+        "Assign",
+        "Constant",
+        "Index",
+        "Call",
+        "Dict"
+      ]
+    },
+    "ps_python_calculation_in_dictionary_es": {
+      "name": "Calculation in a dictionary",
+      "description": "Dictionary calculations",
+      "instructions": "Construye un programa que calcule el promedio de calificaciones de cada estudiante usando el diccionario `dicc_estudiantes` que ya esta definido como sigue:",
+      "initial": "for item in dicc_estudiantes.items():\n\tnombre=item[0]\n\tnotas=item[1]\n\ttotal=0\n\tfor nota in notas:\n\t\ttotal+=nota\n\tpromedio = total/len(notas)\n\tprint(\"El promedio de\",nombre, \"es\",promedio)",
+      "starter_code": "studentdict = {\"Lily\": [90,100,100,85],\n\t\"Anna\": [88,87,99,100]}\n",
+      "type": "VARTEST",
+      "vartests": "[{ initcode : \"\", code : \"\", message : \"dicc_estudiantes = {\\\"Lily\\\": [90,100,100,85],<br/>   \\\"Anna\\\": [88,87,99,100]}\", variables : { __output : \"El promedio de Lily es 93.75\nEl promedio de Anna es 93.5\n\" } },{ initcode : \"dicc_estudiantes = {\\\"Mark\\\": [70,75,80],\n\t\\\"Susan\\\": [80,82,84,86,88]}\n\", code : \"\", message : \"dicc_estudiantes = {\\\"Mark\\\": [70,75,80],<br/>   \\\"Susan\\\": [80,82,84,86,88]}\", variables : { __output : \"El promedio de Mark es 75.0\nEl promedio de Susan es 84.0\n\" } }]"
+    },
+    "ps_python_add_to_list_2_es": {
+      "name": "Add to list 2",
+      "description": "List values and references.",
+      "instructions": "Construye una funcion que agregue valores de k a la lista dada. Los valores agregados son incrementos de k (incrementando de uno en uno) en cada iteracion.",
+      "initial": "def agregar(lista,k):\n\tfor i in range(k):\n\t\tlista.append(k)\n\t\tk=k+1\n\treturn lista",
+      "unittest": "import unittestparson\nclass misPruebas(unittestparson.unittest):\n  def testUno(self):\n    self.assertEqual(agregar([1, 2, 3, 4],5),[1, 2, 3, 4, 5, 6, 7, 8, 9], \"funcion <code>agregar([1, 2, 3, 4], 5)</code>.\")\n  def testDos(self):\n    self.assertEqual(agregar([1, 2, 3, 4],5),[1, 2, 3, 4, 5, 6, 7, 8, 9], \"funcion <code>agregar([1, 2, 3, 4], 5)</code>.\")\n_test_result = misPruebas().main()\n",
+      "type": "UNITTEST",
+      "concepts": [
+        "Constant",
+        "Add",
+        "For",
+        "Call",
+        "FunctionDef",
+        "Return",
+        "Attribute",
+        "arg",
+        "Assign"
+      ]
+    },
+    "ps_python_search_min_index_es": {
+      "description": "Practicing searching the index of the min element",
+      "instructions": "Construye un programa que encuentre el indice del elemento minimo en una lista. num_lista es el caso de prueba donde se debe encontrar el indice minimo. El programa debe imprimir el indice del elemento minimo.",
+      "initial": "indice_min = 0\nfor indice in range(1,len(num_lista)):\n\tif (num_lista[indice] < num_lista[indice_min]):\n\t\tindice_min = indice\nprint(indice_min)",
+      "vartests": "[{ initcode : \"num_lista=[5, -30, 20]\", code : \"\", message : \"[5, -30, 20]\", variables : { __output : \"1\n\" } },{ initcode : \"num_lista=[1, 5, 2, 4, -1]\", code : \"\", message : \"[1, 5, 2, 4, -1]\", variables : { __output : \"4\n\" } }]",
+      "type": "VARTEST",
+      "title": "Index of Min Element",
+      "order": 77,
+      "concepts": [
+        "Assign",
+        "Constant",
+        "For",
+        "Lt",
+        "If",
+        "Call",
+        "Index"
+      ]
+    },
+    "ps_python_search_min_max_index_es": {
+      "description": "Practicing searching the index of the min and max elements",
+      "instructions": "Construye un programa que encuentre los indices tanto del elemento maximo como del minimo en una lista. num_lista es el caso de prueba donde se deben encontrar los indices minimo y maximo. El programa debe imprimir el indice del elemento minimo y el del elemento maximo. Este programa no necesita considerar elementos duplicados.",
+      "initial": "indice_min = 0\nindice_max = 0\nfor indice in range(1, len(num_lista)):\n\tif num_lista[indice] < num_lista[indice_min]:\n\t\tindice_min = indice\n\tif num_lista[indice] > num_lista[indice_max]:\n\t\tindice_max = indice\nprint(indice_min, indice_max)",
+      "vartests": "[{ initcode : \"num_lista = [5, 20, -30, 0, 5, 200]\", code : \"\", message : \"[5, 20, -30, 0, 5, 200]\", variables : { __output : \"2 5\n\" } },{ initcode : \"num_lista = [0, 7, -1, -30, 9]\", code : \"\", message : \"[0, 7, -1, -30, 9]\", variables : { __output : \"3 4\n\" } }]",
+      "type": "VARTEST",
+      "title": "",
+      "order": 77,
+      "concepts": [
+        "For",
+        "Gt",
+        "Assign",
+        "Index",
+        "Constant",
+        "Lt",
+        "Call",
+        "If"
+      ]
+    },
+    "ps_python_stack_es": {
+      "name": "Stack",
+      "description": "Construct a program that creates a Stack Structure",
+      "instructions": "Construye un programa que cree dos funciones en una estructura de Pila. La primera es la funcion \"apilar\" y la segunda es la funcion \"desapilar\". Tu funcion desapilar tambien debe verificar si la pila actual esta vacia. is_empty() es una funcion predefinida.",
+      "initial": "def apilar(self, elemento):\n\tself.items.insert(0, elemento)\ndef desapilar(self):\n\tif self.is_empty():\n\t\tprint(\"error la pila esta vacia\")\n\telse:\n\t\treturn self.items.pop(0)",
+      "type": "SIMPLE",
+      "concepts": [
+        "arg",
+        "FunctionDef",
+        "Return",
+        "Constant",
+        "Call",
+        "Attribute",
+        "If"
+      ]
+    },
+    "ps_python_queue_es": {
+      "name": "Queue",
+      "description": "Construct a function that uses Queue Structure",
+      "instructions": "Construye una funcion que use la estructura de Cola para resolver el problema de Josephus que elimina el k-esimo elemento en una lista dada y devuelve el ultimo elemento restante. Todas las funciones de Cola estan predefinidas (is_empty(), enqueue() y dequeue()). Tu funcion tambien debe devolver un mensaje \"la lista esta vacia\" si la lista dada esta vacia.",
+      "initial": "def circulo(k, lista_nombres):\n\tq = Cola()\n\tif not q.is_empty():\n\t\tfor i in range(len(lista_nombres)):\n\t\t\tq.enqueue(lista_nombres[i])\n\t\ti = 1\n\t\twhile q.size() != 1:\n\t\t\ttemp = q.dequeue()\n\t\t\tif i != k+1:\n\t\t\t\tq.enqueue(temp)\n\t\t\telse:\n\t\t\t\ti = 0\n\t\t\ti += 1\n\telse:\n\t\treturn ('la lista esta vacia!')\n\treturn q.dequeue()",
+      "type": "SIMPLE",
+      "concepts": [
+        "Attribute",
+        "NotEq",
+        "AugAssign",
+        "While",
+        "FunctionDef",
+        "Not",
+        "Index",
+        "Add",
+        "arg",
+        "Return",
+        "Call",
+        "Constant",
+        "Assign",
+        "If",
+        "For"
+      ]
+    },
+    "ps_python_linked_list_traversal_es": {
+      "name": "Linked list traversal",
+      "description": "Construct a function that traverse a linked list",
+      "instructions": "Construye una funcion que imprima todos los elementos de una Lista Doblemente Enlazada hacia adelante y luego en orden inverso.<br/>La implementacion de la clase ListaDoblementeEnlazada se da a continuacion.",
+      "starter_code": "class Node:\n  def __init__(self, data):\n    self.data = data\n    self.next = None\n    self.prev = None\nclass DoublyLinkedList:\n  def __init__(self):\n    self.head = None\n\n  def push(self, new_data):\n    new_node = Node(new_data)\n    new_node.next = self.head\n    if self.head is not None:\n      self.head.prev = new_node\n    self.head = new_node\n",
+      "initial": "def recorrer_lista(lista_doble):\n  actual = lista_doble.cabeza\n  while actual:\n    print(actual.dato, end=\" \")\n    ultimo = actual\n    actual = actual.siguiente\n  while ultimo:\n    print(ultimo.dato, end=\" \")\n    ultimo = ultimo.anterior",
+      "vartests": "[{ initcode : \"\", code : \"doubly_linked_list = DoublyLinkedList()\ndoubly_linked_list.push(\\\"world\\\")\ndoubly_linked_list.push(\\\"hello\\\")\ntraverse_list(doubly_linked_list)\n\", message : \"doubly_linked_list = DoublyLinkedList()<br/>doubly_linked_list.push(\\\"world\\\")<br/>doubly_linked_list.push(\\\"hello\\\")<br/>traverse_list(doubly_linked_list)\n\", variables : { __output : \"hello world world hello \" } },{ initcode : \"\", code : \"doubly_linked_list = DoublyLinkedList()\ndoubly_linked_list.push(4)\ndoubly_linked_list.push(6)\ndoubly_linked_list.push(8)\ntraverse_list(doubly_linked_list)\n\", message : \"doubly_linked_list = DoublyLinkedList()<br/>doubly_linked_list.push(4)<br/>doubly_linked_list.push(6)<br/>doubly_linked_list.push(8)<br/>traverse_list(doubly_linked_list)\n\", variables : { __output : \"8 6 4 4 6 8 \" } }]",
+      "type": "VARTEST",
+      "concepts": [
+        "arg",
+        "Attribute",
+        "keyword",
+        "Call",
+        "Constant",
+        "FunctionDef",
+        "Assign",
+        "While"
+      ]
+    },
+    "ps_python_linked_list_size_es": {
+      "name": "Check linked list size",
+      "description": "Construct a function that checks the size of a linked list",
+      "instructions": "Construye una funcion que calcule el numero de elementos en una lista simplemente enlazada.<br/>La implementacion de la clase ListaEnlazada se da a continuacion.",
+      "starter_code": "class Node:\n    def __init__(self, data):\n        self.data = data\n        self.next = None\nclass LinkedList:\n    def __init__(self):\n        self.head = None\n    def push(self, new):\n        new_node = Node(new)\n        new_node.next = self.head\n        self.head = new_node\n",
+      "initial": "def obtener_tamano(lista_enlazada):\n\tcontador = 0\n\ttemp = lista_enlazada.cabeza\n\twhile temp:\n\t\tcontador = contador + 1\n\t\ttemp = temp.siguiente\n\treturn contador",
+      "vartests": "[{ initcode : \"\", code : \"linked_list = LinkedList()\nlinked_list.push(1)\nlinked_list.push(3)\nlinked_list.push(3)\nlinked_list.push(7)\nprint(get_size(linked_list))\", message : \"linked_list = LinkedList()<br/>linked_list.push(1)<br/>linked_list.push(3)<br/>linked_list.push(3)<br/>linked_list.push(7)<br/>print(get_size(linked_list))\", variables : { __output : \"4\n\" } },{ initcode : \"\", code : \"linked_list = LinkedList()\nprint(get_size(linked_list))\n\", message : \"linked_list = LinkedList()<br/>print(get_size(linked_list))\n\", variables : { __output : \"0\n\" } }]",
+      "type": "VARTEST",
+      "concepts": [
+        "While",
+        "Constant",
+        "Attribute",
+        "FunctionDef",
+        "Assign",
+        "Add",
+        "Return",
+        "arg"
+      ]
+    },
+    "ps_python_merge_sort_es": {
+      "name": "Merge Sorting",
+      "description": "Construct a function that sorts a numeric array using Merge Sort.",
+      "instructions": "Construye una funcion de mezcla que divida recursivamente un arreglo numerico y tome una lista como parametro llamada datos.<br/>Considera que la funcion mezcla_ordenada() ya esta definida y se muestra a continuacion.",
+      "initial": "def mezcla(datos):\n\tif len(datos) <= 1:\n\t\treturn datos\n\tmitad = len(datos)//2\n\tizquierda = mezcla(datos[:mitad])\n\tderecha = mezcla(datos[mitad:])\n\treturn mezcla_ordenada(izquierda, derecha)",
+      "starter_code": "def merge_sort(left, right):\n\tresult = []\n\ti, j = 0, 0\n\twhile i < len(left) and j < len(right):\n\t\tif left[i] <= right[j]:\n\t\t\tresult.append(left[i])\n\t\t\ti += 1\n\t\telse:\n\t\t\tresult.append(right[j])\n\t\t\tj += 1\n\tresult += left[i:]\n\tresult += right[j:]\n\treturn result",
+      "vartests": "[{ initcode : \"\", code : \"print(merge([5, -1, 3, 4]))\n\", message : \"print(merge([5, -1, 3, 4]))\", variables : { __output : \"[-1, 3, 4, 5]\n\" } },{ initcode : \"\", code : \"print(merge([5, 9, -10, -1, 0, 12]))\n\", message : \"print(merge([5, 9, -10, -1, 0, 12]))\", variables : { __output : \"[-10, -1, 0, 5, 9, 12]\n\"} }]",
+      "type": "VARTEST",
+      "concepts": [
+        "LtE",
+        "Constant",
+        "Call",
+        "Return",
+        "Assign",
+        "FloorDiv",
+        "FunctionDef",
+        "If",
+        "arg",
+        "Slice"
+      ]
+    },
+    "ps_python_quick_sorting_es": {
+      "description": "Practicing quick sort algorithm",
+      "instructions": "Construye una funcion que implemente el algoritmo de ordenamiento rapido. La funcion de particion() ha sido predefinida y se muestra a continuacion.<br/>Considera que datos es una lista, primero es el indice del primer elemento y ultimo es el indice del ultimo elemento.",
+      "initial": "def ordenamiento_rapido(datos, primero, ultimo):\n\tif primero < ultimo:\n\t\tpivote = particion(datos, primero, ultimo)\n\t\tordenamiento_rapido(datos, primero, pivote-1)\n\t\tordenamiento_rapido(datos, pivote+1, ultimo)\n\treturn datos",
+      "starter_code": "def partition(data, first, last):\n\tpivot_value = data[first]\n\tleft_mark = first+1\n\tright_mark = last\n\tdone = False\n\twhile not done:\n\t\twhile left_mark <= right_mark and data[left_mark] <= pivot_value:\n\t\t\tleft_mark = left_mark + 1\n\t\t\twhile data[right_mark] >= pivot_value:\n\t\t\t\tright_mark = right_mark-1\n\t\t\tif right_mark < left_mark:\n\t\t\t\tdone = True\n\t\t\telse:\n\t\t\t\ttemp = data[left_mark]\n\t\t\t\tdata[left_mark] = data[right_mark]\n\t\t\t\tdata[right_mark] = temp\n\ttemp = data[first]\n\tdata[first] = data[right_mark]\n\tdata[right_mark] = temp\n\treturn right_mark",
+      "vartests": "[{ initcode : \"\", code : \"print(quick_sort([5, -1, 3, 4], 0, 3))\n\", message : \"print(quick_sort([5, -1, 3, 4], 0, 3))\", variables : { __output : \"[-1, 3, 4, 5]\n\" } }]",
+      "type": "VARTEST",
+      "concepts": [
+        "Lt",
+        "Sub",
+        "Return",
+        "arg",
+        "If",
+        "FunctionDef",
+        "Assign",
+        "Constant",
+        "Add",
+        "Call"
+      ]
+    },
+    "ps_python_tree_inorder_traversal_es": {
+      "name": "Tree",
+      "description": "Construct an inorder traversal function",
+      "instructions": "Construye una funcion de recorrido inorder que recorra recursivamente un arbol desde el nodo izquierdo, nodo raiz y nodo derecho. Almacenamos el arbol recorrido en una lista llamada res=[]. La funcion de recorrido esta dentro de la clase del arbol. Considera que la clase del arbol ha sido predefinida.",
+      "initial": "def recorrido_inorden(self, raiz):\n\tres = []\n\tif raiz:\n\t\tres = self.recorrido_inorden(raiz.izquierda)\n\t\tres.append(raiz.dato)\n\t\tres = res + self.recorrido_inorden(raiz.derecha)\n\treturn res",
+      "type": "SIMPLE",
+      "concepts": [
+        "Attribute",
+        "Add",
+        "Assign",
+        "List",
+        "arg",
+        "If",
+        "FunctionDef",
+        "Return",
+        "Call"
+      ]
+    },
+    "ps_python_tree_preorder_traversal_es": {
+      "name": "Tree",
+      "description": "Construct a preorder traversal function",
+      "instructions": "Construye una funcion de recorrido preorder que recorra recursivamente un arbol desde el nodo raiz, nodo izquierdo y nodo derecho. Almacenamos el arbol recorrido en una lista llamada res=[]. La funcion de recorrido esta dentro de la clase del arbol. Considera que la clase del arbol ha sido predefinida.",
+      "initial": "def recorrido_preorden(self, raiz):\n\tres = []\n\tif raiz:\n\t\tres.append(raiz.dato)\n\t\tres = res + self.recorrido_preorden(raiz.izquierda)\n\t\tres = res + self.recorrido_preorden(raiz.derecha)\n\treturn res",
+      "type": "SIMPLE",
+      "concepts": [
+        "Add",
+        "If",
+        "Return",
+        "Attribute",
+        "Call",
+        "FunctionDef",
+        "List",
+        "arg",
+        "Assign"
+      ]
+    }
 }
