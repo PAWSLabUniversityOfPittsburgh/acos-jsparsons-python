@@ -1103,7 +1103,7 @@
     },
     "ps_python_dict_keys_es": {
       "title": "Items in storage",
-      "instructions": "El diccionario almacen almacena la cantidad de ciertos articulos en almacenamiento. Construye un programa que imprima una lista de todos los articulos de los que hay mas de uno actualmente almacenado.",
+      "instructions": "El diccionario almacen almacena la cantidad de ciertos articulos en bodega. Construye un programa que imprima una lista de todos los articulos de los que hay mas de uno actualmente almacenado.",
       "initial": "almacen = {\"taza\": 7, \"boligrafo\": 0, \"lampara\": 4}\nfor articulo in almacen:\n  if almacen[articulo] > 0:\n    print(articulo)",
       "type": "SIMPLE",
       "description": "Iterating a dictionary",
@@ -1122,7 +1122,7 @@
     },
     "ps_python_dict_values_es": {
       "title": "dict values sum",
-      "instructions": "Construye un programa que imprima cuantos articulos en total hay en el almacenamiento. Puedes asumir que un diccionario llamado almacen ya ha sido inicializado.",
+      "instructions": "Construye un programa que imprima cuantos articulos en total hay en bodega. Puedes asumir que un diccionario llamado almacen ya ha sido inicializado.",
       "initial": "total_articulos = 0\nfor cantidad in almacen.values():\n  total_articulos += cantidad\nprint(total_articulos)",
       "type": "SIMPLE",
       "description": "Accessing dictionary values",
@@ -1156,7 +1156,7 @@
     "ps_python_dict_filter_es": {
       "title": "ps_python_dict_filter",
       "instructions": "Construye un programa que imprima todos los circulos que son mayores que 5.",
-      "initial": "circulos = {\"azul\": 8, \"rojo\": 5, \"gris\": 7}\nfor circulo in circulos.items():\n  if(circulo[1] > 5):\n    print(circulo[0], \"circulo es mayor que\", 5)",
+      "initial": "circulos = {\"azul\": 8, \"rojo\": 5, \"gris\": 7}\nfor circulo in circulos.items():\n  if(circulo[1] > 5):\n    print(\"Circulo \",circulo[0], \" es mayor que\", 5)",
       "type": "SIMPLE",
       "description": "Iterating over dictionary items",
       "concepts": [
