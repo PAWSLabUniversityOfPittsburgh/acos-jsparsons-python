@@ -2461,8 +2461,8 @@
       "name": "Print specific element",
       "description": "Dictionary manipulation.",
       "instructions": "Construye un programa que imprima un coche Toyota azul.",
-      "initial": "coche = dicc_coche[\"marca\"]\ncolor = dicc_coche[\"colores\"]\nprint(\"La marca del coche es\", coche[2],\"y es\", color[2])",
-      "starter_code": "cardict = {\"brand\": [\"Ford\",\"Lexis\",\"Toyota\"],\n\t\"electric\": [False, True],\n\t\"year\": [2020, 2021, 2019],\n\t\"colors\": [\"red\", \"white\", \"blue\"]}\n",
+      "initial": "auto = dicc_auto[\"marca\"]\ncolor = dicc_auto[\"colores\"]\nprint(\"La marca del auto es\", auto[2],\"y es\", color[2])",
+      "starter_code": "dicc_auto = {\"marca\": [\"Ford\",\"Lexis\",\"Toyota\"],\n\t\"electrico\": [False, True],\n\t\"ano\": [2020, 2021, 2019],\n\t\"colores\": [\"red\", \"white\", \"blue\"]}\n",
       "type": "SIMPLE",
       "concepts": [
         "List",
